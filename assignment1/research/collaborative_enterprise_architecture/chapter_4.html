@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INF4883 - Collaborative Enterprise Architecture - Chapter 3</title>
+</head>
+<body>
+    <header>
+        <h1>INF4883 - Assignment 1 - Research - Collaborative Enterprise Architecture - Chapter 3</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="../index.html">Back</a>
+            </li>
+            <li>
+                <a href="chapter_1.html">Chapter 1</a>
+            </li>
+            <li>
+                <a href="chapter_2.html">Chapter 2</a>
+            </li>
+            <li>
+                <a href="chapter_3.html">Chapter 3</a>
+            </li>
+            <li>
+                <a href="chapter_4.html">Chapter 4</a>
+            </li>
+        </ul>
+    </nav>
+    <section>
+        <header>
+            <h2>EA Frameworks</h2>
+        </header>
+        <p>
+            There have been many misconceptions about EA in the minds of IT practitioners, IT managers, and even seasoned IT architects themselves. For instance:
+        </p>
+        <ul>
+            <li>
+                <strong>EA = Zachman Framework?</strong> You attend a one-day seminar on Zachman Framework and join the elite club of enterprise architects.
+            </li>
+            <li>
+                <strong>EA = TOGAF?</strong> You attend a five-day training and certification course on TOGAF and then roll up your sleeves to “do enterprise architecture” the very next day.
+            </li>
+            <li>
+                <strong>EA = Gartner?</strong> You consult an expert from Gartner or Forrester, then do what they tell you to do in EA. If you do this well, all sins, misdoings, and agonies related to your IT will disappear.
+            </li>
+        </ul>
+        <p>
+            These statements may sound a little exaggerated. Nonetheless, we have heard undertones of them on several occasions—sometimes in our formal business meetings with customers, sometimes while listening to presentations in conferences, and sometimes even in informal chat with our peers walking down our office corridors. Moreover, such misconceptions seem to be more prevalent where non-IT people have ended up managing IT. EA has always been cursed with gross generalization and oversimplification. Perhaps it’s due to the widespread ignorance about this field that such myths become popular.
+        </p>
+        <p>
+            Zachman, TOGAF, and Gartner (amongst many others) are undoubtedly good resources on the subject of enterprise architecture. They are early explorers and trendsetters that have survived the test of time. These frameworks are meant to help you bring order to your chaotic enterprise IT landscape. To that effect, they give a direction for your thinking about enterprise architecture. They also provide best practices, tips, and techniques for doing EA in your business. But that is as far as they will go. They do not guarantee success. Using these frameworks ultimately boils down to what you can actually do (or need to do) in EA for your enterprise and how well you can relate your EA effort to what the frameworks have to offer.
+        </p>
+        <p>
+            It thus becomes necessary to understand what Zachman, TOGAF, and Gartner imply from a practical standpoint: what they are, what they are expected to do, and what they are not expected to do. At the onset, we want to clarify that none of them can be a silver bullet for your enterprise architecture initiative. They are no all-in-one cure for the miseries and pains of your business-IT environment, either.
+        </p>
+        <p>
+            The following sections give a brief overview of these frameworks and their relevance for practical use. To begin with, let’s first look at what the term EA framework really means.
+        </p>
+        <article>
+            <header>
+                <h3>What is an EA framework?</h3>
+            </header>
+            <p>
+                An EA framework is a set of assumptions, concepts, values, and practices that constitutes a way of looking at enterprise reality via views on (architectural) models. It offers a fundamental structure, serving as a scaffold for developing, maintaining, and using EA.
+            </p>
+            <p>
+                Over the last 25 years, a number of enterprise architecture frameworks have come and gone. These frameworks have originated from different sources and have been applied in different contexts. Philip Allega, research analyst at Gartner, highlights an overwhelming proliferation of EA frameworks with a bit of frustration. In a blog entry titled “My Mother has an EA Definition, too,” he commented on the introduction of a new EA definition by the Enterprise Architecture Research Forum (EARF), South Africa, in August 2010:
+            </p>
+            <p>
+                <q>
+                    If they’d only add a framework/approach to this definition I could notch my list of EA frameworks/approaches I’m tracking up by one (note: if you’re curious, I’m at 77 right now and if you’ve got one, please let me know). For those of you who aren’t used to reading with a sarcastic voice, please try using sarcasm when you say (out loud): The world really needs yet another definition of enterprise architecture &lt;large, tired, shoulder shrugging sigh&gt;
+                </q>
+            </p>
+            <p>
+                The true number of EA frameworks depends on what you count as a “framework”, but there is definitely an abundance of them. Moreover, they are quite different from each other. For instance, the Zachman Framework for Enterprise Architectures and The Open Group Architecture Framework (TOGAF) have hardly anything common between them except two words: architecture and framework. TOGAF, in fact, acknowledges Zachman as a complementing framework, which implies that TOGAF and Zachman indeed have only minimal overlap.
+            </p>
+            <p>
+                We cannot cover all the frameworks (or approaches, or methods—whatever you call them) that are out there.2 We will not assess, compare, nor endorse any of them, either. For the sake of brevity, we will simply have a quick glance at the methods we listed in the introduction:
+            </p>
+            <ul>
+                <li>
+                    Zachman Framework for Enterprise Architectures
+                </li>
+                <li>
+                    The Open Group Architecture Framework (TOGAF)
+                </li>
+                <li>
+                    Gartner Methodology (formerly META Framework)
+                </li>
+            </ul>
+            <p>
+                We have selected each of them intentionally:
+            </p>
+            <ul>
+                <li>
+                    <strong>Zachman</strong>, because it is one of the first explorations in EA;
+                </li>
+                <li>
+                    <strong>TOGAF</strong>, since it is an open EA framework; in our context, “open” means industry-agnostic, vendor-neutral, and community-based;
+                </li>
+                <li>
+                    <strong>Gartner</strong>, because it is one of the many recognized consulting firms for EA in the corporate world.
+                </li>
+            </ul>
+            <p>
+                Of course, these frameworks are not the only ones that constitute the EA body of knowledge, as pointed out earlier. We do not intend to endorse these three frameworks as the best ones. However, these three are de facto among the most widely known approaches today. This is perhaps due to their versatility, visibility, and market impact so far.
+            </p>
+            <p>
+                EA has also received significant attention from academia, consulting firms, and governments. A number of academic institutions offer research briefings and learning programs regarding EA approaches and practices. They have been quite active and visible with their research on various EA topics in the last five years. Just to name a few prominent examples:
+            </p>
+            <ul>
+                <li>
+                    Center for Information Systems Research, Massachusetts Institute of Technology (CISR–MIT), United States. The focus of CISR–MIT is on developing enterprise architecture as a strategy based on their extensive industry research.
+                </li>
+                <li>
+                    Software Engineering for Business Information Systems (sebis), TU Mu¨nchen, Germany. Sebis concentrates on developing EA patterns (as opposed to frameworks) and evaluating EA management tools.
+                </li>
+                <li>
+                    Center for Enterprise Architecture, Pennsylvania State University, United States. The focus of the college is on curriculum formalization, competency development, and advanced research in the EA area.
+                </li>
+            </ul>
+            <p>
+                In addition, many established IT consulting firms, such as Accenture, Boston Consulting, Cap Gemini, Deloitte, Forrester, Gartner, HP, IBM, McKinsey & Company, and others, usually have their own EA approaches or methods (proprietary frameworks, so to speak) that they use while performing EA activities for their clients.
+            </p>
+            <p>
+                Finally, we should mention the Federal Enterprise Architecture (FEA). It is the enterprise architecture for the largest and most complex enterprise on Earth: the US federal government. Although FEA has been available only since 2006, its history dates back to 1996, when the US Congress passed a bill known as the Clinger Cohen Act.3 This bill mandates that all government agencies take steps to improve the effectiveness of their IT investments. FEA enables them to do that. The US government is one of the most serious adopters of enterprise architecture. The claim can be made that no enterprise has spent more money in EA than what has gone into FEA to date
+            </p>
+            <p>
+                Is there hope that this zoo of frameworks will disappears in the future and give room to only a few best-in-class frameworks? The answer to this question is tricky—maybe or maybe not. The main reasons for this state of affairs are as follows:
+            </p>
+            <ul>
+                <li>
+                    <strong>EA is perceived as an enterprise-specific initiative.</strong> It has a strong dependency on the way the enterprise operates. A number of enterprise-specific factors, such as business imperatives, organizational structure, work culture, and political dynamics, may have significant influence on the modus operandi of an EA organization. This makes it difficult to define a one-size-fits-all framework.
+                </li>
+                <li>
+                    <strong>EA research is not proceeding as fast as one could wish.</strong> The field of EA is still young and immature. It may traverse different paths before it will ultimately stabilize as a mature discipline. The rapid changes in the business and IT world, coupled with difficulties in recognizing the value of EA (in terms of cost/benefit and return on investment), might be the key reasons for EA not being able to progress faster.
+                </li>
+                <li>
+                    <strong>EA frameworks fail to strike a balance.</strong> Some EA frameworks are too generic. They tend to become too abstract and academic to deliver any tangible outcome. Other frameworks are overly specific. They tend to become too exhaustive and complex to be put into practice in a meaningful way. For instance, the Zachman Framework shows a tendency to fall into the first category (too generic), whereas the FEA leans toward the second category (overly specific). What is really needed is a way to strike a difficult balance between too much and not enough detail. In this respect, there is a wide chasm between the current ways of performing EA.
+                </li>
+            </ul>
+        </article>
+        <article>
+            <header>
+                <h3>The Zachman framework for enterprise architecture</h3>
+            </header>
+            <p>
+                The beauty of the Zachman Framework4 is that it visualizes the entire enterprise at one glance, just the way the periodic table of elements visualizes all 118 known chemical elements by selected properties of their atomic structure. By providing a classification schema, the Zachman Framework attempts to bring order to the complex world of business and IT, as the periodic table does for chemistry and chemical reactions.
+            </p>
+            <p>
+                Zachman is a framework of elements—a total set of descriptive representations to fully describe a complex object (the enterprise). It has 6  6 (some say 6  5) cells, as depicted in Figure 4-1 (Zachman, 2008). The columns are called Abstractions. They answer key questions about the enterprise: What (data), How (function), Where (network), Who (people), When (time), and Why (motivation). The rows are called Perspectives. Each row represents a viewpoint of a single group of stakeholders.
+            </p>
+            <p>
+                Zachman has a somewhat conservative view of enterprise architecture. Each cell in the Zachman grid defines primitive element and contains an elementary architectural model. Each cell must represent one and only one aspect of an enterprise. The architecture is “pure” only if you are able to extract different architectural aspects, as per the Zachman classification schema, and represent each of those aspects with a stand-alone model.
+            </p>
+            <p>
+                In that case, a cell contains a single-variable primitive model—only one architectural aspect, just like a basic chemical element in the periodic table. For instance, Cell [3,1] (System Model (Logical) – Data) must contain only the Logical Data Model and nothing else. It will not provide any information about ownership, usage, or location of the data that is being described. If you add that, then you are not doing architecture, you are doing the implementation—so says Zachman.
+            </p>
+            <p>
+                Accordingly, EA has to obey certain ground rules imposed by the Zachman Grid:
+            </p>
+            <ul>
+                <li>
+                    <strong>Rule 1:</strong> The columns have no order. Each column (aspect) is equally important.
+                </li>
+                <li>
+                    <strong>Rule 2:</strong> Each column has a simple, basic model. Each column describes one complete aspect of the enterprise using primitive models only.
+                </li>
+                <li>
+                    <strong>Rule 3:</strong> The basic model of each column is unique. Each model in a column is related to the others. They are abstractions of the same enterprise aspect, yet each model represents a distinct and unique concept.
+                </li>
+                <li>
+                    <strong>Rule 4:</strong> Each row represents a distinct view. The rows describe stakeholder perspectives (Executive, Business Management, Architect, Engineer, and Technician).
+                </li>
+                <li>
+                    <strong>Rule 5:</strong> Each cell is unique. Each model representation or cell differs from the others in essence and not merely in level of detail.
+                </li>
+                <li>
+                    <strong>Rule 6:</strong> Combining the cells in one row forms a complete view. Each row provides a comprehensive view of the enterprise from the perspective of a group of stakeholders.
+                </li>
+            </ul>
+            <p>
+                If a model covers more than one cell from the Zachman Grid, it becomes a composite model, just like a chemical compound. A composite model is very useful for the purpose of implementation. According to Zachman, composite models are only meant for the ease of implementation, not as part of the architecture. It is up to the architect to define the composite models by combining several primitive models. The composite models form architectural work products, which can then be taken to facilitate the implementation.
+            </p>
+            <p>
+                Again, referring to the periodic table analogy, a composite model is just like a chemical compound that can be produced by a chemical reaction between two or more elements. A Logical Data Model, when combined with a People Model, describes ownership and usage of entities. In the same way, data models that also include the physical location of data entities become composite models.
+            </p>
+            <p>
+                Zachman’s classification schema for architecture models does make sense, at least theoretically. However, it does not really provide any insight into the dependencies and relationships among the primitive architectural models. The practical viability of building the primitive and composite models is pretty much left to the enterprise architect to explore and determine.
+            </p>
+            <p>
+                In essence, the Zachman Framework is simply a framework of EA elements. It does not stand for itself but can be used (as a whole or in parts) as a complement to other major EA frameworks, such as TOGAF and FEA, or even in any custom frameworks or approaches that you may have in your enterprise.
+            </p>
+        </article>
+        <article>
+            <header>
+                <h3>The open group architecture framework (TOGAF)</h3>
+            </header>
+            <p>
+                If Zachman is a framework of elements providing the constituents of enterprise architecture, TOGAF is a recipe that tells how to build up those constituents—the work products of EA.
+            </p>
+            <p>
+                TOGAF is a generic yet comprehensive methodological framework for developing enterprise architectures. It is owned by The Open Group consortium and free for your own use within the enterprise. As The Open Group states, TOGAF is the codified common sense for enterprise architecture management. It has been developed based on the experience of EA experts and practitioners for a decade or more. TOGAF can be applied across industries. It is agnostic to the technology in use. Moreover, it is equipped with a vast knowledge base - both in terms of online literature and community support.
+            </p>
+            <p>
+                TOGAF 9.1, the current version at the time of this writing5 (The Open Group, 2011), has five basic parts:
+            </p>
+            <ul>
+                <li>
+                    Architecture Development Methodology (ADM)
+                </li>
+                <li>
+                    Architecture Content Framework
+                </li>
+                <li>
+                    Architecture Capability Framework
+                </li>
+                <li>
+                    Enterprise Continuum and Tools
+                </li>
+                <li>
+                    Reference Models
+                </li>
+            </ul>
+            <p>
+                For the sake of brevity, we will look at only the first three parts of TOGAF. They are most relevant to the scope of this book.
+            </p>
+            <section>
+                <header>
+                    <h4>TOGAF architecture development methodology (ADM)</h4>
+                </header>
+                <p>
+                    The most significant component of TOGAF is the Architecture Development Methodology (ADM). It essentially defines a full life-cycle process for planning, designing, realizing, and governing enterprise architecture. TOGAF ADM has a genetic resemblance to the traditional waterfall software development model. This model typically consists of phases such as planning, analysis, design, development, testing, and deployment, organized in sequential order (Figure 4-2). Each phase in the waterfall software development life cycle (SDLC) can be fully described by entry criteria, tasks, verification, and exit criteria. TOGAF ADM adopts a similar approach.
+                </p>
+                <p>
+                    ADM consists of eight phases A to H, and a Preliminary one at the start (Figure 4-3). Each phase is fully described using an objectives–approach–inputs–steps–outputs pattern, akin to the waterfall model. The phases will be executed from A to H, normally in sequential order.
+                </p>
+                <p>
+                    However, there are fundamental differences between the waterfall SDLC and TOGAF ADM. In general, software development projects are short-lived. They are scheduled for a fixed time and have a budget for a limited effort. They have a clear beginning (project funding) and end (system deployment and maintenance transition).
+                </p>
+                <p>
+                    In contrast, EA is a continuous journey for the enterprise in a search for a better tomorrow. So, what TOGAF does is to simply tie the last phase (H) of an ADM cycle to the first phase (A) of the next cycle. This way ADM becomes an iterative, repeatable, and continuous process for the enterprises to follow. As a consequence, the funding model and the engagement model for TOGAF (the EA group in the enterprise) must be apportioned accordingly.
+                </p>
+                <p>
+                    As another difference, in waterfall SDLC the requirement analysis phase is typically executed during the early part of the project life cycle. In contrast, TOGAF ADM has a Requirements Management part that always stays at the heart of the process. All ADM phases (A–H) are closely tied to this part. Focus and effort during all phases are derived from, and lead to, the core Requirements Management process
+                </p>
+                <p>
+                    There are also a few practical aspects that TOGAF ADM has to tackle. For instance, for most enterprises it is unrealistic to assume that the architectural initiative starts on a green field and that the ADM Phase A (Architecture Vision) will be the first step. The enterprises would typically have many ongoing or past initiatives that involve architectural development efforts.
+                </p>
+                <p>
+                    Moreover, architectural activities in the enterprise cannot follow a strictly linear, sequential, and step-by-step procedure the way that TOGAF ADM advocates. More likely, these activities take place in a random and chaotic manner. Sometimes they even happen parallel to each other, depending on the organizational, operational, or implementational priorities.
+                </p>
+                <p>
+                    TOGAF recognizes this situation and flexes its muscles to adapt to it, at least to some extent. First, it allows you to begin with any of the ADM phases in between. Furthermore, it is permitted to iterate over a part of the ADM cycle that can be logically demarcated, as indicated in Figure 4-4. ADM supports iterations in many ways, the two most important ones being:
+                </p>
+                <ul>
+                    <li>
+                        Iteration through the entire ADM cycle (phases A–H)
+                    </li>
+                    <li>
+                        Iteration through cycles covering one or more phases (architecture context iteration, architecture definition iteration, transition planning iteration, architecture governance iteration), as shown in Figure 4-4
+                    </li>
+                </ul>
+                <p>
+                    In addition, ADM can be custom-tailored with regard to the scope (width) and level of detail (depth) of work to be taken up in one iteration, to suit the given circumstances and constraints in your organization. In essence, although it appears at first sight to adhere to a strict waterfall pattern, TOGAF ADM is surprisingly flexible. It allows phases to be reorganized, reordered, combined, or performed partially, if that fits the need of the enterprise. It is also possible to jump back from any point to any other point within an iteration. The only constraint is that all intermediate steps between the two points must be carried out again.
+                </p>
+                <p>
+                    TOGAF, from version 9 onward, has a new module called ADM Guidelines and Techniques. It provides specific guidelines about the adaptation of the ADM process in your particular enterprise environment. It also offers certain techniques for formalizing your architecture development and management.
+                </p>
+                <p>
+                    To sum up, TOGAF ADM brings discipline to the architecture development process. It promotes a sense of consistency and repeatability while offering amazing flexibility. We have seen these qualities as being critical in practice when dealing with the management of any large-scale endeavor like EA. We will return to these aspects of TOGAF ADM in Chapter 7, “Towards Pragmatism: Lean and Agile EA.” As we will see there, TOGAF can be reconciled in a quite natural way with the flexibility of a lean and agile EA approach.
+                </p>
+            </section>
+            <section>
+                <header>
+                    <h4>TOGAF architecture content framework</h4>
+                </header>
+                <p>
+                    ADM provides a description of what needs to be done—the process to create an architecture. In contrast, the Architecture Content Framework, introduced in TOGAF 9, describes what it should look like in the end—the work product. The Content Framework offers a consistent and structured way to present architectural work products. It acts as a companion to ADM as it standardizes the inputs and outputs of ADM processes. There is a clear map from the content framework to the TOGAF ADM processes. In addition, it also makes it easy to reference and classify architectural work products. This way, it makes the complementary use of the Zachman Framework obsolete.
+                </p>
+                <p>
+                    The Content Framework is a significant addition to TOGAF 9. It provides a Content META Model (an information model for the actual architectural models and views) as well as a classification schema to categorize and organize your architectural work products.
+                </p>
+                <p>
+                    The Content META Model defines the elements that constitute the enterprise architecture. It further differentiates the elements as core (the ones that are mandatory for architectural description) and extensions (which may be used optionally). This gives room to adapt or extend your own content META model as the situation may demand. Figure 4-5 shows an overview of the entities in the framework; Figure 4-6 depicts the entity-relationship diagram for the Content META Model.
+                </p>
+                <p>
+                    The content framework uses three categories to describe a work product (i.e., the output or input of an architectural activity):
+                </p>
+                <ul>
+                    <li>
+                        Deliverables. These are the formal work products created by the projects and are contractually binding. Deliverables can contain many artifacts.
+                    </li>
+                    <li>
+                        Artifacts. Artifacts are fine-grained work products that describe architecture from a specific viewpoint. These include architectural requirements, use-case specifications, class diagrams, network diagrams, or any sort of architecture models. Artifacts are further classified into catalogues (lists of things), matrices (relationships and dependencies between things), and diagrams (visual depiction of things). The collection of all artifacts makes up your architecture repository.
+                    </li>
+                    <li>
+                        Building blocks. These are the packages of functionality defined to meet certain business needs, published through a standard interface and available for enterprise-wide consumption. They are interoperable, reusable, and replaceable across the organization. In a way, building blocks are nothing but the connotation of well-established architectural concepts such as services (as in SOA) and capabilities. Building blocks are further classified into architectural building blocks (ABB, the ones that are technology-aware) and solution building blocks (SBB, those that are product- or vendor-aware). The building blocks can be combined to deliver architectures and solutions.
+                    </li>
+                </ul>
+                <p>
+                    The work products, such as catalogues, matrices, and diagrams, are nothing but different viewpoints derived from the architectural elements in the META model. These viewpoints are shown in Figure 4-7.
+                </p>
+            </section>
+            <section>
+                <header>
+                    <h4>TOGAF architecture capability framework</h4>
+                </header>
+                <p>
+                    TOGAF ADM shows the way (the processes) to do EA, and the Content Framework defines the artifacts that EA should produce. Yet setting up an EA practice is difficult and expensive. It has to deal with a variety of organizational and operational intricacies. The TOGAF 9 Architecture Capability Framework attempts to address this need by providing a set of concepts—from institutions to rule sets and models—for a successful implementation of EA governance. The framework defines the following main concepts:
+                </p>
+                <ul>
+                    <li>
+                        <strong>Architecture board.</strong> The board governs the implementation of the IT strategy. It comprises stakeholders owning the review and maintenance of architecture at two levels. The first one is the global level (organization-wide), and the other is a local one (domain-specific). The board is responsible for reviewing and maintaining architecture with identifiable and stated accountability, and has decision-making authority. The cost for such an architecture board can be justified by preventing ad hoc and unconstrained IT implementations, which, if ignored, would essentially end up in high costs, high risks, lower quality, and difficulty in reuse and replication.
+                    </li>
+                    <li>
+                        <strong>Architecture contract.</strong> The contract is a joint agreement between implementation partners and sponsors regarding the deliverables in terms of quality and fit-for-purpose of the architecture chosen for the implementation. The contract helps to monitor architectural integrity, standards adherence, and risk avoidance in the solution implementation.
+                    </li>
+                    <li>
+                        <strong>Architecture compliance.</strong> The compliance of the solution implementation against the stated architecture contract is vetted through a formal compliance review and decision-making processes. The compliance of projects and implementations is evaluated by two key processes, a project impact assessment at the project start-up, and an architecture compliance review at each key milestone of the project life cycle. The compliance process assesses the adherence7 of a project implementation to the architecture contract or specification, to aid the “go/no-go” decisions for the project execution.
+                    </li>
+                    <li>
+                        <strong>Architecture Maturity Model.</strong> TOGAF 9 proposes an Architecture Maturity Model (ACMM) that tracks the progress and penetration of EA in the enterprise. It was originally developed by the US Department of Commerce. The ACMM is meant to assess the enterprise based on nine EA elements (EA capabilities)8 and then grades the enterprise on a scale of six EA maturity levels. The scorecard derived from a periodic EA maturity assessment process is to be reported to the sponsors and stakeholders of EA. We will discuss maturity models at a little more length in Chapter 5, “EA Maturity Models.”
+                    </li>
+                    <li>
+                        <strong>Architecture Skills Framework.</strong> Both enterprise architecture and enterprise architect are widely used but poorly defined terms in the industry. Moreover, an EA organization would typically need a variety of skills and many different roles. To address this need, TOGAF 9 proposes that the enterprise must set up an EA practice. This is a formal competency management initiative of skills development and certification by which an enterprise recognizes its architects. That is necessary in order to align the skills available in the enterprise with the architectural activities that the enterprise plans to do. In addition, The Open Group Certified Architect (Open CA) Program devised by The Open Group offers a yardstick to evaluate (and certify) an architect in terms of architectural skills and experience.
+                    </li>
+                </ul>
+                <p>
+                    The aspects of enterprise architecture management described in the Architecture Capability Framework are interwoven into TOGAF ADM processes as well. For instance, the ADM Phase G is all about Implementation Governance. Phase G includes Architecture Compliance review processes. Another example is that the Statement of Architecture Work created in ADM Phase A is essentially an architecture contract between the architecting organization and the EA sponsor. Likewise, assessment of EA maturity may be a key activity in the Preliminary Phase of ADM.
+                </p>
+            </section>
+        </article>
+        <article>
+            <header>
+                <h3>Gartner methodology (formerly META framework)</h3>
+            </header>
+            <p>
+                Suppose you are following a perfect diet. You also exercise regularly to keep yourself fit. But still you happen to feel that you are no longer healthy, energetic, enthusiastic, and at ease. What do you do? You will perhaps visit a doctor—a medical practitioner who knows about health matters and whom you would trust the most for her knowledge and expertise in that area. Depending on your income and the graveness of the problem, you will go and see the family doctor next door, or the expensive private specialist in the city.
+            </p>
+            <p>
+                Similarly, despite rigorous adaptation of a comprehensive framework such as TOGAF and significant investment in skill development, enterprises might not see any visible business impact from the effort that has gone into EA. “Are we doing the right things?” they might ask themselves. The benefits are far in the future at best, nonexistent at worst (or so it seems to the enterprises). What do the enterprises do then? They call a “doctor” with vast knowledge and experience. This expert on EA is supposed to be well acquainted with emerging industry trends and competitor initiatives in this field and hence might have better insight into state-of-the-art EA.
+            </p>
+            <p>
+                The established consulting companies (Gartner, Forrester, Accenture, Boston Consulting, Cap Gemini, Deloitte, HP, IBM, McKinsey & Company, and many others) provide such EA experts. Usually they bring their own proprietary approach. This book is not the place to provide a complete overview of all the consulting providers. Instead, we have picked Gartner as one of the more distinguished EA consulting companies and describe their EA framework as a showcase for the complete consulting market.
+            </p>
+            <p>
+                Gartner is one of the leading industry research firms in IT. It offers consulting services to corporate customers, especially for their strategic IT management. Enterprise architecture, being strategic in nature, is one of its core research areas. Although Gartner has been actively pursuing enterprise architecture for more than a decade, what it has to offer in this field today essentially stems from the META Group, a consulting firm that Gartner acquired in 2005. The META Group was the market leader by then and a competitor to Gartner.
+            </p>
+            <p>
+                Today one would go to Gartner (like any other consulting company) to seek professional advice on enterprise architecture because the firm is recognized as an expert in the field. Gartner helps enterprises embark on their enterprise architecture journey. It does not create enterprise architecture for its customers. Instead, Gartner consultants guide enterprises in setting up a process by which EA can emerge from their business strategy—in other words, Gartner helps to set up an EA practice. In Gartner’s view, enterprise architecture is a verb, not a noun; it is an ongoing process, not an artifact. Gartner defines enterprise architecture as follows (Allega, 2010):
+            </p>
+            <p>
+                <q>
+                    [...] the process of translating business vision and strategy into effective enterprise change by creating, communicating, and improving the key requirements, principles and models that describe the enterprise’s future state and enable its evolution. The scope of the EA includes the people, processes, information and technology of the enterprise, and their relationships to one another and to the external environment. Enterprise architects compose holistic solutions that address the business challenges of the enterprise and support the governance needed to implement them.
+                </q>
+            </p>
+            <p>
+                Gartner does not publish a formal framework or a process to do EA. Gartner analysts often quote: “Just enough enterprise architecture, just in time.” Questions such as what framework or methodology to follow, what taxonomy to use, or what standards to conform to are of least concern and perhaps irrelevant. Nonetheless, what makes Gartner a trusted advisor is perhaps its group of research analysts. The analysts group specializes in EA and operates in close collaboration within Gartner. It carries out applied research and establishes a common knowledge base on varied enterprise architecture topics. Over the years Gartner has been authoritative in analyzing emerging trends, observing adoption patterns, and recommending best practices to its customers in the EA area.
+            </p>
+            <p>
+                Gartner will approach enterprise architecture with a top-down approach that is highly tailor-made for the business context of its customers. It will further insist that the enterprise architecture must be driven by the enterprise’s top management and with a complete picture of the enterprise in mind. The prime focus for Gartner is always the CEO’s vision and priorities.
+            </p>
+            <p>
+                In Gartner’s view, enterprise architecture is about establishing a shared business vision and strategy for the enterprise. Gartner says that enterprise architecture starts with a vision as to where an organization is going and a strategy as to how to reach there. Any activity that does not address these questions is inconsequential for Gartner. Gartner will typically advise not for delve into the current state architecture for the enterprise. Where the enterprise is today is not important for deciding where it wants to reach in the future.
+            </p>
+            <p>
+                Gartner probably assumes that you can sell off all your old problematic IT stuff in a garage sale and purchase new IT things for a better tomorrow. The effort in enterprise architecture must be focused on strategic concerns rather than the nitty-gritty of today’s operational problems on the ground. They will vanish, or at least become irrelevant in the longer run, if you address them as part of the strategic concerns.
+            </p>
+            <p>
+                Gartner gives overarching importance to two things: establishing a shared vision and bringing all stakeholder groups behind the shared vision with clear, continuous, and consistent communication. To this end, Gartner will first look at the business context of the enterprise, beginning with the CEO’s priorities for the enterprise. It will then help the CEO and CIO to specify the vision for the target state, based on the CEO’s priorities. The contact will be at CxO level, and the dialogue will always be in business language. Gartner will articulate the CEO’s ideas into a common requirements vision (CRV) in such a way that all stakeholder groups will be able to understand exactly what it means for them. The CRV identifies and states the key changes needed to drive CEO vision in the enterprise.
+            </p>
+            <p>
+                Next, Gartner will start telling the story to stakeholders about where the enterprise is heading and what business drivers it is responding to. This will be a plain story without any prescribed documentation standards, acronyms, or techno-jargon. The only goal is to ensure that the stakeholders understand—and share—a common vision. The Gartner philosophy is as follows: If an organization has a single shared vision for the future and all stakeholders are behind that vision, the organization is already fully equipped to consider the ramifications of the vision into the business, technical, information, and solutions architectures for the enterprise.
+            </p>
+            <p>
+                The shared vision dictates changes in all these architectures, assigns priorities to those changes, and relates them to the business value. EA is about bringing together all the stakeholders: the business owners, the information specialists, and the technology implementers. If these three groups can be unified towards a shared vision that drives business value, enterprise architecture will be a success; otherwise, it will be doomed.
+            </p>
+            <p>
+                Based on the shared vision, the Gartner consultants review the business changes with the business sponsor, and the technical or information changes with the CIO or IT owners. At the same time, they make sure to bring everybody together as one team. The success metrics are always expressed in business terms, such as operational profitability, business growth, and customer satisfaction, so that everyone can understand that, too—clearly and precisely.
+            </p>
+            <p>
+                As the last step, Gartner will work with business owners to develop a target business architecture supporting the CEO vision. Subsequently, its consultants will work with the CIO to develop a target information architecture that realizes salient features outlined in the CRV and supports the new business architecture.
+            </p>
+            <p>
+                In essence, Gartner, as a strategist or as an advisor, offers thought leadership in the enterprise architecture arena. But to what extent that thought leadership travels from the CEO and CIO office down to the shop floors of business and IT is entirely contingent on the organizational leadership of the enterprise.
+            </p>
+        </article>
+        <article>
+            <header>
+                <h3>The role and use of EA frameworks</h3>
+            </header>
+            <p>
+                At Bank4Us, Dave Callaghan, the CIO, had asked one of the expensive, exclusive consulting companies to advise him on the appropriate EA strategy for his company. That was two years ago. As a result of this engagement, the EA team was reorganized and enlarged. In addition, Dave—in need of someone driving EA further—managed to entice the head consultant away from this company, and appointed him as head of the EA team. This is how Oscar Salgado, now the chief architect, joined Bank4Us.
+            </p>
+            <p>
+                Due to his background in management and strategy consulting, Oscar is a firm believer in corporate visions and full-scale EA frameworks that allow translating the board’s business maxims into practical action. Before he took over the EA team, the enterprise architects had not seriously used any formal methodology. Oscar introduced TOGAF, in combination with the Zachman framework, for classifying the architecture artifacts. He sent his architects to a one-week top-notch training, and stubbornly insisted on his team sticking to this new methodology.
+            </p>
+            <p>
+                Since then, Oscar has seen some benefits of adhering to the TOGAF framework. Undoubtedly, it has given the less capable architects within his team a sense of direction, like a railing protecting them from straying too far from the target. But he has also heard complaints from others—often the top performers in his team—that since the introduction of TOGAF the number of documents to be written has increased even more, and the target readership has less and less time to read them. Oscar Salgado is realist enough to recognize some truth in this.
+            </p>
+            <p>
+                Ian Miller, in charge of the Closer to Customer IT transformation and reporting to Oscar, was one of the early TOGAF adopters in the team. Ian is skeptical by nature, which makes him a bit wary of highflying methodologies in general. Being a well-known enterprise architect at Bank4Us, Ian is often asked for his opinion about using Zachman or TOGAF in his work. If he is honest, he does not have any shining success stories, and might even not see them in future. His main criticism is that it is difficult to show a step-by-step use of a framework in a real-life scenario.
+            </p>
+            <p>
+                But besides a skeptic, Ian is also a pragmatist. This is why he regards EA frameworks as a set of practices suggested by the experts and practitioners in this field. It is an orderly collection of codified common sense, best practices, and lessons learnt from the past experiences. For Ian, TOGAF is like a toolkit containing many tools and the techniques to use those tools. He has decided for himself that he will use only the tools that are fit for his purpose at hand. He uses them by having learned the right techniques to use them. For Ian, it is the same thing as when he is at home, building a bookshelf for his son. If he needs to use a screwdriver, he takes the screwdriver from this toolkit. If he does not need the hammer, he will not even take it out. Nevertheless, he has to know all tools in his box, so that he can use the appropriate one to do right things at the right time for the right purpose.
+            </p>
+            <p>
+                How can you apply Ian’s pragmatic toolbox approach to your own EA work? We will look at some new ways of doing this effectively in “Chapter 7 Making EA Pragmatic: Lean and Agile EA”. We will introduce the notion of Architecture Factory and introduce lean and agile ways of doing enterprise architecture. By innovatively incorporating the principles and practices from the Lean (as in manufacturing and software engineering) and the Agile methodology (as in software engineering) to the world of EA, we will sketch as to how a comprehensive EA framework like TOGAF can be leveraged in your own EA—selectively, flexibly, and pragmatically.
+            </p>
+        </article>
+    </section>
+</body>
+</html> 

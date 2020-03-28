@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INF4883 - Collaborative Enterprise Architecture - Chapter 2</title>
+</head>
+<body>
+    <header>
+        <h1>INF4883 - Assignment 1 - Research - Collaborative Enterprise Architecture - Chapter 2</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="../index.html">Back</a>
+            </li>
+            <li>
+                <a href="chapter_1.html">Chapter 1</a>
+            </li>
+            <li>
+                <a href="chapter_2.html">Chapter 2</a>
+            </li>
+            <li>
+                <a href="chapter_3.html">Chapter 3</a>
+            </li>
+            <li>
+                <a href="chapter_4.html">Chapter 4</a>
+            </li>
+        </ul>
+    </nav>
+    <section>
+        <header>
+            <h2>What Is Enterprise Architecture?</h2>
+        </header>
+        <p>
+            Enterprise architecture (EA) comes with a promise: simplify IT. The problem it is tackling here is about controlling the complexity and cost of IT while enabling the desired change and competitiveness for the business. The term enterprise architecture, in this context, appears to be self-explanatory: Apply architectural thinking to simplify the management of a complex enterprise IT landscape. There indeed are many experts who define EA along this line. Others take their own stance as to what EA means for their enterprises, given the business needs, the position of IT, and the political culture in their enterprises.
+        </p>
+        <p>
+            All these definitions are valid, since they provide a basis against which enterprises can scope and judge their own EA initiatives. Yet there is no consensus definition for EA today—even after 25 years of its existence. There are more fundamental truths about EA that cannot be encapsulated in a single definition. This chapter is our attempt to explore these truths.
+        </p>
+        <p>
+            We’ll first look at the basic meaning of the term architecture. Then we will analyze what the term means when it’s applied to describing or managing a complex system such as an enterprise.
+        </p>
+        <article>
+            <header>
+                <h3>The meaning of architecture</h3>
+            </header>
+            <p>
+                There is a widely used definition of architecture for software-intensive systems in the ANSI/IEEE standard 1471-2000 (IEEE Computer Society, 2000):
+            </p>
+            <p>
+                <q>
+                    The fundamental organization of a system, embodied in its components, their relationships to each other and the environment, and the principles governing its design and evolution.
+                </q>
+            </p>
+            <p>
+                Architecture is essentially meant to establish the structural foundation, behavioral characteristics, and principles that guide the creation, evolution, and operation of a system in the long run. In that way, architecture provides up-front knowledge about commonly accepted constraints and freedoms in the long-term design of the system and its constituent parts. It identifies:
+            </p>
+            <ul>
+                <li>
+                    What in the system forms a stable foundation and hence is hard to change later on
+                </li>
+                <li>
+                    What else can remain dynamic and flexible in the long run
+                </li>
+            </ul>
+            <p>
+                The architecture, or rather certain parts of the architecture documentation, is also meant to act as a basis to communicate the system knowledge to its stakeholders. The system stakeholders are the people who deal with creation, evolution, and operation of the system. There are many of them; for instance:
+            </p>
+            <ul>
+                <li>
+                    The owner who pays for it
+                </li>
+                <li>
+                    The strategist who conceptualizes it
+                </li>
+                <li>
+                    The planner who plans its creation
+                </li>
+                <li>
+                    The designer who designs it
+                </li>
+                <li>
+                    The implementer who builds it
+                </li>
+                <li>
+                    The subcontractor who provides constituent parts for it
+                </li>
+                <li>
+                    The field support staff who maintains or operates it in the field
+                </li>
+            </ul>
+            <p>
+                Each of these stakeholders looks at the system with her own viewpoint and cares only about her specific interests and concerns. For instance, the owner is interested in functional features and usage convenience, whereas the implementer mainly cares for technology environment, design specifications, and construction process. The stakeholders need to know about the system in the language they understand. The architecture serves this purpose by providing distinct views of the system, each view addressing the specific interest or concern of a specific stakeholder group. As a whole, the architecture may be used to view a broad outline or a detailed feature of the system, depending on who is looking at it and what is being looked at.
+            </p>
+            <aside>
+                <header>
+                    <h4>ARCHITECTURE</h4>
+                    <p>
+                        <strong>The Definition of Architecture</strong>
+                    </p>
+                </header>
+                <p>
+                    Architecture is the representation of the structure and behavior of a system and its constituent parts, plus a set of principles that guide the system’s long-term evolution.
+                </p>
+            </aside>
+            <p>
+                As the scale and complexity in a system grows, the need for proper planning in designing, building, and operating it becomes more and more important. Likewise, as stakeholder involvement in the system increases, the need for their shared understanding becomes crucial. Architectural thinking addresses these two key imperatives of managing complex systems. A small, simple, unilateral system, like the wooden birdhouse in Figure 2-1, does not require extensive architectural thinking, but larger and more complex structures do.
+            </p>
+            <p>
+                The following key characteristics of architectural thinking help us understand and manage a complex system:
+            </p>
+            <ul>
+                <li>
+                    <strong>Modeling.</strong> Modeling provides an abstraction of a complex system for the purpose of understanding it before building or changing it. Abstraction reveals a small amount of important things that can be dealt with at one time. This allows a selective examination of certain aspects of a system. Abstraction permits us to manage complexity and deal with essentials while ignoring inconsequential details.
+                </li>
+                <li>
+                    <strong>Visualization.</strong> Visualization is the depiction of the architecture model of a complex system, preferably using a formalized and precise notation. This serves the purpose of verifying that the model satisfies key requirements of the system. It also allows blocking out certain alternatives and making prerequisite decisions before creating or changing the actual system.
+                </li>
+                <li>
+                    <strong>Communication.</strong> The architecture models and viewpoints provide a mechanism via which to communicate knowledge about the system among system stakeholders, using a common vocabulary. The stakeholders can visualize the system in a way they can understand and act on. This enables them to mock up usage scenarios. Such scenarios imitate some or all of the external behaviors of the system in a consistent manner and in accordance with the interests and concerns of respective stakeholders.
+                </li>
+            </ul>
+            <p>
+                This generic notion of architecture is applicable in many engineering practices, especially traditional civil, mechanical, and electrical engineering disciplines. It fits well for building and construction of houses or manufacturing cars. It has also been generally accepted in the world of computers. Hardware architecture, network architecture, and software architecture are predominantly used to define IT systems. But enterprise architecture goes beyond IT systems and pure technology.
+            </p>
+        </article>
+        <article>
+            <header>
+                <h3>Applying architecture to an enterprise</h3>
+            </header>
+            <p>
+                March and Simon (1958) define enterprises as complex systems comprising individuals or groups that coordinate actions in pursuit of common goals. During the late 1980s, John Zachman (1987) applied the notion of architecture to represent the functioning of an enterprise, specifically within the context of the enterprise IT landscape and the business environment. Therefore, the primary scope for the term enterprise in this book is reduced to the enterprise IT landscape plus its relationship with the business environment.
+            </p>
+            <p>
+                Enterprise architecture (EA), then, is loosely defined as the architecture of a system where the system is the whole enterprise. Figure 2-2, using an analogy with city planning, illustrates the core concept behind EA.
+            </p>
+            <aside>
+                <header>
+                    <h4>ARCHITECTURE IN THE CONTEXT OF BUSINESS-IT MANAGEMENT IN AN ENTERPRISE</h4>
+                    <p>
+                        <strong>What Is Enterprise Architecture?</strong>
+                    </p>
+                </header>
+                <p>
+                    Enterprise architecture (EA) is the representation of the structure and behavior of an enterprise’s IT landscape in relation to its business environment. It reflects the current and future use of IT in the enterprise and provides a roadmap to reach a future state. EA offers:
+                </p>
+                <ul>
+                    <li>
+                        An insight into the current utilization of IT in business operations,
+                    </li>
+                    <li>
+                        A vision for the future utilization of IT in business operations, and
+                    </li>
+                    <li>
+                        A roadmap for the evolution of the IT landscape from the current state to a future state, along with the transient states in between.
+                    </li>
+                </ul>
+            </aside>
+            <p>
+                EA is documented using architecture artifacts such as model diagrams and principles. These are collectively referred to as the architecture blueprint.
+            </p>
+            <aside>
+                <header>
+                    <h4>ARCHITECTURE IN THE CONTEXT OF BUSINESS-IT MANAGEMENT IN AN ENTERPRISE</h4>
+                    <p>
+                        <strong>What Is Enterprise Architecture Management?</strong>
+                    </p>
+                </header>
+                <p>
+                    Enterprise architecture management (EAM) is a structured approach that an enterprise uses for creating, managing, and using enterprise architecture to align business and IT. EAM translates the enterprise vision into venture and takes the enterprise through the journey from its current state to the target state.
+                </p>
+                <p>
+                    In this book, we use the term EA as a synonym for both EA and EAM, since in practice the two concepts are inseparable.
+                </p>
+            </aside>
+            <p>
+                It must be noted that EA does not stand alone in its pursuit of managing the complexities of the enterprise IT landscape. Apart from pure EA, the role of an enterprise architect extends into the realms of other IT management practices as well, especially in strategic enterprise planning, IT investment management, IT project management, and IT infrastructure management.
+            </p>
+            <p>
+                Figure 2-3 shows that EA describes a clear line of sight from strategic goals through project investments to measurable business value and performance improvements—for the entire enterprise or for a part of the enterprise. EA helps organize and illuminate the relationships among the enterprise’s strategic goals, investments, business solutions, and measurable performance indicators.
+            </p>
+            <p>
+                EA is however just one link in a lattice of integrated IT practice areas. Other practice areas, such as strategic planning, investment management, project management, and infrastructure management, must be equally strong and fully integrated with the EA practice. Only through such integration can EA provide a stable foundation for sound IT management practices, end-to-end governance of IT investments, and alignment of IT implementation with the enterprise’s vision and strategic goals.
+            </p>
+            <p>
+                There is one more fundamental distinction of EA that should be noted here. In contrast to the traditional architecture practices, which primarily look at pure technical systems such as a bridge, a car, or a plane, EA deals with a socio-technical system. This difference is like the difference between a house and a home. A house is a mere structure that provides shelter; a home is a place where a family lives. The people element brings complex behavioral attributes into the functioning of an enterprise in the same way as it turns a house into a home. Hence, the term architecture does not literally apply to the enterprise in the same way as it has been traditionally applied to technical systems.
+            </p>
+            <p>
+                In this book, an enterprise is characterized as an organization of people who use (among other things) IT to do business. In that sense, enterprise architecture not only deals with technical aspects such as IT systems and infrastructure, but it also deals with social elements such as collaborative business processes, organizational leadership, political dynamics, and work culture in the enterprise. This fact carries great consequences for the way EA should be looked at and dealt with. We will elaborate this concept in greater detail in Chapter 6, in the section “Reflection on Complexity.”
+            </p>
+        </article>
+        <article>
+            <header>
+                <h3>EA applicability and use</h3>
+            </header>
+            <p>
+                Today most large and midsize organizations across all industry sectors embrace EA as an authoritative entity having its own budget, headcount, processes, and organizational structure. EA is specifically predominant in companies with a decentralized organization and a distributed operational environment, where an enterprise-wide shared vision and an integrated strategic plan are the key imperatives for business success.
+            </p>
+            <p>
+                The way in which EA is approached is, however, specific to the context and scope within which the enterprise operates. A bank operates in a different fashion than a car manufacturer. Within the financial services industry, a retail bank does not work like an investment bank. Even within a retail bank there may be major differences between regions or market segments. In each case, EA is approached differently, but it always has a common purpose and theme: EA enables an understanding of the structure and behavior of the enterprise business and IT from a holistic viewpoint. It also provides a strategic approach to evolving the enterprise IT landscape. In that way, EA can deal with the complexity of its environment and manage the change in the enterprise’s IT landscape and business environment.
+            </p>
+            <p>
+                EA can be applied to scopes other than the enterprise IT landscape alone. It has a valid use case in any of the following scenarios:
+            </p>
+            <ul>
+                <li>
+                    Managing the business operation and the IT landscape of large and midsize enterprises
+                </li>
+                <li>
+                    Managing business and IT for a sufficiently complex subdomain of an enterprise
+                </li>
+                <li>
+                    Managing large-scale, IT-enabled business transformations in the enterprise
+                </li>
+                <li>
+                    Managing the product life cycle of a software product company
+                </li>
+            </ul>
+            <p>
+                In many large companies, the term EA is applied to cases where the “enterprise” is not the entire company but just a sufficiently complex subdomain of the main enterprise. The business-IT ecosystem owned by a subdomain can already be complex enough to demand a dedicated EA focus for itself. Here are some examples:
+            </p>
+            <ul>
+                <li>
+                    A line of business for a large bank—for instance, the retail-banking division with a country-wide network of 5,000 branches in a distributed operating environment
+                </li>
+                <li>
+                    Customer services of a telecom operator with more than 300 CRM applications across four business lines
+                </li>
+                <li>
+                    The regional operating unit of a manufacturer in Europe
+                </li>
+                <li>
+                    A unified web portal platform of an insurance firm that supports three business lines and five regional segments
+                </li>
+            </ul>
+            <p>
+                To elaborate further, let’s consider a global car manufacturing enterprise. The complexity of its information systems is enormous, ranging from human resources applications over marketing and finance up to supply chain management and computer-aided manufacturing systems. This complexity results from the multitude of business functions and operations at a global scale. Moreover, the enterprise typically is a merger of several companies producing different brands. This implies a great deal of diversity in business strategies, principles, and goals among different sub-domains of the enterprise.
+            </p>
+            <p>
+                Furthermore, the business is distributed all over the world and has to comply with the legal, cultural, and business stipulations in each country. Recently, many enterprises with distributed business operations and decentralized organizations have tried to leverage synergies across their business units, market segments, or geographic regions. These enterprises have engaged in large-scale, cross-organizational, IT-enabled business transformation initiatives. IT is placed at the core of business success by such initiatives. Their promise is to deliver tangible business benefits in terms of cost reduction, operational excellence, customer satisfaction, or product innovation. Such programs involve harmonization of significant parts of the business processes in different business units and system integration across data centers. Even if the scope is not the whole enterprise, EA is still required in such initiatives, since we need to instill a shared vision and a structured approach while managing the complexity involved.
+            </p>
+            <p>
+                Let’s conclude by looking at software vendors such as Oracle, IBM, or Microsoft. From their perspective, EA usually does not involve dealing with their own supporting IT infrastructure but with the envisioning, roadmap creation, and release planning of their software products and platforms. EA in this context is employed to strategically manage the roadmaps and release plans for vendors’ software products and platforms.
+            </p>
+            <p>
+                EA has a role to play whenever one plans to do anything that spans many applications, projects, business units, geographical regions, or market segments. It comprises methodology and taxonomy to deal with certain problems and demands in the strategic management of business and IT. In the next chapter, we will take a closer look at how an enterprise architect uses these tools to fulfill her mission.
+            </p>
+        </article>
+    </section>
+</body>
+</html>
