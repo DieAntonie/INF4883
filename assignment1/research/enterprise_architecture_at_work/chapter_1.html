@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INF4883 - Enterprise Architecture at Work - Chapter 1</title>
+</head>
+<body>
+    <header>
+        <h1>INF4883 - Assignment 1 - Research - Enterprise Architecture at Work - Chapter 1</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="../index.html">Back</a>
+            </li>
+            <li>
+                <a href="chapter_1.html">Chapter 1</a>
+            </li>
+            <li>
+                <a href="chapter_2.html">Chapter 2</a>
+            </li>
+            <li>
+                <a href="chapter_3.html">Chapter 3</a>
+            </li>
+            <li>
+                <a href="chapter_4.html">Chapter 4</a>
+            </li>
+        </ul>
+    </nav>
+    <section>
+        <header>
+            <h2>Introduction to Enterprise Architecture</h2>
+        </header>
+        <article>
+            <header>
+                <h3>1.1 Architecture</h3>
+            </header>
+            <p>
+                It is often said that to manage the complexity of any large organisation or system, you need architecture. But what exactly does ‘architecture’ mean? Of course, we have long known this notion from building and construction. Suppose you contract an architect to design your house. You discuss how rooms, staircases, windows, bathrooms, balconies, doors, a roof, etc., will be put together. You agree on a master plan, on the basis of which the architect will produce detailed specifications, to be used by the engineers and builders.
+            </p>
+            <p>
+                How is it that you can communicate so efficiently about that master plan? We think it is because you share a common frame of reference: you both know what a ‘room’ is, a ‘balcony’, a ‘staircase’, etc. You know their function and their relation. A ‘room’, for example, serves as a shelter and is connected to another ‘room’ via a ‘door’. You both use, mentally, an architectural model of a house. This model defines its major functions and how they are structured. It provides an abstract design, ignoring many details. These details, like the number of rooms, dimensions, materials to be used, and colours, will be filled in later.
+            </p>
+            <p>
+                A similar frame of reference is needed in designing an enterprise. To create an overview of the structure of an organisation, its business processes, their application support, and the technical infrastructure, you need to express the different aspects and domains, and their relations.
+            </p>
+            <p>
+                But what is ‘architecture’ exactly? Even in building and construction, the term is not without ambiguity. It can signify the art and science of designing the built environment, or the product of such a design. Thus, the term architecture can encompass both the blueprint for a building and the general underlying principles such as its style, as in ‘gothic architecture’. There are different schools of thought on this. Some say we should reserve the term ‘architecture’ in the context of IT solely for such principles and constraints on the design space, as e.g. Dietz argues (2006), who uses the term ‘enterprise ontology’ for the actual designs. In this book, we will use the ISO/IEC/IEEE FDIS 42010:2011 standard (ISO/IEC/IEEE 2011) definition of architecture:
+            </p>
+            <aside>
+                <p>
+                    <strong>Architecture:</strong> fundamental concepts or properties of a system in its environment, embodied in its elements, relationships, and in the principles of its design and evolution.
+                </p>
+            </aside>
+            <p>
+                This definition accommodates both the blueprint and the general principles. More succinctly, we could define architecture as ‘structure with a vision’. An architecture provides an integrated view of the system being designed or studied.
+            </p>
+            <p>
+                As well as the definition of architecture, we will use two other important notions from the IEEE standard. First, a ‘stakeholder’ is defined as follows:
+            </p>
+            <aside>
+                <p>
+                    <strong>Stakeholder:</strong> an individual, team, or organisation (or classes thereof) with interests in, or concerns relative to, a system.
+                </p>
+            </aside>
+            <p>
+                Most stakeholders of a system are probably not interested in its architecture, but only in the impact of this on their concerns. However, an architect needs to be aware of these concerns and discuss them with the stakeholders, and thus should be able to explain the architecture to all stakeholders involved, who will often have completely different backgrounds.
+            </p>
+        </article>
+        <article>
+            <header>
+                <h3>1.2 Enterprise Architecture</h3>
+            </header>
+            <p>
+                More and more, the notion of architecture is applied with a broader scope than just in the technical and IT domains. The emerging discipline of Enterprise Engineering views enterprises as a whole as purposefully designed systems that can be adapted and redesigned in a systematic and controlled way. An ‘enterprise’ in this context can be defined as follows (The Open Group 2011):
+            </p>
+            <aside>
+                <p>
+                    <strong>Enterprise:</strong> any collection of organisations that has a common set of goals and/or a single bottom line.
+                </p>
+            </aside>
+            <p>
+                Architecture at the level of an entire organisation is commonly referred to as ‘enterprise architecture’. This leads us to the definition of enterprise architecture:
+            </p>
+            <aside>
+                <p>
+                    <strong>Enterprise architecture:</strong> a coherent whole of principles, methods, and models that are used in the design and realisation of an enterprise’s organisational structure, business processes, information systems, and infrastructure.
+                </p>
+            </aside>
+            <p>
+                Enterprise architecture captures the essentials of the business, IT and its evolution. The idea is that the essentials are much more stable than the specific solutions that are found for the problems currently at hand. Architecture is therefore helpful in guarding the essentials of the business, while still allowing for maximal flexibility and adaptivity. Without good architecture, it is difficult to achieve business success.
+            </p>
+            <p>
+                The most important characteristic of an enterprise architecture is that it provides a holistic view of the enterprise. Within individual domains local optimisation will take place, and from a reductionist point of view, the architectures within this domain may be optimal. However, this need not lead to a desired situation for the company as a whole. For example, a highly optimised technical infrastructure that offers great performance at low cost might turn out to be too rigid and inflexible if it needs to support highly agile and rapidly changing business processes. A good enterprise architecture provides the insight needed to balance these requirements and facilitates the translation from corporate strategy to daily operations.
+            </p>
+            <p>
+                To achieve this quality in enterprise architecture, bringing together information from formerly unrelated domains necessitates an approach that is understood by all those involved from these different domains. In contrast to building architecture, which has a history over millennia in which a common language and culture has been established, such a shared frame of reference is still lacking in business and IT. In current practice, architecture descriptions are heterogeneous in nature: each domain has its own description techniques, either textual or graphical, either informal or with a precise meaning. Different fields speak their own languages, draw their own models, and use their own techniques and tools. Communication and decision making across these domains is seriously impaired.
+            </p>
+            <p>
+                What is part of the enterprise architecture, and what is only an implementation within that architecture, is a matter of what the business defines to be the architecture, and what not. The architecture marks the separation between what should not be tampered with and what can be filled in more freely. This places a high demand for quality on the architecture. Quality means that the architecture actually helps in achieving essential business objectives. In constructing and maintaining an architecture, choices should therefore be related to the business objectives, i.e., they should be rational.
+            </p>
+            <p>
+                Even though an architecture captures the relatively stable parts of business and technology, any architecture will need to accommodate and facilitate change, and architecture products will therefore only have a temporary status. Architectures change because the environment changes and new technological opportunities arise, and because of new insights as to what is essential to the business. To ensure that these essentials are discussed, a good architecture clearly shows the relation of the architectural decisions to the business objectives of the enterprise.
+            </p>
+            <p>
+                To create an integrated perspective of an enterprise, we need techniques for describing architectures in a coherent way and communicating these with all relevant stakeholders. Different types of stakeholders will have their own viewpoints on the architecture. Furthermore, architectures are subject to change, and methods to analyse the effects of these changes are necessary in planning future developments. Often, an enterprise architect has to rely on existing methods and techniques from disparate domains, without being able to create the ‘big picture’ that puts these domains together. This requires an integrated set of methods and techniques for the specification, analysis, and communication of enterprise architectures that fulfils the needs of the different types of stakeholders involved. In this book, we will introduce such an approach. Architecture models, views, presentations, and analyses all help to bridge the ‘communication gap’ between architects and stakeholders (Fig. 1.1).
+            </p>
+            <p>
+                Of course, architects play a central role in this process. In this book, we will not go deeper into the various competencies and skills they need, but we refer the reader to Wieringa et al. (2008) and Op ’t Land et al. (2008, Chap. 6) for more on this subject.
+            </p>
+        </article>
+        <article>
+            <header>
+                <h3>1.3 The Architecture Process</h3>
+            </header>
+            <p>
+                Architecture is a process as well as a product. The product serves to guide managers in designing business processes and system developers in building applications in a way that is in line with business objectives and policies. The effects of the process reach further than the mere creation of the architecture product—the awareness of stakeholders with respect to business objectives and information flow will be raised. Also, once the architecture is created, it needs to be maintained. Businesses and IT are continually changing. This constant evolution is, ideally, a rational process. Change should only be initiated when people in power see an opportunity to strengthen business objectives.
+            </p>
+            <p>
+                The architecture process consists of the usual steps that take an initial idea through design and implementation phases to an operational system, and finally changing or replacing this system, closing the loop. In all of the phases of the architecture process, clear communication with and between stakeholders is indispensable. The architecture descriptions undergo a life cycle that corresponds to this design process (Fig. 1.2). The different architecture products in this life cycle are discussed with stakeholders, approved, revised, etc., and play a central role in establishing a common frame of reference for all those involved.
+            </p>
+        </article>
+        <article>
+            <header>
+                <h3>1.4 Drivers for Enterprise Architecture</h3>
+            </header>
+            <p>
+                It need not be stressed that any organisation benefits from having a clear understanding of its structure, products, operations, technology, and the web of relations tying these together and connecting the organisation to its surroundings. Furthermore, there are external pressures to take into account, both from customers, suppliers, and other business partners, and from regulatory bodies. Especially if a company becomes larger and more complicated, good architectural practice becomes indispensable. Here, we briefly outline the most important and commonly recognised internal and external drivers for establishing an enterprise architecture.
+            </p>
+            <section>
+                <header>
+                    <h4>1.4.1 Internal Drivers</h4>
+                </header>
+                <p>
+                    Business–IT alignment is commonly recognised as an important instrument to realise organisational effectiveness. Such effectiveness is not obtained by local optimisations, but is realised by well-orchestrated interaction of organisational components (Nadler et al. 1992). Effectiveness is driven by the relationships between components rather than by the detailed specification of each individual component. A vast amount of literature has been written on the topic of alignment,underlining the significance of both ‘soft’ and ‘hard’ components of an organisation.
+                </p>
+                <p>
+                    Parker and Benson (1989) were forerunners in using the term ‘alignment’ in this context and emphasising the role of architecture in strategic planning. The wellknown strategic alignment model of Henderson and Venkatraman (1993) distinguishes between the aspects of business strategy and organisational infrastructure on the one hand and IT strategy and IT infrastructure on the other hand (Fig. 1.3). The model provides four dominant perspectives that are used to tackle the alignment between these aspects. One can take the business strategy of an enterprise as the starting point, and derive its IT infrastructure either via an IT strategy or through the organisational infrastructure; conversely, one can focus on IT as an enabler and start from the IT strategy, deriving the organisational infrastructure via a business strategy or based on the IT infrastructure. In any of these perspectives, an enterprise architecture can be a valuable help in executing the business or IT strategy.
+                </p>
+                <p>
+                    Nadler et al. (1992) identify four relevant alignment components: work, people, the formal organisation and the informal organisation. Labovitz and Rosansky (1997) emphasise the horizontal and vertical alignment dimensions of an organisation. Vertical alignment describes the relation between the top strategy and the people at the bottom, whereas horizontal alignment describes the relation between internal processes and external customers. Obviously, the world of business–IT alignment is as diverse as it is complex. In coping with this complexity, enterprise architecture is of valuable assistance.
+                </p>
+                <p>
+                    In Fig. 1.4, enterprise architecture is positioned within the context of managing the enterprise. At the top of this pyramid, we see the mission of the enterprise: why does it exist? The vision states its ‘image of the future’ and the values the enterprise holds. Next there is its strategy, which states the route the enterprise will take in achieving this mission and vision. This is translated into concrete goals that give direction and provide the milestones in executing the strategy. Translating those goals into concrete changes to the daily operations of the company is where enterprise architecture comes into play. It offers a holistic perspective of the current and future operations, and on the actions that should be taken to achieve the company’s goals.
+                </p>
+                <p>
+                    Next to its architecture, which could be viewed as the ‘hard’ part of the company, the ‘soft’ part, its culture, is formed by its people and leadership, and is of equal if not higher importance in achieving these goals. Finally, of course, we see the enterprise’s daily operations, which are governed by the pyramid of Fig. 1.4.
+                </p>
+                <p>
+                    To some it may seem that architecture is something static, confining everything within its rules and boundaries, and hampering innovation. This is a misconception. A well-defined architecture is an important asset in positioning new developments within the context of the existing processes, IT systems, and other assets of an organisation, and it helps in identifying necessary changes. Thus, good architectural practice helps a company innovate and change by providing both stability and flexibility. The insights provided by an enterprise architecture are needed on the one hand in determining the needs and priorities for change from a business perspective, and on the other hand in assessing how the company may benefit from technological and business innovations.
+                </p>
+                <p>
+                    Moreover, architecture is a strategic instrument in guiding an organisation through a planned course of development. As Ross et al. (2006) show with numerous case studies, successful enterprises employ an ‘operating model’ with clear choices on the levels of integration and standardisation of business processes across the enterprise (Fig. 1.5). This operating model should fit both their area of business and their stage of development.
+                </p>
+                <p>
+                    Ross et al. explain the role of enterprise architecture as the organising logic for business processes and IT infrastructure, which must reflect the integration and standardisation requirements of the operating model. They also describe the ‘engagement model’, i.e., the governance needed to ensure that business and IT projects meet local and corporate objectives and conform to the enterprise architecture.
+                </p>
+                <p>
+                    Finally, in an increasingly networked world, no enterprise can focus solely on its own operations. To get to grips with the wealth of interconnections with customers, suppliers, and other partners, an enterprise architecture is a valuable asset. A prominent example of this is outsourcing part of a company’s business processes and/or IT operations. For any sourcing project to be successful, it is paramount to have a clear insight into precisely what the activities and responsibilities are of all the partners involved, and what the services and interfaces between these partners are.
+                </p>
+            </section>
+            <section>
+                <header>
+                    <h4>1.4.2 External Drivers</h4>
+                </header>
+                <p>
+                    Next to the internal drive to execute effectively an organisation’s strategy and optimise its operations, there are also external pressures that push organisations towards adopting enterprise architecture practice. The regulatory framework increasingly demands that companies and governmental institutions can prove that they have a clear insight into their operations and that they comply with the applicable laws on, say, financial transactions.
+                </p>
+                <p>
+                    In the USA, the Clinger–Cohen Act (1996), also known as the Information Technology Management Reform Act, demands that every government agency must have an IT architecture, which is defined as: ‘an integrated framework for evolving or maintaining existing information technology and acquiring new information technology to achieve the agency’s strategic goals and information resources management goals’. Section 5125 (b) of the Act assigns the Agency Chief Information Officer (CIO) the responsibility of ‘developing, maintaining, and facilitating the implementation of a sound and integrated information technology architecture.’ The US Department of Defense even requires all IT to comply with this Act, including that in weapons and weapons system programmes.
+                </p>
+                <p>
+                    The Clinger–Cohen Act has been an important stimulus for the development of enterprise architecture as a discipline, not just in a government context, but in general. Although most European governments do not impose such strict requirements on their agencies, these architecture practices are making inroads in Europe as well.
+                </p>
+                <p>
+                    The capital adequacy framework known as Basel II (2004), endorsed in 2004 by the central bank governors and the heads of bank supervisory authorities in the Group of Ten (G10) countries, puts requirements on banking organisations with respect to their financial risk management, to promote stability in the financial world. The Basel II framework imposes strict regulations on banks in terms of risk measurement and management, with wide-ranging implications for both their organisations and their IT systems. The framework provides explicit incentives in the form of lower capital requirements for banks to adopt more comprehensive and accurate measures of risk as well as more effective processes for controlling their exposures to risk. This encompasses both credit risk and operational risk, the latter being defined as the risk of loss resulting from inadequate or failed internal processes, people and systems or from external events. Given this wide scope and the detailed requirements on risk management, compliance with Basel II can hardly be envisaged without a sound architectural approach.
+                </p>
+                <p>
+                    Another US act, the Sarbanes–Oxley Act (2002), also has a major impact. This act, formally known as the Public Company Accounting Reform and Investor Protection Act, was drawn up in the aftermath of the Enron scandal, to force companies to adopt good corporate governance practices and to make company executives personally accountable. These accountability regulations make it very important for a company that it is clear what the responsibilities of each employee are. IT systems must provide the necessary accounting information to be able to perform the audits required by the Act, and should enforce their users to have appropriate authorisation. Again, enterprise architecture may be of assistance in providing the necessary insight, and many companies are improving their architecture practice to conform to these regulations. And given that this Act applies to all companies that have their stocks quoted on the US stock exchanges, it has a worldwide impact.
+                </p>
+            </section>
+        </article>
+        <article>
+            <header>
+                <h3>1.5 Summary</h3>
+            </header>
+            <p>
+                Architecture is the art and science of designing complex structures. Enterprise architecture, more specifically, is defined as a coherent whole of principles, methods, and models that are used in the design and realisation of an enterprise’s organisational structure, business processes, information systems, and infrastructure. Architecture models, views, presentations, and analyses all help to bridge the ‘communication gap’ between architects and stakeholders.
+            </p>
+            <p>
+                Architecture is an indispensable instrument in controlling the complexity of the enterprise and its processes and systems. On the one hand, we see internal drivers for using an architectural approach, related to the strategy execution of an organisation. Better alignment between business and IT leads to lower cost, higher quality, better time-to-market, and greater customer satisfaction. On the other hand, external drivers from regulatory authorities and other pressures necessitate companies to have a thorough insight into their structure and operations. All of these drivers make a clear case for the use of enterprise architecture.
+            </p>
+        </article>
+    </section>
+</body>
+</html>
