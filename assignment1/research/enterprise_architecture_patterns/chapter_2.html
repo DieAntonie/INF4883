@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INF4883 - Enterprise Architecture Patterns - Chapter 2</title>
+</head>
+<body>
+    <header>
+        <h1>INF4883 - Assignment 1 - Research - Enterprise Architecture Patterns - Chapter 2</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="../index.html">Back</a>
+            </li>
+            <li>
+                <a href="chapter_2.html">Chapter 2</a>
+            </li>
+        </ul>
+    </nav>
+    <section>
+        <header>
+            <h2>Theory</h2>
+            <blockquote>
+                My theory is to enjoy life, but the practice is against it.
+            </blockquote>- Charles Lamb
+        </header>
+        <p>
+            <strong>Abstract.</strong> An enterprise architecture pattern (EAP) is based on the concepts and ideas of Architecture Enterprise frameworks such as TOGAF, NAF, or Zachman. We first give a short description of Enterprise Architecture, followed by the main concepts conveyed by the frameworks, such as views and viewpoints, architectural domains, architecture bricks, etc. This is followed by a list of stakeholders who might use the patterns in this book. We then explain in detail what an EAP is, define the graphical notations of the different views, and describe the structure of an EAP.
+        </p>
+        <article>
+            <header>
+                <h3>2.1 Enterprise Architecture: Explain It to Your Girlfriend</h3>
+            </header>
+            <p>
+                A number of books and articles have been written on Enterprise Architecture. We do not try to write a new one, or present a revolutionary way of defining it. Yet, we do need to write a few words on Enterprise Architecture, as it is the vessel on which we transport our concept of patterns. In the following sections we give a brief overview of the concepts behind Enterprise Architecture. You may find more in-depth information in the reference list at the end of this chapter.
+            </p>
+            <p>
+                If you had to explain the rather abstract discipline of «Enterprise Architecture» to a friend or relative, who is not in the Information Technology business, you certainly would try to make an analogy with something that the person could know from his or her own experience: «Planning and overview the building of a house», «Urban planning and sustainability» or «Draw plans for different craftsmen» would be common approaches to try to explain this topic. After your expert talk, your discussion partner will certainly have one understanding: Architecture, be it in the house construction business or in information technology, is a planning discipline, involving many different people with different skills. The architect is expected to overview, coordinate the different craftsmanship, and address the requirements of all the people involved through adequate views of the building (or information system) to be built or renovated. He will have to translate the requirements of the sponsor into a feasible architecture, present options depending on costs and budget, and measure the progress of the as-is architecture in relation to the to-be architecture. As in real architecture, the Enterprise Architecture is not «l’art pour l’art» – you do not do it just because of the beauty of it, but to align your Information Technology investments with the business needs and strategies. This is the main goal. In addition to this, one of the agreeable by-products of an Enterprise Architecture initiative is to order things, make classification, to clarify terms, and to introduce a sustainable way to document your business processes, the application landscape, and the underlying infrastructure. Every architect adheres to a more or less rigorous methodology to document his doing. This ensures transparency, traceability, and minimizes the risks of wrong decisions by using wellproven techniques and documentation standards.
+            </p>
+            <p>
+                There is no scientific definition of Enterprise Architecture, but a lot of smart people have thought about it and have formulated their understanding in books, articles, forums, blogs, and conferences in the last few years (Perks and Beveridge 2003; Wikipedia EA 2011; NIH 2008; Lankhorst 2005). In the context of this book we use the definitions related to the vast field of Enterprise Architecture as given by TOGAF (2009). In order to facilitate the understanding of the EAP in this book, the following definitions will be of help to the reader:
+            </p>
+            <ul>
+                <li>
+                    <strong>Enterprise:</strong> The highest level (typically) of description of an organization that typically covers all missions and functions. An enterprise will often span multiple organizations.
+                </li>
+                <li>
+                    <strong>Architecture:</strong>
+                    <ol>
+                        <li>
+                            A formal description of a system, or a detailed plan of the system at component level, to guide its implementation (ISO/IEC 42010 2007).
+                        </li>
+                        <li>
+                            The structure of components, their interrelationships, and the principles and guidelines governing their design and evolution over time.
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <strong>Architecture Framework:</strong> A conceptual structure used to develop, implement, and sustain an architecture.
+                </li>
+                <li>
+                    <strong>Architecture Domain:</strong> The architectural area being considered. There are four architecture domains within TOGAF: business, data, application, and technology.
+                </li>
+                <li>
+                    <strong>Patterns:</strong> A technique for putting building blocks into context; for example, to describe a reusable solution to a problem. Building blocks are what you use: patterns can tell you how you use them, when, why, and what tradeoffs you have to make in doing so.
+                </li>
+            </ul>
+            <p>
+                In this book, we deal with a simplification of the real world to address the concerns of different stakeholders. We therefore use the following definitions as well:
+            </p>
+            <ul>
+                <li>
+                    <strong>Model:</strong> A representation of a subject of interest. A model provides a smaller scale, simplified, and/or abstract representation of the subject matter. A model is constructed as a «means to an end». In the context of Enterprise Architecture, the subject matter is the entire enterprise or a part of it and the end is the ability to construct «views» that address the concerns of particular stakeholders; i.e., their «viewpoints» in relation to the subject matter.
+                </li>
+                <li>
+                    <strong>View:</strong> The representation of a related set of concerns. A view is what is seen from a viewpoint. An architecture view may be represented by a model to demonstrate to stakeholders their areas of interest in the architecture. A view does not have to be visual or graphical in nature.
+                </li>
+                <li>
+                    <strong>Viewpoint:</strong> A definition of the perspective from which a view is taken. It is a specification of the conventions for constructing and using a view (often by means of an appropriate schema or template). A view is what you see; a viewpoint is where you are looking from – the vantage point or perspective that determines what you see.
+                </li>
+            </ul>
+            <p>
+                As most of these kinds of disciplines have roots in a very technological environment (e.g., information technology), the Enterprise Architecture has gained maturity by taking more and more the views and viewpoints of the business and its strategies.1 Nowadays, every definition of Enterprise Architecture encompasses all the levels, beginning at the business architecture down to the technology. This understanding of Enterprise Architecture can also be observed in how the role of the «Enterprise Architecture» identified by the Gartner Group (Pettey and Stevens 2009), the 4th states:
+            </p>
+            <p>
+                <blockquote>
+                    «Doing Only Technical Domain-Level Architecture: This dated EA approach is still in use in some organizations and is even narrower in scope than technical architecture. Holistic EA best practice is much broader as it includes business, information, and solutions architecture.»
+                </blockquote>
+            </p>
+            <p>
+                Enterprise Architecture acts like a master plan for the whole enterprise; it takes into account the business strategy, goals, vision and principles, aspects of business operations, automation of processes, data processing, and the necessary technological infrastructure. Moreover, the Enterprise Architecture enables the communication among the different stakeholders and promotes a common glossary.
+            </p>
+            <section>
+                <header>
+                    <h4>Why Do We Need an Enterprise Architecture?</h4>
+                </header>
+                <p>
+                    An Enterprise Architecture fulfills primarily one goal: Aligning the IT-related activities with the goals of the enterprise. This encompasses all investments, the management of the resources (hardware, software, facilities, people) in the different architecture layers, the strategic planning of the evolution of the overall Enterprise Architecture, and of course an up-to-date of the actual situation. With a consistent and well-managed EA the enterprise will be able to minimize the risks of wrong investments, to contribute to the value delivery according to business goals, and to react more flexibly to changes in the business environment and derived requirements.
+                </p>
+                <p>
+                    To achieve this, the Enterprise Architecture delivers artifacts that help to manage the complexity of all architecture layers in the form of models, blueprints, policies, a glossary, and principles to adhere to. The principles are the cornerstone of every Enterprise Architecture: They are high-level statements with a direct link to an IT strategy and business goals, and are motivated by a rationale and the implications that ensue when applying. Last but not least an EA principle enables the enterprise to measure how well the goals of the IT strategy are being reached and thus contribute to the overall performance management.
+                </p>
+            </section>
+            <section>
+                <header>
+                    <h4>Layers of an Enterprise Architecture</h4>
+                </header>
+                <p>
+                    To cope with the complexity of the relations between all the elements of an Enterprise Architecture and the different views and viewpoints of the stakeholders to address, it is common to use a layering scheme (Fig. 2.1).
+                </p>
+                <p>
+                    As stated in the definition given by The Opengroup for the term «Architecture Domains» the layering in (TOGAF) is done as follows:
+                </p>
+                <ul>
+                    <li>
+                        <p>
+                            <strong>Business Architecture:</strong> As TOGAF states:
+                        </p>
+                        <p>
+                            <blockquote>
+                                «In summary, the Business Architecture describes the product and/or service strategy, and the organizational, functional, process, information, and geographic aspects of the business environment.»
+                            </blockquote>
+                        </p>
+                        <p>
+                            This architecture is extremely important, as all the other architectures rely on it. The exact extent to which business-related activities to define this layer will effectively be driven and managed by an Enterprise Architecture program depends on the business environment. For example, in our environment the Enterprise Architecture team had the lead for the definition of an information model and business glossary, but not for the business process architecture itself.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <strong>Data Architecture:</strong> This architecture deals with all necessary aspects of data management, how applications, services, and business functions utilize enterprise data, how the relationship among data objects are to be modeled, how the transformation of data is to be done, etc. TOGAF provides the following definition:
+                        </p>
+                        <p>
+                            <blockquote>
+                                «A description of the structure and interaction of the enterprise’s major types and sources of data, logical data assets, physical data assets, and data management resources.»
+                            </blockquote>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <strong>Application Architecture:</strong> This layer provides all necessary information for the management of the application landscape, how business functions will be realized in terms of applications. The TOGAF definition is as follows:
+                        </p>
+                        <p>
+                            <blockquote>
+                                «A description of the structure and interaction of the applications as groups of capabilities that provide key business functions and manage the data assets.»
+                            </blockquote>
+                        </p>
+                    </li>
+                    <p>
+                        TOGAF uses the term «Information Systems Architecture» in its Architecture Development Method (ADM), meaning the combination of the Data Architecture and the Application Architecture, as these two are strongly interrelated.
+                    </p>
+                    <li>
+                        <p>
+                            <strong>Technology Architecture:</strong> The effective realization of the above-mentioned architecture layers are done in the technology. TOGAF provides the following definition:
+                        </p>
+                        <p>
+                            <blockquote>
+                                «A description of the structure and interaction of the platform services, and logical and physical technology components.»
+                            </blockquote>
+                        </p>
+                    </li>
+                </ul>
+                <p>
+                    Depending on the framework you will use for structuring the Enterprise Architecture, different layers may be used (e.g., information layer that contains the business view on data objects, a process layer, an organizational layer, or a solution layer, etc.).
+                </p>
+            </section>
+            <section>
+                <header>
+                    <h4>Processes Involved in Enterprise Architecture Management</h4>
+                </header>
+                <p>
+                    The processes needed to sustain and deliver a consistent Enterprise Architecture are all part of an overall (IT) Governance process framework. They all make a contribution to the strategic alignment of the enterprise, the value delivery, the risk management, the resource management, and the performance management as stated for example by CGEIT (2012). Processes for the Enterprise Architecture Management (EAM) have been described in different publications (Keller 2007; Dern 2006; TOGAF 2009), but there is no common understanding on this subject. Keller (2007) proposes the following processes:
+                </p>
+                <ul>
+                    <li>
+                        <strong>Strategy and Planning:</strong> Deriving the IT strategy from the business strategy, managing the application landscape including the as-is and the to-be architectures.
+                    </li>
+                    <li>
+                        <strong>Modeling and Policies:</strong> Definition of the modeling of the different architecture layers and development, enforcement of architecture standards and policies.
+                    </li>
+                    <li>
+                        <strong>Implementation of the Planning:</strong> Monitoring of the project portfolio, steering of projects concerning the architecture aspects.
+                    </li>
+                </ul>
+                <p>
+                    All these processes have one critical success factor in common: It is absolutely mandatory that the top management gives its commitment and support. From our own experience we can testify that you may not have the full necessary support from the beginning, but with the right attitude, enough stamina, seizing the favorable opportunities for your cause and doing a good job, a mind change toward Enterprise Architecture will occur.
+                </p>
+            </section>
+        </article>
+        <article>
+            <header>
+                <h3>2.2 Supporting Frameworks</h3>
+            </header>
+            <p>
+                The discipline of Enterprise Architecture has evolved tremendously in the past few years – and with it the supporting architecture frameworks and methods to help to develop the architectures.
+            </p>
+            <p>
+                With the evolution of Enterprise Architecture different supporting frameworks and methodologies arose. The best known are the Zachman Framework (Zachman 1987), the Department of Defense architecture framework (DoDAF 2011), the NATO architecture framework (NAF 2011), the Federal Enterprise Architecture Framework (FEAF 1999), and the opengroup architecture framework (TOGAF 2009). All these architecture frameworks have one common goal: To provide the means to structure and govern all the elements pertaining to an enterprise that uses Information Technology resources. Nowadays, the Enterprise Architect will certainly propose to adhere to such a method or framework based on a standard or best practices, before thinking about creating his own way and world of managing the Enterprise Architecture. But there is no secret when adopting any framework, the architects must work their fingers to the bone and adapt the hundreds of pages and bullets to their specific situation.
+            </p>
+            <p>
+                An architecture framework represents a guideline, sometimes with more emphasis on certain topics (like DoDAF on views or TOGAF on the Architecture Development Methodology) and must be adapted to the specific situation of an enterprise. The frameworks provide the architects with good or even best practices on what, and seldom on how, something should be done.
+            </p>
+            <p>
+                Sometimes the Enterprise Architecture is prescriptive, but mainly descriptive: A lot of the work to be done involves the description of the architecture in a more or less sustainable way. Drawings must be made, the semantic of the squares and arrows must be defined, and views from different viewpoints of a system have to be designed. Sometimes the architects will work with specialized tools, but often the classic tools of the office palette are still being used.
+            </p>
+        </article>
+        <article>
+            <header>
+                <h3>2.3 The P in EAP</h3>
+            </header>
+            <p>
+                There is still the last word in the title of this book that we did not explain: How are patterns related to Enterprise Architecture?
+            </p>
+            <p>
+                As we have seen earlier, patterns are a way to describe solutions to recurring problems. Many enterprises and organizations, which took the adventurous path of Enterprise Architecture, have collected valuable experiences, formulated good or even best practices, and have documented solutions to recurring problems. The patterns in this book can be seen as a formalized way to document this kind of knowledge. Of course you will have patterns on different levels in your Enterprise Architecture: As stated earlier, patterns exist in different kinds and forms, in different levels of abstraction. We present here patterns for Enterprise Architecture, meaning that we will motivate each pattern from a business point of view, but showing also the impact on the layers underneath. This is a holistic approach and induces also a certain loss of details.
+            </p>
+            <p>
+                Patterns in Enterprise Architecture will be established in the next few years, the first initiatives have already been started – so let us take this challenge!
+            </p>
+        </article>
+        <article>
+            <header>
+                <h3>2.4 Your View Depends on Your Viewpoint</h3>
+            </header>
+            <p>
+                If you are reading this book, then we assume that you are a potential stakeholder of the Enterprise Architecture Patterns (EAPs). In this section, we motivate the use of the EAPs by describing the intended readers of this book and the concerns they might have about the things they need to see in an Enterprise Architecture. We first describe the concept of views and viewpoints, as this is fundamental to understand the different notations of patterns presented in this book. The views and viewpoints are closely related to the different stakeholders and their concerns or areas of interests in the architecture domain. We first make an analogy to the «real world» architecture (e.g., buildings and their makers) and then describe the stakeholders and their concerns and how we intend to address them in terms of EAPs.
+            </p>
+            <p>
+                In order to manage and communicate the artifacts of the Enterprise Architecture it is essential that the most suitable language for the design, communication, and implementation of these results be used. By language we mean the notation for the visualization, the architecture model on which it is based, the choice of words used, the rules, the constraints, modeling techniques, or analytical methods in use. In the concept of Enterprise Architecture this can be summarized with the term «architectural descriptions» (ISO/IEC 42010 2007).
+            </p>
+            <p>
+                In our understanding a language is suitable, if all involved parties can communicate and understand each other with minimal risk of misunderstandings (you may argue that, although we may all speak the same language, it is by no means a guarantee that we really do understand each other). The Enterprise Architecture can live without formal description, but this makes it rather difficult to communicate any changes or new issues. Moreover, the traceability – the extent to which the proof of how the requirements from the business are met by the underlying infrastructure, and the efficient and effective management of the Enterprise Architecture – may be adversely affected with this approach. Every notation (e.g., description language) that is being introduced to document certain aspects of an Enterprise Architecture must come in conjunction with the appropriate processes to enforce, teach, and further develop the use of this language.
+            </p>
+            <p>
+                An architect trying to describe the Enterprise Architecture of his company must find a consistent way at different levels of detail. When building a house the (real) architect has a similar problem to solve: He must be able to produce different kinds of blueprints and drawings for the various craftsmen and engineers involved in the construction of the house. These drawings and formal descriptions have certainly a longer tradition than what we use in Enterprise Architecture for the documentation, but nonetheless we have to deal with the same issues: For every viewpoint (sponsor, architects, electrician, craftsmen) the views (drawings, blueprints, level of detail) must be provided and managed, using different kinds of techniques and notations [computer-aided design (CAD) tools, hand drawings, specialized programs to compute insulation values, and so on]. Every stakeholder has his concerns (and hopefully also requirements) that must be met in the language he is able or willing to understand. Every view of the house is equally important as it meets the needs of a specific stakeholder. The sum of all these different perspectives on the house will form the complete description. Even in real architecture it is absolutely normal that no one has a comprehensive understanding of all the details in the different views of the building. We must live with the fact that we will not understand and have a complete grasp of every detail that is to be built.
+            </p>
+            <p>
+                The concept of views and viewpoints is fundamental in practically every Enterprise Architecture framework. The wording may sometimes be «stakeholder analysis» or «operational view» – the core statement is always that you have to address the concerns of the people participating in your Enterprise Architecture initiative to be successful.
+            </p>
+            <p>
+                In the chapter «The Role of Architecture Views» (TOGAF 2009) the introduction states:
+            </p>
+            <p>
+                <blockquote>
+                    «Architecture views are representations of the overall architecture that are meaningful to one or more stakeholders in the system. The architect chooses and develops a set of views that will enable the architecture to be communicated to, and understood by, all the stakeholders, and enable them to verify that the system will address their concerns».
+                </blockquote>
+            </p>
+            <p>
+                Furthermore ISO/IEC 42010 2007 «Systems and software engineering – Architectural description», as being referenced by TOGAF, defines:
+            </p>
+            <ul>
+                <li>
+                    The architectural view as «representation of a system from the perspective of an identified set of architecture-related concerns», and
+                </li>
+                <li>
+                    The architecture viewpoint as «conventions for the construction, interpretation, and use of architectural view and its contributing architectural models».
+                </li>
+            </ul>
+            <p>
+                If you follow the ISO standard to the letter, you will notice that the concepts are formulated in a rather abstract way and may be somewhat difficult to communicate to stakeholders who perhaps do not have the same level of abstraction than most Enterprise Architects. We will use a simplified version of these concepts to describe the suitable notation of the EAPs for the different stakeholders of this book.
+            </p>
+        </article>
+        <article>
+            <header>
+                <h3>2.5 Reusability</h3>
+            </header>
+            <p>
+                One of the most important goals of defining patterns is to provide reusability. Reusability itself incorporates different aspects. It should reduce the amount of work, avoid repeating errors other people have made, and generally accelerate the way a solution is planned, developed, and implemented. As many EAPs are only built in one instance in an enterprise, the reusability unfolds its value particularly when developed, refined, and used by the community of enterprise architects. The aspect of applying a common body of knowledge is not only part of the traditional software design patterns but forms the basis of virtually any ICT framework. Thus, the use of Architecture Enterprise Patterns expands the idea of design patterns as well as motivation of frameworks such as TOGAF. In order to be reusable, EAPs need to be formulated in an easily understandable, standardized, and vendorneutral way, a «pattern language». The definition of 13 EAPs in this book should not be considered as a closing selection of all patterns that are to be used but more as a starting point and we hope that a community emerges that provides additional patterns or modifies existing patterns according to their experience. However, based upon our experience, we are confident that these 13 patterns form a solid base for working with the concept of EAPs.
+            </p>
+        </article>
+        <article>
+            <header>
+                <h3>2.6 Stakeholders and Their Concerns</h3>
+            </header>
+            <p>
+                To understand the patterns presented in this book we first identify the stakeholders and describe their concerns. In terms of Enterprise Architecture development we are talking about the different architectural viewpoints. This gives us the possibility to find the suitable language (architectural descriptions) to meet their expectations. For each stakeholder we describe first his role and then list his possible concerns and how we intend to respond to them in a suitable language in terms of EAPs. The stakeholders will of course use modeling or visualization techniques other than EAPs. By defining how we intend to respond to the diverse concerns with the patterns presented in this book, we are also gathering requirements on what kind of information the EAPs should provide and motivate their use. We mostly deal with four types of stakeholders:
+            </p>
+            <ol>
+                <li>
+                    Stakeholders whose concerns address the consistency of the overall architecture or the strategic direction to follow in accordance with the business goals. In the context of this book this stakeholder corresponds to the Enterprise Architect.
+                </li>
+                <li>
+                    Stakeholders that are mainly involved during an ICT project to build or change a system. These are the Project Sponsor, the Solution Architects, Business Analysts, and Project Leaders.
+                </li>
+                <li>
+                    Stakeholders that are charged with strategic planning, decision making. Very often, this is a Chief Information Officer (CIO) or another person who is involved in defining the strategy of how ICT should be used to best support meeting the business goals.
+                </li>
+                <li>
+                    Stakeholders that are responsible for the controlling of how efficient ICT is used in an enterprise. This is typically an internal auditor or a controller. By comparing EAPs to the actual ICT landscape he gains an impression of how well ICT is aligned to strategic goals.
+                </li>
+            </ol>
+            <p>
+                The <strong>Project Sponsor</strong> finances an ICT project to change or create a new system. This person will also be the one who formulates the business requirements and gives his approval to go into production (Table 2.1).
+            </p>
+            <label for="table2-1"><strong>Table 2.1</strong> Concerns of a project sponsor</label>
+            <table id="table2-1">
+                <tr>
+                    <th>Concerns</th>
+                    <td>
+                        The new or changed system must meet the business requirements. Budget and time expectations must be met. He may not be very interested in technical details, but if it comes to the costs of technologies he would be interested in the differences between two solutions
+                    </td>
+                </tr>
+                <tr>
+                    <th>Information in EAP</th>
+                    <td>
+                        The business drivers and requirements, the business scenario and the vision depicted in every EAP will help to understand the purpose of a pattern. By means of the holistic view the Project Sponsor can gain an understanding of the impact that a change in the business architecture may have on the underlying layers. Furthermore, the business view of the EAP shows the supported process
+                    </td>
+                </tr>
+            </table>
+            <p>
+                The <strong>Enterprise Architect</strong> is in charge of developing and implementing the overall Enterprise Architecture of a company. To achieve the objective of efficiently supporting the business processes a thorough understanding of the business as well as of the ICT architecture are key competences of any Enterprise Architect. Moreover, he must have strong skills in the application of different methodologies, like requirements engineering, Enterprise Architecture, or project management. The Enterprise Architect will certainly have the skills to read and understand different kinds of notations [e.g., (ArchiMate 2011), Unified Modeling Language (UML 2010), network diagrams], although he may not produce documents with all these description languages himself (Table 2.2).
+            </p>
+            <label for="table2-2"><strong>Table 2.2</strong> Concerns of a enterprise architect</label>
+            <table id="table2-2">
+                <tr>
+                    <th>Concerns</th>
+                    <td>
+                        <p>
+                             Getting an overall view, from the business needs down to the technology, but flying high over ground. The level of detail may be coarse, but the dependencies between all architecture layers (e.g., business, data, application, technology) must be visible
+                        </p>
+                        <p>
+                            Getting information about a specific pattern consisting of a set of interrelated architecture or solution bricks
+                        </p>
+                        <p>
+                            Identify and define new architecture or solution bricks based on new customer requirements and needs
+                        </p>
+                        <p>
+                            Identify reusable solutions and architectures. This is directly related to financial issues, like cost optimization and scalability, of the architecture
+                        </p>
+                        <p>
+                            Ensure the overall consistency of architecture artifacts
+                        </p>
+                        <p>
+                            Identify gaps and «black holes» in the overall enterprise architecture and take the appropriate actions to deal with them
+                        </p>
+                        <p>
+                            Ensure the compliance with regulative and legal requirements
+                        </p>
+                        <p>
+                            Communicate changes in the enterprise architecture to the different stakeholders
+                        </p>
+                        <p>
+                            Cost-efficiency, quality, and feasibility of architectural activities
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Information in EAP</th>
+                    <td>
+                        <p>
+                            EAPs fulfill two main goals for the enterprise architect
+                        </p>
+                        <ol>
+                            <li>
+                                They show a holistic approach to solve reoccurring problems
+                            </li>
+                            <li>
+                                They are a facilitator for finding a common language between all stakeholders in the process of developing and governing an ICT architecture of an enterprise
+                            </li>
+                        </ol>
+                        <p>
+                            The EAPs must provide an overall view to the Enterprise Architects, from the business layer down to the technology aspects without dealing too much with details. They must be easy to understand—a kind of intuitive Esperanto language. We will therefore use a simplified version of BPMN, UML, and ArchiMate, using only a subset of the vocabulary provided
+                        </p>
+                    </td>
+                </tr>
+            </table>
+            <p>
+                The <strong>Solution Architect</strong> is responsible for the resulting architecture of a specific ICT project. He is normally in close contact with the Enterprise Architect(s), the project sponsor or customer, and of course the Project Leader. The solution architect’s main task is to develop solutions that meet the customer’s needs and integrate seamlessly in the overall architecture of the company. He will certainly have strong knowledge of the conceptual, engineering, or design level, but also skills pertaining to the domain of project management and communication (Table 2.3).
+            </p>
+            <label for="table2-3"><strong>Table 2.3</strong> Concerns of a solution architect</label>
+            <table id="table2-3">
+                <tr>
+                    <th>Concerns</th>
+                    <td>
+                        <p>
+                            Ease of integration through the use of predefined solution bricks and the possible connections between them
+                        </p>
+                        <p>
+                            The solution architect will as much as possible adhere to best practices. He will therefore favor reusable, well-proven solutions
+                        </p>
+                        <p>
+                            Traceability of the requirements through all levels of the architectural descriptions of the solution architecture
+                        </p>
+                        <p>
+                            Ensuring the compliance with the standards, policies, and principles of the Enterprise Architecture
+                        </p>
+                        <p>
+                            Using adequate and efficient tools to document the solution architecture using predefined patterns and shapes
+                        </p>
+                        <p>
+                            Feasibility of the solution (cost, technical aspects, time-budget)
+                        </p>
+                        <p>
+                            Being able to fulfill the customer needs
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Information in EAP</th>
+                    <td>
+                        The EAPs help the solution architect to understand the overall picture of the ICT architecture in an enterprise (to be more precise, the common, recurring architecture elements of an enterprise). It enables him to examine the pattern catalog and compare the problem descriptions of the various patterns with his own problem he has to solve. As the solution bricks are product-specific and we cannot describe all possible vendor-specific implementations, we give an example of how an EAP can be transformed into a pattern of solution bricks
+                    </td>
+                </tr>
+            </table>
+            <p>
+                The <strong>Business Analyst</strong> is the «missing link». He gathers the verbalized requirements from the business, analyses, and transforms them into architecture artifacts like business process diagrams, context diagrams, or use cases. He is expected to have a strong knowledge of the business and of course well-developed skills in communication and interviewing techniques (Table 2.4).
+            </p>
+            <label for="table2-4"><strong>Table 2.4</strong> Concerns of a business analyst</label>
+            <table id="table2-4">
+                <tr>
+                    <th>Concerns</th>
+                    <td>
+                        <p>
+                            Identify the link between business requirements and the underlying architecture layers and document them in various forms that can be understood by both the business and ICT specialists
+                        </p>
+                        <p>
+                            Know which bricks are available and which requirements these bricks address
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Information in EAP</th>
+                    <td>
+                        As the business analyst must understand the business needs of his customer and provide the necessary information to the solution architect to further define the solution, the EAP must provide input for the business analyst on how a customer request can be implemented and whether there already exists a pattern to fulfill this request. His estimations about time and cost may then become more accurate and the patterns serve as a common understanding between him, the customer, and the solution architect
+                    </td>
+                </tr>
+            </table>
+            <p>
+                The <strong>Project Leader</strong> is the coordinator of all activities in a specific project. It is common to distinguish between the project leader on the business side and that on the ICT side. Both types of project leaders have the same goals (satisfying customer needs in time and in budget). Therefore, we will only consider the concerns they have in common (Table 2.5).
+            </p>
+            <label for="table2-5"><strong>Table 2.5</strong> Concerns of a project leader</label>
+            <table id="table2-5">
+                <tr>
+                    <th>Concerns</th>
+                    <td>
+                        <p>
+                            Getting help and support from the enterprise architect to successfully lead the project in time and in budget. The enterprise architect is expected to provide the necessary information and measures to be taken, so that the resulting solution fits into the overall architecture
+                        </p>
+                        <p>
+                            Advisory and templates on how to document certain aspects of the architecture (e.g., system layout diagrams, network zoning diagrams)
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Information in EAP</th>
+                    <td>
+                        The project leader will have to deal with different kinds of description languages, as he has to manage the communication and demand different kinds of documents from the project members. Although he might not be expected to understand all the details, he must be able to lead meetings based on the provided documentation. The EAP will help the project leader to understand the overall architecture of his project and provide him with the possibility to position the different activities and tasks in relation to the architecture. The different views (holistic, business, data and application, technology) are written in the language of the different project members
+                    </td>
+                </tr>
+            </table>
+            <p>
+                The <strong>C-level Executive</strong> involved in EAPs is responsible for the strategic alignment of ICT technology with the business goals. In regard to Enterprise Architecture he is often supported by Enterprise Architects. EAPs may be a facilitator and a common language between the Enterprise Architects, the C-level Executive, and the other Board members (Table 2.6).
+            </p>
+            <label for="table2-6"><strong>Table 2.6</strong> Concerns of a C-level executive</label>
+            <table id="table2-6">
+                <tr>
+                    <th>Concerns</th>
+                    <td>
+                         Align ITC with business goals. He often relies on the expertise of the enterprise architect but has the ultimate responsibility in terms of strategic alignment and investment
+                    </td>
+                </tr>
+                <tr>
+                    <th>Information in EAP</th>
+                    <td>
+                        The C-level executive may use EAPs as a valuable resource for keeping oversight of the ICT landscape. Seeing how well EAPs are applied gives him confidence that ICT uses its resources efficiently. The different views (holistic, business, data and application technology) give him the ability to make decisions based on a sound information base
+                    </td>
+                </tr>
+            </table>
+            <p>
+                The <strong>Auditor</strong> may use EAPs as a quick indicator where a deviation between the desired state of ICT and the actual state exists. He may demand the use of EAPs as a control objective for the alignment of ICT use with the strategic business goals. The landscape of EAPs used in an enterprise is also a very valuable source for the planning of any audit as the auditor gains a quick overview of the whole ICT landscape (Table 2.7).
+            </p>
+            <label for="table2-7"><strong>Table 2.7</strong> Concerns of a auditor</label>
+            <table id="table2-7">
+                <tr>
+                    <th>Concerns</th>
+                    <td>
+                        Audit the ICT infrastructure for compliance and alignment
+                    </td>
+                </tr>
+                <tr>
+                    <th>Information in EAP</th>
+                    <td>
+                        The use of EAPs may increase the effectiveness, the quality, and the compliance of any ICT environment; the auditor is interested whether and to what extent EAPs are used. The ICT landscape is an important part for planning any audit as it gives an overview of the interdependences of the different applications
+                    </td>
+                </tr>
+            </table>
+            <p>
+                We did not list a few other common roles (e.g., Security Architect, Software Architect, Data Architect), which might be also interested in EAPs. This does not mean that they are not welcome to dig with us into the topic, on the contrary.
+            </p>
+        </article>
+        <article>
+            <header>
+                <h3>2.7 Bricks Are the Architect’s Best Friends</h3>
+            </header>
+            <p>
+                When designing an EAP you will stumble over the same question as the old Greeks did: «Which is the smallest element that everything is built of?» We will call this element the architecture brick (AB), defined as follows:
+            </p>
+            <p>
+                The Architecture Brick
+            </p>
+            <ul>
+                <li>
+                    Addresses a set of requirements.
+                </li>
+                <li>
+                    Is vendor and product-neutral.
+                </li>
+                <li>
+                    Is attributed to exactly one architecture layer (business, information, application, or technology).
+                </li>
+                <li>
+                    Provides a well-defined set of interfaces to other ABs.
+                </li>
+                <li>
+                    Uses interfaces from other ABs.
+                </li>
+            </ul>
+            <p>
+                You can deduce from this definition that an AB has no commercial aspects. It cannot be bought and there are no Service Level Agreements (SLA) associated with it. An AB represents the most abstract form of a basic artifact in an Enterprise Architecture. The AB is the architect’s answer to the demand for a certain capability in the Enterprise Architecture that must be provided for the business processes. Of course, an AB actually consists of much smaller components and elements – the coarse definition given here enables us to take the adequate flying altitude to address the concerns of the stakeholders of Sect. 2.5 without going too much into details. The smaller elements, like application components, services, or service-interfaces will be addressed in more detailed views in the description of an EAP. For the understanding of an EAP the granularity of information in an AB is often sufficient.
+            </p>
+            <p>
+                As stated in the list above, there are no differences for the definition of an AB on the different architecture layers (e.g., business, data and application technology). We do not differentiate a brick that is being used to build a wall on the first floor from the one used on the third floor of a house. They are all described by the same meta-data. The mortar between the bricks is the interface. A brick may use an interface from another brick (even if the brick resides on another architecture layer) and provides some functionality to other bricks through its own interface(s). Starting from the definition of an AB we are now able to write the meta-model for these kinds of bricks. Table 2.8 gives a possible list of parameters you will have to fill in to describe your architecture bricks:
+            </p>
+            <label for="table2-8"><strong>Table 2.8</strong> List of possible parameters to define an architecture brick</label>
+            <table id="table2-8">
+                <thead>
+                    <th>Parameter</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Name</th>
+                        <td>
+                            The name of the AB should be meaningful and unique
+                        </td>
+                        <td>
+                            Web server brick
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Functionality</th>
+                        <td>
+                            List of high-level functionalities (the purpose of the brick) provided by the brick 
+                        </td>
+                        <td>
+                            HTML-based pages according to W3C specification
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Architectural layer</th>
+                        <td>
+                            The name of the layer (Business, Information system, Technology)
+                        </td>
+                        <td>
+                            Technology
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Version</th>
+                        <td>
+                            You will have to track the version of all the bricks in the Enterprise Architecture. This implies also that the lifecycle management processes have to be defined and instantiated
+                        </td>
+                        <td>
+                            1.1
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Requirements</th>
+                        <td>
+                            A list of requirements that this brick fulfills
+                        </td>
+                        <td>
+                            Must support PHP-scripting language
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Required interfaces</th>
+                        <td>
+                            The interfaces from other architecture bricks that this brick requires
+                        </td>
+                        <td>
+                            Connection to database service
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Available interfaces</th>
+                        <td>
+                            The interfaces that this brick makes available to other bricks. The description of the interfaces must contain all the relevant parameters so that it can be used
+                        </td>
+                        <td>
+                            <p>
+                                Management Interface for the web server
+                            </p>
+                            <p>
+                                HTTP and HTTPS interfaces according to RFC specification
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>
+                You may define other parameters to further specify an AB (ownership, creation, and modification date, etc.). The above list should help you to get a start to define a meta-model. Our recommendation is that you should only describe the parameters that are useful to at least one of the stakeholders, because only those will effectively be managed. We will not describe every AB in this book according to the proposed meta-model. We will only describe an AB in more detail if there might arise some ambiguities concerning its functionalities in comparison to another brick.
+            </p>
+            <p>
+                The architecture bricks are the toys of an Enterprise Architect. They provide a means to structure the overall architecture on a high-level, without having to deal with all the commercial aspects. They are a simplification of the Enterprise Architecture, omitting certain facts. The architecture bricks enable the Enterprise Architects to create specific views without having to deal with all the complexities of the real world.
+            </p>
+            <p>
+                But how do we address the concerns of a solution architect? He will need a product-specific solution that he can use to design the solution architecture. The answer to this is that one or several solution bricks (SB) as shown in Fig. 2.2 will normally realize the AB. The SB is very similar to the architecture brick, with the difference that it is product-specific, and therefore related to commercial aspects as well as to a certain environment. You can put a price tag on it and define an SLA for its usage. For one AB you may have to define one or more SB. Of course the contrary may also be possible: One solution brick can provide the functionality for more than one AB. The meta-model of a solution brick is very similar that of an architecture brick. But the aspects of lifecycle management of a solution brick are extremely important, as the solution brick will be in effective use in a solution within an Enterprise Architecture. This means that such parameters must be taken into consideration when defining the solution brick. For the architects among us using TOGAF this construct of AB and SB is certainly familiar – they are called architecture or solution building blocks.
+            </p>
+            <p>
+                In reality, neither the AB nor the SB will be designed from scratch – you will have to analyze your «as–is» Enterprise Architecture, the ongoing projects, the needs from the business, the strategies, etc., in your company to extract the solution and architecture bricks. The architecture and SB are one way to structure your Enterprise Architecture and are therefore also a contribution to the ICT governance. The same mechanism of deducting an AB from an SB must also be made for the EAP: The effective solution architecture with all the products in place may differ from an EAP, as there will certainly be vendor-specific constraints.
+            </p>
+            <p>
+                It should be mentioned that it takes a great effort to describe and manage all the bricks in a uniform and consistent way, but this will definitely help to master the Enterprise Architecture. Introducing the notion of architecture and SB in the Enterprise Architecture means that you have to define and instantiate the necessary processes (including roles, performance indicators, etc.,) to manage the lifecycle of these artifacts. The architecture bricks are the basis for the EAPs presented in this book. Essentially, the EAPs are nothing more than a meaningful way of combining these architecture bricks to address a recurring problem. As you will see in Sect. 2.9, where we present the notation(s) for the EAPs, they can be written in different ways to address the concerns of stakeholders.
+            </p>
+        </article>
+        <article>
+            <header>
+                <h3>2.8 How to Make an EAP?</h3>
+            </header>
+            <p>
+                The notion of principles is well established in the Enterprise Architecture world – so why should not we define a few design principles that will guide us when defining and using the EAPs? The following principles have their roots in our own experience – you may well adapt them to your own environment.
+            </p>
+            <section>
+                <header>
+                    <h4>Principle 1: Do not invent an Enterprise Architecture Pattern</h4>
+                </header>
+                <p>
+                    Gamma et al. (1995) state in their conclusion:
+                </p>
+                <p>
+                    <blockquote>
+                        «Third, look for patterns you use, and write them down. Make them part of your documentation. Show them to other people. You do not have to be in a research lab to find patterns.»
+                    </blockquote>
+                </p>
+                <p>
+                    You do recognize them in your environment and then try to extract them to subsequently make them available as generalized solutions for a given problem. You will have to analyze your actual Enterprise Architecture or the actual problems in the different projects and try to recognize a pattern (and the underlying bricks) and address possible upcoming similar problems by defining the pattern in a generalized and reusable form.
+                </p>
+            </section>
+            <section>
+                <header>
+                    <h4>Principle 2: Let the patterns evolve</h4>
+                </header>
+                <p>
+                    The initial version of a pattern will seldom be the mature one. A pattern will evolve over time. Defining patterns is a process where the different stakeholders will contribute from their experience or point of view. Do not try to grasp every aspect and possible issue in the first version of your pattern. In this case «less is more» is the path to take.
+                </p>
+            </section>
+            <section>
+                <header>
+                    <h4>Principle 3: Make the patterns simple and clear</h4>
+                </header>
+                <p>
+                    A pattern is not a photographic image of the reality nor shall it ever be. Keep the pattern simple, even knowing that reality would not be that simple. The idea of the pattern is to give the user a clear view of how he can solve a problem. Give them the direction and let them deal with the details, trust them, they will do it well.
+                </p>
+            </section>
+            <section>
+                <header>
+                    <h4>Principle 4: Keep the structure</h4>
+                </header>
+                <p>
+                    Always keep the structure of the pattern the same, always begin with a meaningful and self-explanatory name and end with the consequences. The structure strengthens the orientation of the reader and helps him to stay focused.
+                </p>
+            </section>
+            <section>
+                <header>
+                    <h4>Principle 5: Publish and make the patterns available</h4>
+                </header>
+                <p>
+                    Your patterns must be made available. Nobody will ask you for the pattern if you do not take the initiative to «spread the good word». The availability of the patterns does not imply that they in fact will be used. You will have to initiate the discussion, show the benefit, and talk to your stakeholders. You will notice that as soon as you engage the discussion about patterns you will also contribute to a change of mind toward the Enterprise Architecture, as the patterns are a tool to help.
+                </p>
+            </section>
+        </article>
+        <article>
+            <header>
+                <h3>2.9 Notes About Notation</h3>
+            </header>
+            <p>
+                In the sections an overview of what an AB is and who the different stakeholders in our EAP world are, has been given. In this chapter we dig further into the topic of how artifacts can be documented and specify the language in which the patterns are visualized. The chosen notation is derived from the ArchiMate (ArchiMate 2011) specification, the BPMN standard (BPMN 2011), and a network notation that has been applied in hundreds of ICT-projects at a governmental agency. The notations presented in this chapter deal only with the graphical view of an EAP – the rest of the EAP is described according to Sect. 2.11.
+            </p>
+            <p>
+                A graphical notation always needs an explanation. You will need to document the semantic, the meaning behind the symbols, and their relationship with English (or your preferred language) words. This can be best done with tables describing the attributes (in UML these attributes are called tagged values) that define the content of a symbol. You will find an overview for every view in the following sections and the complete symbols and their meanings in Chap. 6.
+            </p>
+            <p>
+                We chose the following criteria to define the notation to describe the EAPs:
+            </p>
+            <ul>
+                <li>
+                    Based on standards whenever possible.
+                </li>
+                <li>
+                    Simple enough, so that a reader can understand the semantic without having to work with the notation everyday. This means that we had to simplify the notations given by the standards without breaking the rules.
+                </li>
+                <li>
+                    Supported by common design tools used for documenting software or architecture artifacts (e.g., Visual Paradigm, Sparx EA, Bizagi, Visio, and others).
+                </li>
+            </ul>
+            <p>
+                To define the description language in this book, we have taken the stakeholder listed in Sect. 2.6 and defined four different views that address their respective concerns. For every view the suitable graphical notation has been defined.
+            </p>
+            <p>
+                The diagrams of the different views do not represent the one and only truth – you may well find other graphical representations or other relationships between the elements. We believe that they will help to understand the purpose of an EAP and constitute a consistent and uniform way to allow us to compare the patterns and keep the same granularity for all views.
+            </p>
+            <section>
+                <header>
+                    <h4>2.9.1 Holistic View</h4>
+                </header>
+                <p>
+                    This view encompasses all the architectural layers. It consists of the architecture bricks and their relationships, hiding the details like functions, services, and so on. It represents the lowest level of detail in the pattern map. This view is well suited to communicate with stakeholders like project sponsors or the management. To document this view we use a very simple notation, consisting of squares that represent the architecture bricks (Fig. 2.3) and a symbol that shows whether a brick provides or uses an interface of another brick. The symbol for the interface is the same as what we use for the pattern map. Note that a similar representation with the ArchiMate shapes could also be made (e.g., process symbols for the Business Architecture, application components for the Data and Application Architecture, and so on). We opted to use only one symbol to represent the bricks in all layers in order to keep a very simple holistic view. A table that provides a description of the most important Architecture Bricks always follows the diagram of the holistic view.
+                </p>
+                <p>
+                    Note that the holistic view can easily be drawn with a UML component diagram or with the ArchiMate application components and application interface symbols (as we in fact did).
+                </p>
+            </section>
+            <section>
+                <header>
+                    <h4>2.9.2 Business View</h4>
+                </header>
+                <p>
+                    The BPMN standard is nowadays widely used to document business processes. We will use only a few symbols to document the business layer of the EAPs and provide more insight into the business requirements and drivers of an EAP. As with the holistic view, we will only use a subset of the notation provided by the BPMN standard. We assume that the notation is well known (The symbols used in this book are explained in Chap. 6). Figure 2.4 shows an example.
+                </p>
+            </section>
+            <section>
+                <header>
+                    <h4>2.9.3 Data and Application View</h4>
+                </header>
+                <p>
+                    In this view we will look a bit more in detail at the different objects and their relationships to the data and application architecture layers based on a reduced ArchiMate specification. For the notation we adhere to the same concept of passive, active, and behavioral structure as proposed by the standard. We also use the same symbols, but only a subset of it. The same is true for the different kinds of relationships provided by the specification. We made the following simplifications:
+                </p>
+                <ul>
+                    <li>
+                        There is only one element that represents the core of the application. We use the application component and omit the application functions, collaborations, and so on.
+                    </li>
+                    <li>
+                        The application component always exposes its functions through an application service. Each service is only accessible through an application interface (you cannot access a service directly). The service is always responsible for the data it accesses either in write or read mode. This leverages the concept of service orientation.
+                    </li>
+                </ul>
+                <p>
+                    We also stripped down the number of available connectors: Interfaces are associated to a service or application element, the application service is realized with an application component, an interface is being used by an application component.
+                </p>
+                <p>
+                    Figure 2.5 shows all the symbols and relationships as they are used in this book.
+                </p>
+            </section>
+            <section>
+                <header>
+                    <h4>2.9.4. Technology View</h4>
+                </header>
+                <p>
+                    In practice not everyone is able (or willing) to read and understand an UML-based notation. Especially when it comes to technical details, networking and hardware issues, a specific notation can be of great help. Figure 2.6 shows the elements we have chosen to deal with these issues. The elements are the servers, clients, directories, gateways, and so on. An arrow visualizes the relationship between two elements. The arrow is annotated with the acronym (e.g., http) of a networking protocol. This view enables us to talk about physical structures, networking policies, redundancy, hardware cost, and so on.
+                </p>
+               <p>
+                   We propose this simple notation, which has been used in hundreds of projects and which can be understood by administrators, network engineers, solution architects, or project managers as well.
+               </p>
+               <p>
+                   At the very bottom of this notation lies the networking zone. We propose a universally applicable, very reduced networking structure consisting of the following networking zones:
+               </p>
+               <ul>
+                   <li>
+                        <strong>Internal Zone:</strong> This zone is divided into at least two logical zones.
+                   </li>
+                   <li>
+                        <strong>Clients Network:</strong> This network consists of internal clients used by employees of the organization. Road warriors are counted to this network zone, as they are normally a part of this network by means of a VPN (Virtual Private Network) connection.
+                   </li>
+                   <li>
+                        <strong>Server Network:</strong> Internal servers are commonly used by internal clients and are not to be accessed by external users.
+                   </li>
+                   <li>
+                        <strong>External Zone:</strong> All systems used by external parties are located in this zone. It is noteworthy that such a zone also holds systems that are frequently used by internal users but that must also grant access to external users.
+                   </li>
+                   <li>
+                        <strong>Central Access Zone(CAZ):</strong> describes the zone where all the access management (authentication, coarse authorization, filtering) takes place. It is important to note that all authentication tokens later passed to an application emerge from this zone. Normally, this zone is treated as a black box and is described in the StoreMyIdentities (I1) and LetMeAccess (I2) patterns in detail.
+                   </li>
+                   <li>
+                        <strong>Storage:</strong> the network where all the storage devices reside. This may depend from organization to organization in the way data are stored. Some enterprises use a storage area network (SAN) that is connected by fiber channel (FC) or iSCSI; others use network attached storage (NAS).
+                   </li>
+               </ul>
+               <p>
+                   There are two kinds of security boundaries, those against foreign networks and internal boundaries. There exist only two zones which are allowed to have an external boundary, the zone hosting external services that cannot be made accessible by gateways such as domain name system (DNS) or network time protocol (NTP) services. Security boundaries are heavily defended by firewalls. In order to keep the drawings readable the firewalls are not noted as individual devices but are included in the representation of the security boundary. All other services, even if they are positioned in the external network zone, are accessed via the central access zone. This provides a clear flow of data that can be monitored, sanitized, or transformed. It also eases application development as well-defined interfaces exist from the networking level up to the application level.
+               </p>
+               <p>
+                   It is possible that connections to other patterns exist in the technical view. These are pointed out by drawing dashed rectangles with the name and number of patterns within.
+               </p>
+            </section>
+        </article>
+        <article>
+            <header>
+                <h3>2.10 Pattern Types</h3>
+            </header>
+            <p>
+                We present 13 patterns in this book. We identified them based on our experience when working as architects and discussing with other Enterprise Architects. When putting the patterns together, we had to decide whether we wanted to classify them. One possibility would have been to simply enumerate them as we went along with writing them. To help the reader to be able to choose from the catalog depending on his needs, we came up with a simple categorization scheme: Every company has core business processes and supporting processes like finance or human resources. These two process types gave us the first categories («Business Patterns» and «Support Patterns»). We were still missing a possibility to categorize patterns that work «in the background», meaning that they provided basic services (like security or access management) to the patterns in the two aforementioned categories. We call this category the «Infrastructure Patterns». The differentiation between these three types of patterns reflects the fact that there exists a 1:1 or n:1 relationship between a business process and ICT technology. A 1:1 relationship would indicate that a Business Pattern is needed whereas support and Infrastructure Patterns most often form n:1 relationships, meaning that the ICT infrastructure is needed by different business processes.
+            </p>
+            <p>
+                Table 2.9 shows the three pattern types with a short explanation.
+            </p>
+            <label for="table2-9"><strong>Table 2.9</strong> Type of a pattern</label>
+            <table id="table2-9">
+                <tr>
+                    <th>Business</th>
+                    <td>
+                        These patterns are directly related to a core business process. The use of these kinds of patterns is dependent on the sector the company or organization makes business. For example, the VendingMachine (B2) pattern will only be implemented by companies selling goods over the Internet. A business pattern uses often far more interfaces from other patterns than it provides
+                    </td>
+                </tr>
+                <tr>
+                    <th>Support</th>
+                    <td>
+                        The typical support processes of a company are human resources, financial services, and logistics. We put all patterns in this category that are not directly involved in a core business process, but are nevertheless essential for the direct provision of core business services. We believe that these patterns will be useful in practically all ICT environments. Examples of this type of pattern are FromSupplierToCustomer (S4) or Financials (S1)
+                    </td>
+                </tr>
+                <tr>
+                    <th>Infrastructure</th>
+                    <td>
+                        These patterns provide basic services for all patterns. The services are often not directly visible to end users, but are essentials for the effective and efficient functioning of an ICT environment. An infrastructure pattern often provides more interfaces than it requires. Examples are StoreMyIdentities (I1) or UnderControl (I3)
+                    </td>
+                </tr>
+            </table>
+            <p>
+                As Infrastructure patterns form the base of all patterns, we recommend having a look at them first (see also Chap. 5 on using patterns). If you have to implement a new selling channel over the Internet, you will certainly first dig into the appropriate Business Pattern and then you will probably be confronted with problems that are being solved using the infrastructure patterns (e.g., Identity Management issues).
+            </p>
+        </article>
+        <article>
+            <header>
+                <h3>2.11 The Structure of a Pattern</h3>
+            </header>
+            <p>
+                We now are ready to define how an EAP should be documented. In the following paragraphs, we will describe the characteristics of a pattern and give some explanations concerning the different parameters common to all patterns. A pattern is described using the following section structure as shown in Table 2.10 (the X is a placeholder for the respective chapter number):
+            </p>
+            <p>
+                In the following sections, we will dig a little deeper into the structure of a pattern and give a short explanation for every part of a pattern.
+            </p>
+            <section>
+                <header>
+                    <h4>2.11.1 Introduction</h4>
+                </header>
+                <p>
+                    The introductory chapter must be short and concise. It gives the name and defines the topic of the pattern. Besides the name, a table shows the most important parameters.
+                </p>
+                <section>
+                    <header>
+                        <h5>Name and Overview</h5>
+                    </header>
+                    <p>
+                        Whereas this chapter is pretty self-explanatory, it should be pointed out that choosing a good name is crucial.
+                    </p>
+                    <p>
+                        The «gang of four» stated that:
+                    </p>
+                    <p>
+                        <blockquote>
+                            «The pattern name is a handle we can use to describe a design problem, its solutions, and consequences in a word or two. Naming a pattern immediately increases our design vocabulary. It lets us design at a higher level of abstraction. Having a vocabulary for patterns lets us talk about them with our colleagues, in our documentation, and even to ourselves.»
+                        </blockquote>
+                    </p>
+                    <p>
+                        For the notation of the name we use the so-called «camel caps» (or BumpyCaps) with the first letter of the word compound capitalized: KnowYourCustomer (B3), VendingMachine (B2), etc. Wherever suitable, we made the word compound with a verb and a noun. The purpose is to show that an EAP is somewhat always related to an activity. A reference to an EAP in this book is always the name of the pattern followed by the abbreviation of the type (first letter, B for Business Pattern) and the number in parenthesis. This is a similar notation as used by Alexander et al. (1977) and Gamma et al. (1995), e.g., VendingMachine (B2).
+                    </p>
+                    <p>
+                        In ICT terminology we know a lot of acronyms like ERP, CRM, IDM, and so on. When people use these acronyms they often relate them to their experience and knowledge in their specific field of work. Moreover, vendors leave their mark on these acronyms and use them in their marketing flavor. In the view of Microsoft a customer relationship management (CRM) system is not the same as for SAP. You have to consider these facts when talking to people using acronyms. To avoid possible misunderstandings or preconceptions, we would not use any of these abbreviation in the naming of the patterns. Of course we will make, when suitable, references to these acronyms in the specific patterns. For example, the pattern KnowYourCustomer (B3) is closely related to CRM (who had thought of this?).
+                    </p>
+                    <p>
+                        A table such as shown in Table 2.11 is used as an overview of the pattern and provides hints to architects whether this pattern is suited for their purpose or not.
+                    </p>
+                    <label for="table2-11"><strong>Table 2.11</strong> Overview of a pattern</label>
+                    <table id="table2-11">
+                        <tr>
+                            <th>Name</th>
+                            <td>
+                                The name must be as precise and self-explanatory as possible
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Number</th>
+                            <td>
+                                Each pattern has a unique number
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Type of pattern</th>
+                            <td>
+                                Business, support, or infrastructure
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Abstract</th>
+                            <td>
+                                A short concatenation of the most important facts of the pattern
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Capabilities</th>
+                            <td>
+                                Capabilities provided by the pattern. This gives a hint, which business requirements are met by the pattern
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Referenced patterns</th>
+                            <td>
+                                Patterns that provide a service that is going to be used by this pattern
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Bricks</th>
+                            <td>
+                                Bricks used in this pattern
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Impending Forces</th>
+                            <td>
+                                Forces that are working against the implementation of the pattern
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Supporting Forces</th>
+                            <td>
+                                Forces that support and work towards the implementation of the pattern
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Invariance</th>
+                            <td>
+                                The degree of confidence we have that this pattern exists in exactly this form in various enterprises
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Complexity</th>
+                            <td>
+                                The complexity is a measure that gives you a hint of how much effort we think you must put in, to implement the pattern
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Connectivity</th>
+                            <td>
+                                This parameter measures the strength of interdependence between this pattern and others
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Keywords</th>
+                            <td>
+                                Keywords help finding and—in case of a database used—indexing the pattern catalog
+                            </td>
+                        </tr>
+                    </table>
+                    <p>
+                        The «Type of pattern» and the three parameters «Invariance», «Complexity», and «Connectivity» need a little bit more explanation:
+                    </p>
+                    <p>
+                        To differentiate and classify the patterns, we have defined three types as explained in Sect. 2.10.
+                    </p>
+                    <p>
+                        The three parameters «Invariance», «Complexity», and «Connectivity» represent a purely qualitative and personal appreciation (and will not withstand any scientific examinations). They facilitate a comparison between different patterns and point out possible similarities or differences.
+                    </p>
+                    <p>
+                        The «Invariance» parameter tries to represent the likelihood that the pattern can be applied in different companies or organizations more or less exactly as described. Alexander et al. (1977) uses a very similar approach: They use the invariance property, marked with two, one, or no asterisks in the pattern. The invariance of a pattern defines whether a problem can be solved as stated in their book.
+                    </p>
+                    <p>
+                        <blockquote>
+                            «Two asterisks mean that it is not possible to solve the stated problem properly, without shaping the environment in one way or another according to the pattern (…)»
+                        </blockquote>
+                    </p>
+                    <p>
+                        We will use the following metrics to define the invariance of a pattern (Table 2.12):
+                    </p>
+                    <label for="table2-12"><strong>Table 2.12</strong> Invariance of a pattern</label>
+                    <table id="table2-12">
+                        <tr>
+                            <th>Low</th>
+                            <td>
+                                The pattern has only little connections with other patterns or systems. It is usually not a core element of an Enterprise Architecture and will normally not be used in every context. It may function in a self-sustaining way and/or serves a highly specialized purpose. Its implementation depends on the nature and maturity of the enterprise. Example: VendingMachine (B2)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Medium</th>
+                            <td>
+                                The pattern has a moderate number of connections to other patterns or systems. It is not mandatory to be implemented in every context, but its use is highly recommended. It is often used in companies as an element to support important business processes but we do not consider it to be a core pattern for the underlying infrastructure. Examples: KnowYourCustomers (B3), ResourcesAreScarce (S3)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>High</th>
+                            <td>
+                                The pattern has a large number of connections to other patterns or systems. It is a core element of any architecture and can be implemented in every context. Patterns with a high degree of interaction, especially when they provide more services than they use, are core patterns. They should be implemented first as the patterns with a lower degree of interaction depend on them. Examples: StoreMyIdentities (I1), LetMeAccess(I2), Financials (S1)
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+                <section>
+                    <header>
+                        <h5>Definition</h5>
+                    </header>
+                    <p>
+                        It is important that the purpose of the pattern is clearly and unambiguously defined. To define a pattern we make references to sources that define the most important terms used. For each pattern we then derive our own definition.
+                    </p>
+                </section>
+            </section>
+            <section>
+                <header>
+                    <h4>2.11.2 Example</h4>
+                </header>
+                <p>
+                    The motivation of a pattern should be introduced by telling a story from real life. This conforms to the statement of Gamma et al. (1995) that a pattern should not be invented but found.
+                </p>
+                <aside>
+                    <p>
+                        Bob works at the company TheWineBottle as a key account manager. During his sales tours he often has to contact the sales department over phone to get possible changes in prices and stock information. It would be more efficient if Bob could have all these information in time and online without having to call over phone.
+                    </p>
+                </aside>
+            </section>
+            <section>
+                <header>
+                    <h4>2.11.3 Context</h4>
+                </header>
+                <p>
+                    The context describes under what circumstances the pattern is applicable and what the preconditions are that an enterprise must fulfill in order to use this pattern.
+                </p>
+            </section>
+            <section>
+                <header>
+                    <h4>2.11.4 Problem</h4>
+                </header>
+                <p>
+                    This section describes the problem that should be solved in greater detail and emphasizes the forces that must be taken into account. As Harrison states:
+                </p>
+                <p>
+                    <blockquote>
+                        The notion of «forces» equates in many ways to the «qualities» that architects seek to optimize, and the concerns they seek to address, in designing architectures.
+                    </blockquote>
+                </p>
+                <p>
+                    Forces should be taken into account before implementing the pattern as this alleviates the planning and project marketing. In nearly every circumstance there exist forces that help in promoting the pattern (called supporting forces) as well as forces that stand against a successful implementation (impeding forces). The goal of anyone trying to implement a pattern must be to correctly identify the relevant stakeholders and their concerns. The opposing stakeholders should be convinced of the beneficial effect to transform them into supporting forces or at least to keep them neutral so as not to endanger the successful use of the pattern. The supporting forces should be fostered to gain momentum during the planning, implementation, and use of the pattern.
+                </p>
+                <p>
+                    The problem description features three views, the organization’s view, the Enterprise Architect’s view, and the end-user’s view. The first view represents the problem as the organization sees it, meaning why and where deficits exist that hinder the organization to use its ICT infrastructure efficiently. It is the overall problem description. The Enterprise Architect’s view describes the situation as it is perceived by the Enterprise Architect. Often this description makes a relation to the organization’s view and how this must be changed. Last but not least is the end-user’s view that shows if and how the end-user is affected by the problem. The end-user may be an employee as well as a customer depending on the pattern. It is noteworthy that most patterns solve more than one problem. However, it may be possible that a problem mentioned in the description is not solvable in its entirety by one pattern alone but more likely by a combination of different patterns.
+                </p>
+            </section>
+            <section>
+                <header>
+                    <h4>2.11.5 Solution</h4>
+                </header>
+                <p>
+                    The solution consists of a vision, principles, and the different views as described in Sect. 2.9.
+                </p>
+                <section>
+                    <header>
+                        <h5>Vision and Principles</h5>
+                    </header>
+                    <p>
+                        The vision describes the desired state a pattern should enable. It should be used as guidance for governing the infrastructure and processes affected by the pattern.
+                    </p>
+                    <p>
+                        The principles are derived from the vision and state high-level targets that must be adhered to in order to reach the goal of the pattern.
+                    </p>
+                    <p>
+                        The vision and the principles taken together describe, in fact, the core of a possible strategy. They define the «to be» architecture on a very high level and are suitable to communicate with the management. We described some of the principles in the EAPs, you may well add further ones which reflect the situation of your company.
+                    </p>
+                </section>
+                <section>
+                    <header>
+                        <h5>Holistic View</h5>
+                    </header>
+                    <p>
+                        The Holistic View gives an oversight of the pattern and helps to link together the various views and concerns of the different architecture, business, and ICT levels. Having a holistic view is important as otherwise the successful and sustainable implementation is endangered. If you «forget» about the business processes it may well be that a pattern is perfectly realized at the infrastructure level but no one is going to use it or people use it in a way it has not been made for.
+                    </p>
+                </section>
+                <section>
+                    <header>
+                        <h5>Business View</h5>
+                    </header>
+                    <p>
+                        The Business Architecture represents the view of the business toward a pattern. Therefore, the main focus lies within the description of the business case and the business processes that are going to be supported or enabled by this pattern.
+                    </p>
+                    <p>
+                        It must be formulated in a way that makes no reference to the technical solution but should give the frame for ICT support. Therefore, the Business View should be as abstract as necessary in order to be applicable in any environment trying to implement the pattern but as precise as possible so that it is unambiguous. The Business View could be seen as derivative of a business scenario concentrating on the business level form the architect’s point of view.
+                    </p>
+                    <p>
+                        The Business View must include the following elements:
+                    </p>
+                    <ul>
+                        <li>
+                            BPMN-based diagram showing the whole process.
+                        </li>
+                        <li>
+                            Short description of the business process.
+                        </li>
+                    </ul>
+                    <p>
+                        As already explained in Sect. 2.9, the BPMN-based diagram defines the flow of information throughout the business process and points out the most important steps and decisions that are made by the participants of the process. The description of the business process and the actors strengthens and refines the BPMN diagram in a way that enables the reader to fully understand the intent and outcome of the Business Architecture layer. The main purpose of the Business View is not to show the detailed activities, but to set the context of the pattern.
+                    </p>
+                </section>
+                <section>
+                    <header>
+                        <h5>Data and Application View</h5>
+                    </header>
+                    <p>
+                        The Data and Application View is the glue between the Business View and the Technology View. While the business architecture is driven by the business needs and constraints, the technological architecture must take the technological possibilities and restrictions into account. The data and application architecture is where both layers meet and it is important that this layer is fully understood and agreed upon by the business architects as well as by the technology architects. The Data and Application View is described in a notation based on ArchiMate. Following the diagram is a short description.
+                    </p>
+                </section>
+                <section>
+                    <header>
+                        <h5>Technology View</h5>
+                    </header>
+                    <p>
+                        The Technology View describes the pattern in a technical way. The notation is kept very simple and should give a good overview of every component needed to implement the pattern. The notation has been in use in the Federal Administration of Switzerland for several years and has been proved as well-defined and comprehensible by all participants.
+                    </p>
+                    <p>
+                        Basically, it consists of the following elements:
+                    </p>
+                    <ul>
+                        <li>
+                            The technological bricks (being a logical aggregation physical or virtual systems, such as a database system or a web server).
+                        </li>
+                        <li>
+                            Different networking zones with different levels of security.
+                        </li>
+                        <li>
+                            Connecting or dividing elements between these zones (firewalls, gateways).
+                        </li>
+                        <li>
+                            Information and connection flows between the bricks.
+                        </li>
+                    </ul>
+                    <p>
+                        The network layout may be seen as the map on which the technological architecture is built. It roughly shows the flow of connection and information. The main components being used («the buildings») are the technological bricks we utilize. It is important that this is done in a vendor-neutral way as the pattern should be applicable regardless of any vendor decisions an enterprise has made.
+                    </p>
+                </section>
+            </section>
+            <section>
+                <header>
+                    <h4>2.11.6 Resulting Context</h4>
+                </header>
+                <p>
+                    The resulting context describes what the architect has to expect when implementing the pattern. It consists of an interaction diagram and the consequences arising from the pattern.
+                </p>
+                <section>
+                    <header>
+                        <h5>Interaction</h5>
+                    </header>
+                    <p>
+                        The interaction between patterns is one of the most important points to consider. The notation chosen is similar to the way Gamma et al. (1995) described the Design Pattern relationships. The pattern being described is in the center, as shown in Fig. 2.7, whereas relationships and interactions with other patterns are referenced through the use of or through providing interfaces.
+                    </p>
+                    <p>
+                        In the context of interaction, the use of an interface from another pattern is most interesting, as it shows how (in-) dependent a pattern is from its environment. The less interfaces a pattern uses in relation to the interfaces it provides, the more it can be considered as «standalone». This is typically true for an infrastructure pattern: StoreMyIdentities (I1) or LetMeAccess (I2) are being highly used by every other pattern, but they need practically no external interfaces.
+                    </p>
+                    <p>
+                        As we did certainly not describe every possible pattern that may exist, we cannot show the full picture of every imaginable interaction of a pattern with its surrounding environment. For example, the number of business applications that use the Financials (S1), WorkTogether (B1), or InformationChest (S2) will vary greatly depending on the business of an enterprise. We therefore chose to use a placeholder for the name of a provided or used interface in the case where the number of patterns that use this interface will not be in our list of described patterns (e.g., «External Financial Applications» or «Applications»).
+                    </p>
+                    <p>
+                        The complete EAP map consists of all interaction diagrams of the EAPs in this book.
+                    </p>
+                </section>
+                <section>
+                    <header>
+                        <h5>Consequences</h5>
+                    </header>
+                    <p>
+                        The section about consequences describes what the advantages and disadvantages, the risks and chances are that an enterprise has to expect when using this pattern. The architect implementing a pattern should have a clear notion of the advantages and disadvantages of a pattern as well as the possible conflicts. It must be said that patterns – although helpful – can have side effects, for example, decreasing the degree of freedom for certain projects.
+                    </p>
+                </section>
+            </section>
+            <section>
+                <header>
+                    <h4>2.11.7 References</h4>
+                </header>
+                <p>
+                    This section contains further information related to patterns. These are references to publications like books, journals, or Internet links.
+                </p>
+            </section>
+        </article>
+        <article>
+            <header>
+                <h3>2.12 Comparison of the Structure of Patterns</h3>
+            </header>
+            <p>
+                Two fundamental works defining patterns in Software Design have been written by Buschmann et al. (2000), Gamma et al. (1995). We used the structure as a reference for our own structure and tried to stay as close as possible. Table 2.15 shows the different naming types compared to our EA Patterns.
+            </p>
+        </article>
+    </section>
+</body>
+</html>
