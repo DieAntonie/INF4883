@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INF4883 - Enterprise Architecture</title>
+</head>
+<body>
+    <header>
+        <h1>INF4883 - Assignment 1 - Research - Enterprise Architecture</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="../index.html">Back</a>
+            </li>
+            <li>
+                <a href="chapter_2.html">Chapter 2</a>
+            </li>
+            <li>
+                <a href="chapter_3.html">Chapter 3</a>
+            </li>
+        </ul>
+    </nav>
+    <section>
+        <header>
+            <h2>The Need for a New Instrument</h2>
+        </header>
+        <article>
+            <header>
+                <h3>2.1 Introduction</h3>
+            </header>
+            <p>
+                As a result of developments such as globalization, the fusion of business and IT, the introduction of new technologies, novel business models, etc., enterprises are confronted with an increasing variety of options to deal with an ever faster changing environment. This results in a need for enterprises to be able to innovate and to adapt themselves quickly to these changes in the environment, and a desire to proactively exploit these developments in an attempt to create new business opportunities. This puts a major challenge on the enterprise’s management to make the right decisions at the right time. To accommodate management in their decision-making and governance tasks, a new instrument is needed. This need is stressed even more by the complexities of the challenges and their consequences, as well as the diversity of stakeholders and their concerns.
+            </p>
+            <p>
+                The emerging instrument of enterprise architecture promises to provide management with insight and overview to harness complexity. Where classical approaches will handle problems one by one, enterprise architecture aims to deal with these issues in a coherent and integral fashion, while at the same time offering a medium to achieve a shared understanding and conceptualization among all stakeholders involved and govern enterprise development based on this conceptualization. As such, enterprise architecture plays a key role in the governance of organizations and their evolution. In this book, we therefore treat enterprise architecting as being an integral part of the governance of an enterprise’s change and transformation processes.
+            </p>
+            <p>
+                Where the next chapter aims to define the instrument of enterprise architecture, this chapter aims to first provide an exploration of the motivations why enterprises turn to enterprise architecture as a means to find answers in their quest to meet modern day challenges. In doing so, we start with a brief exploration of the challenges (Sect. 2.2), which confront modern day enterprises. In Sect. 2.3, we then turn our attention to the stakeholders who have a stake in the enterprise and/or its development. By surveying the stakes and concerns of these stakeholders, we gain an understanding of the demands on enterprise architecture as a means of governing an enterprise’s change and transformation processes. We then continue, in Sect. 2.4, with a discussion of traditional approaches for strategy execution and governance. Section 2.5 then assesses to what extend these traditional approaches do indeed provide answers to the challenges of enterprises, leading to several shortcomings which are to be remedied by the use of enterprise architecture. Before concluding this chapter (Sect. 2.7), Sect. 2.6 summarizes the requirements on enterprise architecture.
+            </p>
+        </article>
+        <article>
+            <header>
+                <h3>2.2 Enterprises and their challenges</h3>
+            </header>
+            <p>
+                Enterprises are, as illustrated in Fig. 2.1, confronted with a multitude of challenges. In this section, we discuss some of the challenges with which modern day enterprises are confronted, sparking the need for enterprise architecture. Discussing these examples also gives us an initial appreciation of the requirements that should be met by the means of enterprise architecture.
+            </p>
+            <section>
+                <header>
+                    <h4>2.2.1 Keep up or Perish</h4>
+                </header>
+                <p>
+                    Enterprises face many changes, such as mergers, acquisitions, innovations, novel technologies, new business models, reduced protectionism, demonopolization of markets, deregulation of international trade, privatization of state owned companies, increased global competition, etc. These changes are fueled even more by the advances of eCommerce, Networked Business, Virtual Enterprises, Mashups Corporations, the availability of resourcing on a global scale, etc. [53, 58, 88, 134]. These factors all contribute toward an increasingly dynamic environment in which enterprises want to thrive. To improve their chances of survival, enterprises need to be agile. In other words, they need the ability to quickly adapt themselves to changes in their environment, and seize opportunities as they avail themselves. Such agility has become a business requirement in many lines of business, from the US army (schedules for combat systems from 8 years to 2 years) via the car industry (from thought to finish for a new model in a few months instead of 6 years) to the banking industry (time to market for a new product from 9–12 months to a few weeks [95]). Setting up new businesses has become a matter of hours, including online purchasing and payment systems. In practice, however, enterprises see themselves hampered in their ability to change in several ways:
+                </p>
+                <ul>
+                    <li>
+                        being uninformed about their own products, services, capabilities, and internal structures,
+                    </li>
+                    <li>
+                        traditionally organizations were designed with efficiency and effectiveness in mind rather than agility,
+                    </li>
+                    <li>
+                        no common understanding and governance of key data resources,
+                    </li>
+                    <li>
+                        prevailing organizational structures, regulations, etc., have become engrained in the technological, social, and cultural fabric of an enterprise,
+                    </li>
+                    <li>
+                        a plethora of legacy applications and infrastructures,
+                    </li>
+                    <li>
+                        duplicated functionality in terms of people and/or technology,
+                    </li>
+                    <li>
+                        interwoven and unclear responsibilities,
+                    </li>
+                    <li>
+                        organizational silos, self-contained business units who operate on their own, with no sharing of data,
+                    </li>
+                    <li>
+                        silo application, i.e., self-contained and isolated applications, which only provide functionality to a specific business process,
+                    </li>
+                    <li>
+                        old generation ERP systems embedded in the organization’s package based silos.
+                    </li>
+                </ul>
+                <p>
+                    These impediments of change are usually the result of:
+                </p>
+                <ul>
+                    <li>
+                        wave after wave of mergers,
+                    </li>
+                    <li>
+                        results of projects intended as pilots evolve into structural parts of the organization,
+                    </li>
+                    <li>
+                        new product introductions that have been conducted as insular projects,
+                    </li>
+                    <li>
+                        the swinging pendulum between centralization and decentralization,
+                    </li>
+                    <li>
+                        (sub)optimization of development at a local level rather than at a more communal level, usually exacerbated by local profit and loss responsibilities.
+                    </li>
+                </ul>
+                <p>
+                    Management needs insight in the ability of their organizations/enterprise to change as well as insight into ways of improving their agility by at least removing the impediments.
+                </p>
+            </section>
+            <section>
+                <header>
+                    <h4>2.2.2 Shifting Powers in the Value Chain</h4>
+                </header>
+                <p>
+                    Clients of enterprises have become more demanding. A shift of power in the value chain is occurring. Clients have grown more powerful and demand customized, integrated, and full life-cycle products and services. For example, rather than asking for a “forklift-insurance,” they ask for “forklift-availability” in their warehouse. Instead of asking for a “printer,” they require a guaranteed “printing service.” Even more, customers have a tendency to ask for integrated service offerings. Rather than treating booking of a flight, a hotel, and a sight-seeing trip as separate services provided via separate outlets, customers opt for one-stop shopping. This is a shift from basic products to full services. The creation and delivery of such complex products and services requires additional competencies which may not be readily available within a single (preexisting) enterprise. In this pursuit, they increasingly engage in complex product-offerings involving other parties, leading to cross-selling and cobranding, in which the request of the customer has a deeper impact in the complete value web. To ensure the quality of such products and services, a high level of integration and orchestration between the processes involved in delivering them is required. These developments trigger enterprises into reorganizing themselves into specialized parts increasing the agility of the enterprise as a whole. Umar [141] introduces the notion of Next Generation Enterprises (NGE), which conduct business by utilizing innovative new business models. He claims such a NGE (known by names such as virtual enterprise, networked enterprise, real-time corporations, etc.) will be the standard way of doing business, given its agility and ease of set up. Friedman [43] states that businesses are being formed not based on the core competencies they have, but instead on their ability to provide services by clever combinations of outsourcing and renting through service providers around the globe.
+                </p>
+                <p>
+                    A relative new trend in NGEs is close collaboration on research and development as well as innovation. Enterprises that decide to structurally collaborate with partners in their innovation processes, or maybe even fully outsource innovation, are part of so-called open innovation networks. A leader in such networks is Philips. Philips carries out innovation projects in collaboration with partners within and outside their supply chain. Well-known examples are the Senseo coffee machine (partner: Sara Lee DEs) and the PerfectDraft (partner: Inbev). Management need insight into the opportunities and risks of collaborations, enabling informed decisions about creating new partnerships, joining or extending existing ones, or leaving one.
+                </p>
+            </section>
+            <section>
+                <header>
+                    <h4>2.2.3 Comply or Bust</h4>
+                </header>
+                <p>
+                    In the networked economy, governance of enterprises becomes increasingly complex. One sees a shift in governance from individual departments within an organization, to the entire organization, and lately to the organization’s value web. Management does not only have to worry about the reputation of their own organization, but also about the other organizations in their value web. How daunting the latter might be can be illustrated by real life examples, such as a large shoe manufacturer who outsourced the production of shoes to another company, to only discover at a later stage that the latter made use of child labor. Although the latter company was not part of the shoemaker’s own organization, their reputation was still damaged, threatening their survival on the market-place.
+                </p>
+                <p>
+                    Governance is not only an issue to an organization on its own, but also a major concern to society as a whole. As a result of undesired and uncontrollable (side-) effects of the increased socio-economical complexity and interdependency of organizations, services, products, and financial instruments. Recent examples of such side-effects are the well-known Enron scandal, as well as the subprime mortgage crises. To control and/or prevent such effects, new legislation has been put in place to better regulate enterprise practices. An example being the Sarbanes–Oxley Act [47] forcing enterprises to increase the quality of their governance and appropriateness of audits.
+                </p>
+                <p>
+                    Management of organizations need insight into the compliance of their processes to their own goals as well as regulations provided by external regulators.
+                </p>
+            </section>
+            <section>
+                <header>
+                    <h4>2.2.4 Achieving Competitive Advantage</h4>
+                </header>
+                <p>
+                    Enterprises try to achieve and maintain a competitive advantage. In order to do so, they need to choose an optimal strategic position. Porter [102] distinguishes four basic units of competitive advantage: product development, purchasing, operation, and distribution of products or services. Performing these four activities better than one’s rival is called operational excellence. Enterprises can, however, also opt for other ways of distinguishing themselves from their rivals. In [140], Treacy and Wiersema argue that enterprises should try and focus on one of the three disciplines of added value:
+                </p>
+                <ul>
+                    <li>
+                        <header>
+                            <h5>Product leadership</h5>
+                        </header>
+                        <p>
+                            These enterprises aim to provide the best and/or most innovative products. An example would be Nike.
+                        </p>
+                    </li>
+                    <li>
+                        <header>
+                            <h5>Operational excellence</h5>
+                        </header>
+                        <p>
+                            These are typically enterprises, which strive to provide a basic level of service in the most efficient way. McDonalds would be a prototypical example of operational excellence.
+                        </p>
+                    </li>
+                    <li>
+                        <header>
+                            <h5>Customer intimacy</h5>
+                        </header>
+                        <p>
+                            Enterprises, which are customer focused and aim to provide (complete) solutions for these customers. An example of such an enterprise would be Rolls Royce (the car manufacturer).
+                        </p>
+                    </li>
+                </ul>
+                <p>
+                    In the recent past, enterprises needed to excel in only one of the above areas to be successful, and meet industry standards on the other areas [140]. Due to the network economy and globalization, there is a growing need to excel in a minimum of two areas (or at least in one and significantly improving in the other areas). To be able to make proper decisions in these crucial matters, management needs a clear view of the future and its impact on their enterprise.
+                </p>
+            </section>
+            <section>
+                <header>
+                    <h4>2.2.5 Making Technology the Business Differentiator</h4>
+                </header>
+                <p>
+                    The evolution of information technology brings an abundance of new opportunities to enterprises. Technology becomes part of almost everything and most processes have become IT reliant, if not fully automated. Some recent illustrations of the innovative use of information technology to support preexisting processes are:
+                </p>
+                <ul>
+                    <li>
+                        Delinquents which serve house arrest are monitored with RFID and GPS technology to make sure they do not leave their premises;
+                    </li>
+                    <li>
+                        • Police officers in Groningen (The Netherlands) use a PDA during surveillance. This PDA, which is equipped with GPS and navigational functions, automatically alerts officers when they pass the address of someone with unpaid fines. The PDA also shows the positions of their colleagues [87].
+                    </li>
+                </ul>
+                <p>
+                    The technological evolutions confront enterprises with the question of which technologies are relevant to the enterprise? Which technology should be replaced and which technology could be of use for developing new products (or services) or to enter new markets? Management needs insight in the features of new technology and the impact on, and possibilities for their enterprise.
+                </p>
+            </section>
+            <section>
+                <header>
+                    <h4>2.2.6 Excel or Outsource</h4>
+                </header>
+                <p>
+                    Increasingly enterprises outsource business processes. Outsourcing of business processes requires organizations to precisely understand and describe what needs to be outsourced, as well as the implementation of measures to ensure the quality of the outsourced processes [48, 94, 96, 115].
+                </p>
+                <p>
+                    In deciding on what to outsource and how to safeguard its quality, management needs insight into the extent to which processes can be outsourced, the risks that may need to be managed when doing so, as well as the interdependencies within the outsourced processes and between the outsourced processes and the retained organization.
+                </p>
+                <p>
+                    Conversely, organizations with a strong tradition in a certain business process may decide to become industry leader for such processes, for example, processing of payments, management of IT infrastructure and logistics.
+                </p>
+            </section>
+        </article>
+        <article>
+            <header>
+                <h3>2.3 Stakeholders and Their Concerns</h3>
+            </header>
+            <p>
+                An enterprise has many stakeholders. Future development of an enterprise is likely to impact on the interests of these stakeholders. In this section, we briefly survey some classes of stakeholders and their specific concerns. In this book, we use the definition of stakeholder and concern as provided in [60]. A stakeholder is an individual, team, or organization (or classes thereof) with interest in, or concerns relative to, a system (such as an enterprise). Concerns are those interests, which pertain to the system’s development, its operation or any other aspect that is critical or otherwise important to one or more stakeholders.
+            </p>
+            <p>
+                In making decisions about an enterprise’s future directions, stakeholders want to obtain insight into the impact these directions will have on their concerns, and understand the risks involved in current and future initiatives. Even more, since present day enterprises are complex social systems of interrelated processes, people and technology, stakeholders are keen on finding a way to harness this complexity when judging the impact on their concerns.
+            </p>
+            <p>
+                Each type of stakeholder has its specific need for insight, control, and overview. At the same time, they all want insight into the potential impact on the enterprise resulting from changes in its own strategy or its environment, and consequences of decisions about the enterprise’s future directions. They also have the desire to communicate about these changes and impact. Communication will take place at enterprise level, business unit level, department level, and project level depending on the responsibilities of the stakeholder involved in the communication. Below, we briefly zoom in on the interests and concerns of three typical classes of stakeholders, and their needs, namely (see Fig. 2.2):
+            </p>
+            <ol>
+                <li>
+                    stakeholders involved in a transformation;
+                </li>
+                <li>
+                    stakeholders impacted by transformation results;
+                </li>
+                <li>
+                    stakeholders sponsoring a transformation.
+                </li>
+            </ol>
+            <section>
+                <header>
+                    <h4>2.3.1 Stakeholders Involved in a Transformation</h4>
+                </header>
+                <p>
+                    Stakeholders involved in the transformation of (parts of) the enterprise need insight in and control over the scope of their engagement. They need insight into such questions as:
+                </p>
+                <ul>
+                    <li>
+                        What part of the enterprise will be impacted by the transformation?
+                    </li>
+                    <li>
+                        What are the boundaries of the part of the enterprise being transformed?
+                    </li>
+                    <li>
+                        What are the relations and dependencies with other transformations/projects?
+                    </li>
+                </ul>
+                <p>
+                    Furthermore, insight is needed into the contribution of their respective projects to the long-term strategy of the enterprise. This insight will prevent the implementation of solutions, which do not fit well into the overall (long-term) solution, even though they might be suitable in the context of a specific project. For example, the long-term strategy of some enterprise might be to apply an “enterprise service bus” for bilateral communication between applications enabling more flexible support of new business processes. If people involved in a specific project are not aware of this long-term strategy, it could be tempting for them to implement point-to-point solutions because this is probably less time consuming. Another example would be the long-term strategy to introduce shared service centers for services needed by different processes across the enterprise. If a project developing some new business process is not aware of this strategy, they may opt to realize some required subprocesses locally, which should have been provided by the shared service center.
+                </p>
+            </section>
+            <section>
+                <header>
+                    <h4>2.3.2 Stakeholders Impacted by Transformation Results</h4>
+                </header>
+                <p>
+                    A wide variety of stakeholders will possibly be impacted by the results of a transformation. Depending on the type of transformation, employees, operational managers, customers, or business partners could be impacted. Typically, they would be looking for answers to questions such as:
+                </p>
+                <ul>
+                    <li>
+                        How will the new situation, resulting from the transformation, differ from my current way of working?
+                    </li>
+                    <li>
+                        How can I prepare myself for this new situation?
+                    </li>
+                    <li>
+                        What is the rationale for this transformation?
+                    </li>
+                    <li>
+                        When will the results of the transformation be effective?
+                    </li>
+                    <li>
+                        What type of change will happen and how to contribute to the realization of the transformation?
+                    </li>
+                </ul>
+                <p>
+                    This insight gives these stakeholders understanding for the reasons and the effects of the transformation on their work, and knowing how to prepare themselves for the transformation results. As an example, consider the transformation of an enterprise to become more customer oriented, leading to the introduction of a frontoffice where all customer contacts are handled, a back-office for handling customer requests, and a multi-channel service delivery. The stakeholders will clearly be impacted by this transformation, and might want to know when they can fully use the Internet channel (customers), or what skills are required for the back-office workers (employees).
+                </p>
+            </section>
+            <section>
+                <header>
+                    <h4>2.3.3 Stakeholders Sponsoring a Transformation</h4>
+                </header>
+                <p>
+                    The discussion in the previous section already stressed how decisions concerning the future direction of an enterprise (be it in terms of business aspects, human resources aspects, or IT aspects) may have a profound impact on the future health of the enterprise as a whole. Therefore, it is of the utmost importance for the enterprise’s management to have control over the decision-making processes as well as the desired transformations following from these decisions. Major trade-offs should be made explicit in terms of an evaluation of the alternatives. Management and other stakeholders are looking for some kind of “compass” or “atlas” that will guide them in making decisions about future directions of the enterprise, and will make clear to them (in their terminology) what the impact of future changes will be; at least to strategic management and stakeholders deemed relevant by the owners of the enterprise and/or sponsors of the major change or transformation process.
+                </p>
+                <p>
+                    Fueled by the challenges confronting enterprises, as discussed in the previous section, some typical questions confronting (strategic) management are:
+                </p>
+                <ul>
+                    <li>
+                        Are we able to deliver a new product? Which parts can be produced in-house (by reusing current business services) and which parts should be outsourced (or produced by using external business services)?
+                    </li>
+                    <li>
+                        How sound is the business case a major transformation? What will it cost? How big are the benefits?
+                    </li>
+                    <li>
+                        What are consequences of alliances with external parties or innovation networks?
+                    </li>
+                    <li>
+                        What opportunities would such alliances offer?
+                    </li>
+                    <li>
+                        What is the impact of their decisions at different levels, such as enterprise level, business unit level, and department level?
+                    </li>
+                    <li>
+                        What are the implications of major changes in the enterprise’s environment, such as technology shifts, mergers or demergers, outsourcing or centralization, and the introduction of new forms of legislation such as Sarbanes–Oxley Act [47]?
+                    </li>
+                    <li>
+                        How does the current process landscape reflect our business priorities?
+                    </li>
+                    <li>
+                        To what extent might a specific project generate undesired side effects?
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <header>
+                    <h4>2.3.4 Variety and Complexity in Dealing with Stakeholders</h4>
+                </header>
+                <p>
+                    As discussed in, e.g. [78, 149], there is also an increased need to not only consider one aspect (such as business processes, IT, culture, human resources, knowledge domains, applications, etc.) of an enterprise in isolation, but rather to see all aspects as being part of an integrated whole. The concerns of stakeholders, especially when considered in parallel, are hardly ever limited to one aspect only. Stakeholders will want to gain insight into these aspects, their interdependencies, and the possible impact of future developments on their concerns [78]. This means one has to deal with a variety of concerns when dealing with stakeholders.
+                </p>
+                <p>
+                    In addition to the variety of concerns, one typically has to deal with a large number of stakeholders as well. This is commonly referred to by the notion of social complexity [31]. Social complexity is determined by:
+                </p>
+                <ol>
+                    <li>
+                        the number of stakeholders involved,
+                    </li>
+                    <li>
+                        the variety of their stakes and concerns,
+                    </li>
+                    <li>
+                        the diversity of their functional, social, and cultural backgrounds, and
+                    </li>
+                    <li>
+                        the diversity of their communicative and cognitive abilities.
+                    </li>
+                </ol>
+                <p>
+                    Effective communication can be very difficult when the social complexity is high. This calls for a shared meaning of key terms and concepts [19, 50, 144], as a prerequisite for a shared understanding of context, goals and issues, and a shared commitment to the outcome.
+                </p>
+            </section>
+        </article>
+        <article>
+            <header>
+                <h3>2.4 Traditional Approaches</h3>
+            </header>
+            <p>
+                In this section, we consider two traditional approaches for dealing with the earlier discussed challenges. The first approach is the use of strategy to focus change and/or transformation efforts in an enterprise. The second approach is programmatic steering of change, involving governance, program management, project management, and portfolio management.
+            </p>
+            <section>
+                <header>
+                    <h4>2.4.1 Strategy as a Means to Focus Effort</h4>
+                </header>
+                <p>
+                    In times of change, enterprises are hard pressed to make choices in order to survive. One of the disciplines that can be applied in making those choices at the enterprise level is strategic management. Strategic management is a combination of three main processes: strategy formulation, strategy implementation, and strategy evaluation. It can be applied to coordinate the various aspects of management to enable an organization to achieve its long term objectives.
+                </p>
+                <p>
+                    Organizations are commonly defined as a goal-oriented cooperative of people and means [32]. There is no need to argue that organizations need some mechanism by which they can consciously make decisions about the way they deploy their resources. Even more, for organizations to sustain in the longer run, they need to make choices about their own future in relation to the environment. Organizations typically use strategies to focus their resources and efforts toward the achievement of goals. Based on reflections on future evolutions, those strategies express choices for main directions of their organization.
+                </p>
+                <p>
+                    The concept of strategy is usually related to other concepts, such as: mission, vision, goal, and policies. Several definitions of these concepts are in existence, for example:
+                </p>
+                <ul>
+                    <li>
+                        <header>
+                            <h5>Mission</h5>
+                        </header>
+                        <p>
+                            Overriding purpose in line with the values or expectations of stakeholders;
+                        </p>
+                    </li>
+                    <li>
+                        <header>
+                            <h5>Vision</h5>
+                        </header>
+                        <p>
+                            Desired future state: the aspiration of the organization;
+                        </p>
+                    </li>
+                    <li>
+                        <header>
+                            <h5>Strategy</h5>
+                        </header>
+                        <p>
+                            Long-term direction;
+                        </p>
+                    </li>
+                    <li>
+                        <header>
+                            <h5>Goal</h5>
+                        </header>
+                        <p>
+                            General statement of aim or purpose;
+                        </p>
+                    </li>
+                    <li>
+                        <header>
+                            <h5>Policy</h5>
+                        </header>
+                        <p>
+                            A statement giving direction toward the achievement of goals.
+                        </p>
+                    </li>
+                </ul>
+                <p>
+                    In [68], a strategy is positioned as the resultant of an organization’s mission and vision, while goals are formulated as concrete milestones toward the achievement of an organization’s vision. These terms can be related to each other, and positioned in three tiers (see Fig. 2.3):
+                </p>
+                <ol>
+                    <li>
+                        On the first tier, we find mission, the reason of existence for an organization;
+                    </li>
+                    <li>
+                        The second tier provides a concretization of the mission in terms of a vision and a strategy aiming to realize the vision;
+                    </li>
+                    <li>
+                        The third tier provides a further concretization by refining the vision to goals and the strategy to policies.
+                    </li>
+                </ol>
+                <p>
+                    The distinction between vision and goals and analogous between strategy and policies is not absolute but gradual. In Fig. 2.3, this is illustrated by the dashed bordering.
+                </p>
+                <p>
+                    To further illustrate these concepts, consider the following example. A mortgage company has defined as its mission “to supply superior financial solutions to make individuals live in a better place.” As a vision, it aspires to be “the largest and internationally recognized mortgage banking firm.” As part of their strategy, they have decided that their way of becoming the largest mortgage firm is not by means of organic growth, but rather by means of take-overs of other mortgage firms. The policy they have set out for the take-overs is: “only friendly take-overs in countries in which the organization does not yet operate.” The goal in which they intend to measure the achievement of their mission is to grow their market share by 2% each year.
+                </p>
+                <p>
+                    The execution of a strategy is a continuous process, in particular, because the strategy itself is likely to evolve continuously as well. It is necessary to permanently improve and adapt an organization’s strategy due to changes in either the environment of the organization or changes in the organization itself. This leads us to discern two flavors of strategy evolution:
+                </p>
+                <ul>
+                    <li>
+                        <header>
+                            <h5>Outside-in</h5>
+                        </header>
+                        <p>
+                            A strategy can be influenced by developments in the environment of an organization [68]. These developments may be due to political, environmental, socio-cultural, technical, economic, as well as legal factors (also refer to the PESTEL framework [68]). Some examples of developments and their possible influence on strategy are:
+                        </p>
+                        <ol>
+                            <li>
+                                Following on the open electricity market in Europe, electricity companies in the Netherlands are required to unbundle the ownership of network facilities and the delivery of electricity.
+                            </li>
+                            <li>
+                                Technology innovations such as RFID and GPS/Galileo have enabled new applications and even new forms of doing business, as well as product innovations such as unmanned harvesting in an agricultural context and innovations in the car industry.
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <header>
+                            <h5>Inside-out</h5>
+                        </header>
+                        <p>
+                            A strategy can also be influenced by changes in the availability (and becoming aware) of an organization’s resources and competencies [68], leading to a resource-based view of a strategy. Some example of developments in this area and its strategic implications are:
+                        </p>
+                        <ol>
+                            <li>
+                                Having specialists in a specific field and positioning that field as a key business driver. Consider, for example, Porsche. Porsche is a company, which traditionally focuses on the design and construction of fast cars, is now also responsible for the design of several other artefacts such as domestic appliances, thus transplanting their design quality and image to other products.
+                            </li>
+                            <li>
+                                Organizing a number of services in a shared service center in order to improve quality and lower costs of these services [10, 62].
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+                <p>
+                    When related to the traditional SWOT analysis, summarizing key issues that are most likely to impact on an organization’s strategy development, the outside-in approach covers the opportunities and threats, while the inside-out approach deals with strengths and weaknesses.
+                </p>
+            </section>
+            <section>
+                <header>
+                    <h4>2.4.2 Programmatic Steering of Change</h4>
+                </header>
+                <p>
+                    Typically, the implementation of a strategy is executed through programs. A program can be considered as a layer above individual projects. It consists of multiple interdependent projects that together deliver some defined objective(s) for an organization. The objectives of a program are typically at a strategic level, aiming to achieve benefits and improvements in the business. We now will briefly explain what instruments are available for programmatic steering of change, namely governance, project management, portfolio management, and program management.
+                </p>
+                <ul>
+                    <li>
+                        <strong>Governance</strong> as discussed in Sect. 2.2.3, is a business challenge, which becomes increasingly important in the networked economy. To make overall change and governance processes of the enterprise possible, governance needs a clear insight into the substance and coherence of the entire value chain.
+                    </li>
+                    <li>
+                        <strong>Projects</strong> aim to realize parts of the to-be situation. In doing so, the projects need to have a clear view of the to-be and the as-is situation. In the end, project results should not only answer the concerns of the project’s stakeholders, but it should also be aligned to strategic directions and constraints.
+                    </li>
+                    <li>
+                        <strong>Portfolio management</strong> is a means to manage initiatives and programs in an integrated, coherent fashion. For defining these programs, a common language is needed for the business and IT aspects involved and also for (expected and realized) outcomes and added value.
+                    </li>
+                    <li>
+                        <strong>Programme management</strong> is an instrument to achieve business benefits. It is a way to manage uncertainties, changes, and coherence between projects. In coherence with the complete portfolio, rankings for the projects or interventions have to be made to develop a route consisting of projects toward the desired state. Program management focuses on the managerial aspects of this body of projects. Take, for example, the Goal–Efforts–Network [133] method for program management. This method prescribes an approach to take in deriving program activities, bundled in projects, from the goals of a transformation. This will ensure the goal-orientation of those projects, but not necessarily the coherence in work done by these projects; indeed, several projects may want to change the same things — even in different directions—in order to reach different goals. Therefore, program management needs insight in the cohesion between the product aspects of these projects.
+                    </li>
+                </ul>
+            </section>
+        </article>
+        <article>
+            <header>
+                <h3>2.5 Assessing Traditional Approaches</h3>
+            </header>
+            <p>
+                In the previous section, we introduced strategic management and programmatic steering of change as answers on the challenges confronting enterprises. In this section, we concern ourselves with the question: To what extent do these traditional approaches answer the challenges indeed? Are these approaches sufficient?
+            </p>
+            <section>
+                <header>
+                    <h4>2.5.1 Putting Strategy into Action</h4>
+                </header>
+                <p>
+                    A strategy is essentially a high-level choice of the way an organization aims to achieve their mission and vision. This immediately raises the question: How can this strategy be executed? Given the definitions above, the obvious thing to do is to refine the vision and strategy to more specific goals and policies. This is, however, not enough since this does not yet provide an operational perspective on how to indeed achieve these goals. Therefore, in addition to the identification of goals and policies, a number of programs, projects, or activities are needed to indeed implement the strategy. This section examines this process of strategy execution and implementation, and shows the major issues that could arise. We take the stance that a proper definition of a strategy should be specific, unambiguous, achievable, relevant, and actionable, and be based on a profound insight into the impact of change. For such a proper definition of a strategy, and the execution of such a strategy, an additional means is needed: enterprise architecture.
+                </p>
+                <p>
+                    Translating a strategy formulation into strategy execution or, as it is also called, strategy into action, is concerned with three major areas: organizing the organization, resources allocation, and change management [68]. “Organizing the organization” takes care of structuring an organization’s structure, processes, and relationships to support successful performance. “Resources allocation” is the enablement of success by how various business areas support strategies and vice-versa. “Change management” addresses the individual and organizational issues concerned in managing change.
+                </p>
+                <p>
+                    Within each of these three areas, problems pop up during strategy execution. Not much scientific literature exists uncovering the causes of such problems. Therefore, we have gathered a list of potential causes derived from our best practices. Besides that, we found one source (1), which concentrates on such causes, as well as four others (2–5) who focus on ways to improve strategies:
+                </p>
+                <ol>
+                    <li>
+                        the Free University of Amsterdam and consultancy agency, Turner, who shows seven ways to “screw up a strategy” [125];
+                    </li>
+                    <li>
+                        Kaplan et al. [71] who introduce the balanced scorecard to map strategy;
+                    </li>
+                    <li>
+                        Zagotta et al. [156], who give seven keys to successful strategy execution;
+                    </li>
+                    <li>
+                        a study into the real stories behind mergers and acquisitions [3];
+                    </li>
+                    <li>
+                        and a McKinsey research about what drives successful transformation in organizational performance [103].
+                    </li>
+                </ol>
+                <p>
+                    We combined these sources with the causes we already found ourselves and mapped these in the three areas “organizing the organization,” “resources allocation,” and “change management.” The result of this mapping is described below. The causes identified by us have been represented in italics.
+                </p>
+                <p>
+                    With regards to “organizing the organization,” one will come across causes such as a vague vision and/or strategy and alternatives that are not shown or balanced. These causes are recognized by [71] who argue that many top executives only give very limited information to their employees. In an attempt to counter these causes, [156] introduce two strategies represented by two key phrases: “quantify the vision” and “plan what you are not going to do.” The first phrase represents the will to transform corporate hopes and dreams into tangible targets, while the second represents the need to show what initiatives should not be executed because of the new strategy. The first two of the causes raised in [125], being “discord at the top” and “let us just start” address the disarray that may result when a vision or strategy is not clear enough. “Discord at the top” really signifies that among management there is already ample room for multiple interpretations of the directions set out in the strategy, while not all managers propagate the same goals underlying the vision. The “let us just start” phrase captures the fact that quite often it is forgotten to also identify what you want to reach and how. Based on our own experiences, we would like to add some additional concerns:
+                </p>
+                <ul>
+                    <li>
+                        decision-making that is done too early or too late, which often results in wrong decisions;
+                    </li>
+                    <li>
+                        a strategy without freedom of choice which limits the execution teams too much;
+                    </li>
+                    <li>
+                        a vision and strategy that are not well-defined, causing different interpretations and at execution level;
+                    </li>
+                    <li>
+                        and having solutions that cannot be traced back to the strategy, which makes it difficult to show the added value of the project and the results of the strategy.
+                    </li>
+                </ul>
+                <p>
+                    With regards to “resources allocation,” one comes across problems such as solutions that do not fit in because departments may have a tendency to make their own plans for those parts of corporate strategy that are relevant to them, while not integrating these plans with other departments. Alternatively, people within might work on the realization of one aspect of the strategy, while not being aware of the relationships (cohesion!) to other aspects. “Resources allocation” also refers to possible shortages-of/struggles-over resources. For example, when priorities are not clearly set, a fight for money can occur, or during strategy execution, it is realized that the strategy is not feasible or realistic in resources. Two of the ways to “screw up a strategy” in [125] concentrate on the latter causes, specifically “flexible in execution” and “leave it to the stakeholders.” The first potential stumbling block deals with the way the strategy is to be executed, while the second addresses the requirement that the parties involved in the strategy execution need to know what is expected from them. In support of this, [3] mentions “clarifying organizational structures and governance processes” as one of the most important issues to address during mergers.
+                </p>
+                <p>
+                    “Change management” is concerned with the management of change processes taking place in an organization. What may happen during the change process is that the strategy disappears in a closet for a couple of years. In other words, the strategy itself is not changed during the change processes, as if the enterprise’s socioeconomic and technical environment is waiting patiently for the enterprise to catch up. The authors of [156] recognize this and aspire an open strategy approach, which entails that employees need to work with the strategy in terms of an ongoing process of reviewing and maintaining strategic progress. Johnson et al. [68] also identify that change programs need to be active and vivid within organizations, otherwise it is a risk that the employees are going to see such changes as rituals signifying very little. In [125], it is stated that it does not suffice to appoint a change manager, but rather that a change leader is called for, someone who can make a difference. Two other typical strategy killers mentioned in this research are “force change upon the organization” and “send everyone to courses.” These are typical examples of “uncontrolled and uncoordinated efforts” [68] which will not be understood by the people in the organization. Top management also plays a crucial role in organizational changes. On the one hand, an organization needs management commitment to successfully execute a strategy [3] and on the other hand, the change should not be invented by senior executives only. The latter would lead to “ivory tower change [68].” A lack of communication and a lack of supervision are two causes that also relate to change management. Change concerns the whole organization and the whole organization needs to be involved in this change. Therefore, communication and visibility are very important. [103] held a survey in which these kinds of change management mechanisms were questioned. [156] prescribe mantras for communicating strategy; simple lines to communicate the essence. The last pitfalls we will mention are:
+                </p>
+                <ul>
+                    <li>
+                        <strong>Endless strategy formulation</strong>, essentially a relative to analysis paralysis. This pitfall will usually lead to a situation in which the execution of the strategy is not attained.
+                    </li>
+                    <li>
+                        <strong>Under the name of strategy many different projects arise</strong> that actually have no benefit to the strategy. Johnson et al. [68] refer to this as “hijacked processes.
+                    </li>
+                </ul>
+                <p>
+                    All three areas (organizing the organization, resources allocation, and change management) cause pop up which need to be addressed. Moving from strategy formulation to strategy execution is not a simple path to follow. Many enterprises struggle with their strategy execution and need a means to support this.
+                </p>
+            </section>
+            <section>
+                <header>
+                    <h4>2.5.2 Putting Programmatic Steering into Action</h4>
+                </header>
+                <p>
+                    Program management caters for change management, effectiveness, and the control of time and budget. By handling problems one by one, such solution development becomes phased and manageable. At the same time, best practices on programmatic steering show the following common shortcomings and needs:
+                </p>
+                <ul>
+                    <li>
+                        portfolio, programs, and projects don’t stay in line with agreed strategy and constraints;
+                    </li>
+                    <li>
+                        <p>
+                            program/project sequence planning is not solidly or explicitly underpinned:
+                        </p>
+                        <ul>
+                            <li>
+                                e.g., the programs in year 2 finds out that part of the solutions of the programs in year 1 is superfluous or could have been simplified;
+                            </li>
+                            <li>
+                                e.g., it is not always known that the result of project 1 is required for execution of the solution to be delivered by project 2;
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        realized solutions overlap or are incomplete;
+                    </li>
+                    <li>
+                        realized solutions are incompatible with each other, with solutions in the context or with acknowledged business and IT policies;
+                    </li>
+                    <li>
+                        realized solutions are optimal for their project, but not the best for the enterprise as a whole;
+                    </li>
+                    <li>
+                        programs in the change portfolio interfere, because of lack of common language, e.g., on to-be and as-is situation or on added value and outcomes;
+                    </li>
+                    <li>
+                        the business case for an intended transformation is not complete;
+                    </li>
+                    <li>
+                        business attention for programs directly focused at implementing a business initiative is ensured, neglecting programs to ensure the required boundary constraints;
+                    </li>
+                    <li>
+                        the quality of the end result is traded off with duration and budget, thus unconsciously downgrading the result to a mid-term instead of a long-term solution;
+                    </li>
+                    <li>
+                        the same requirements are differently elaborated and solved by different projects.
+                    </li>
+                </ul>
+                <p>
+                    Some examples of consequences of these shortcomings are:
+                </p>
+                <ul>
+                    <li>
+                        the enterprise is not fully obtaining the business benefits that the program was set out to achieve;
+                    </li>
+                    <li>
+                        surprises in systems management costs;
+                    </li>
+                    <li>
+                        lack of interoperability and consistency;
+                    </li>
+                    <li>
+                        lack of economies of scale (through common use);
+                    </li>
+                    <li>
+                        lack of a overall consistent experience of the systems.
+                    </li>
+                </ul>
+            </section>
+        </article>
+        <article>
+            <header>
+                <h4>2.6 Requirements on Enterprise Architecture</h4>
+            </header>
+            <p>
+                The road from strategy formulation to strategy execution, including the use of programmatic steering, is certainly not an easy one to travel. Research shows that less than 60% of the strategic objectives in organizations are reached [125]. When considering the possible failures in strategy execution as discussed in the previous section, an instrument is needed to support this process. As illustrated in Fig. 2.4, this instrument is positioned between strategy and program management. This section describes the requirements to this additional instrument. We start with a reflection of the requirements following from the causes for problem areas in strategy execution: “organizing the organization,” and “change management.”
+            </p>
+            <p>
+                The causes involving “organizing the organization” call for a means that makes the strategy more specific, unambiguous, achievable, relevant, and actionable, while at the same time providing an overview of the desired future state and the impact of change with respect to the current state. As [19] shows, it is important to keep an eye out for ambiguities during development projects, i.e., the need to define terms precisely. For example, what does a given government agency mean by customeroriented? Is that to be interpreted as serving the citizen, to service the responsible minister or both? After defining such terminology, the programs and projects needed to arrive at the desired state need to be “designed.” To be able to do so, different alternatives to obtain the state have to be elaborated, evaluated, and decided upon. A method to structure and document these alternatives is necessary, just as tracing of the contributions of individual proposed projects to the realization of the strategy. Furthermore, all stakeholders are likely to want insight into the key issues to be able to make decisions. To obtain this insight, views are needed which highlight the important issues to the specific stakeholders. The added value of each of the proposed programs and projects needs to be assessed from an agreed and committed to perspective [78, 108].
+            </p>
+            <p>
+                In the second area of “resources allocation,” it is essential to look at the different aspects of the business areas in cohesion. Therefore, concrete plans of the desired state and the way toward it are required and a prioritization in the programs and projects based on time, resources, and goals is needed. Cohesion is needed in the business processes and serving of the client (e.g., do not have information on traffic conditions end at the border of a region, but let it be in the perspective of the driver who travels from A to B), in the information required (e.g., each actor has all information available required for his function), and in the infrastructure (the infrastructure is connected in a meaningful way for end users).
+            </p>
+            <p>
+                The “change management” area strives for a common understanding and shared commitment between all stakeholders involved. This requires stepwise commitment together with growing insight in impact of change. Therefore, effective communication is needed toward all stakeholders. A communication breakdown is required in which a common language and models are used to communicate between all parties [19, 107]. In this area, it is crucial to address the culture of the organization and take care of the commitment and recognition of the stakeholders. It is necessary to deal with conflicting requirements and to adapt quickly to changes in the situation.
+            </p>
+            <p>
+                The route to be taken from strategy formulation to execution, including the use of programmatic steering, needs a means that enables it to do the right things (be effective) and to do things right (be efficient) in strategy execution. Therefore, the means needs to be a tool for steering, coordination as well as communication. Using this means, it should be possible to:
+            </p>
+            <ol>
+                <li>
+                    Gain insight into the current state of the enterprise at a suitable abstraction level to understand and to analyze issues that hamper the execution of the strategy of the enterprise;
+                </li>
+                <li>
+                    Gain insight into the current state of the enterprise to assess its compliance to (external) regulations;
+                </li>
+                <li>
+                    Deal with social complexity of stakeholders involved in enterprise transformations;
+                </li>
+                <li>
+                    Develop a business case for the chosen strategic direction;
+                </li>
+                <li>
+                    Explore strategic alternatives for the future direction of the enterprise, while considering issues, challenges, feasibility and impacts, and eventually making a decision for an alternative of choice;
+                </li>
+                <li>
+                    Express/depict a coherent, comprehensive and concrete image of the desired future state(s) of the enterprise;
+                </li>
+                <li>
+                    Design a roadmap for the transformation;
+                </li>
+                <li>
+                    Distinguish between short-term solutions and long-term (structural) solutions;
+                </li>
+                <li>
+                    Give a clear context and direction—limiting design freedom—of individual projects that contribute to the transformation;
+                </li>
+                <li>
+                    Select available solutions and/or packages that are to remain or to become a part of the solution, whether in-house or sourced by a business partner;
+                </li>
+                <li>
+                    Guard the proper execution of any transformation project to be in line with the strategic direction (or to be knowingly informed that it deviates) and with external regulations;
+                </li>
+                <li>
+                    Provide a common language to a portfolio of changes/transformations of an enterprise;
+                </li>
+                <li>
+                    Enable traceability of design decisions from the strategic level via programs to specific projects.
+                </li>
+            </ol>
+            <p>
+                In addition to the above requirements on enterprise architecture as a means, based on the discussions in this chapter, we also identify seven key applications for enterprise architecture:
+            </p>
+            <ol>
+                <li>
+                    Investigate problems/shortcomings in a preexisting situation, including the creation of a shared (among stakeholders) understanding of the existing situation;
+                </li>
+                <li>
+                    Express (and motivate) the future direction of an enterprise, as well as investigate (and evaluate) different alternatives. This also involves the creation of a shared (among stakeholders) conceptualisation of the (possible) future directions, and shared agreement for the selected alternative;
+                </li>
+                <li>
+                    Identify key problems, challenges, issues, impediments, chances, etc., as well as make well-motivated design decisions that enable a move from the existing situation into the desired strategic direction;
+                </li>
+                <li>
+                    Provide boundaries and identify plateaus (intermediary steps) for the transformation of the enterprise toward the articulated strategic direction. In this context, enterprise architecture is used as a planning tool, making the realization of a strategy more tangible;
+                </li>
+                <li>
+                    Give a clear context and direction for a portfolio of projects working toward the realization of the first plateau as defined at the tactical planning level;
+                </li>
+                <li>
+                    Select one or more standard solutions and/or packages that are to become part of the solution and/or decide to outsource an entire business process/service to another enterprise;
+                </li>
+                <li>
+                    Create the high level design of an actual step in the enterprise transformation as it will be realized (and implemented) in the context of a specific project.
+                </li>
+            </ol>
+        </article>
+        <article>
+            <header>
+                <h3>2.7 Summary</h3>
+            </header>
+            <p>
+                In this chapter, we have explored the motivations why enterprises turn to enterprise architecture as a means to find answers in their quest to meet modern day challenges such as the constantly evolving environment in which they need to operate, outsourcing, network organizations, etc. Given these challenges, we then turned our attention to the stakeholders and examined their stakes and concerns, their needs with regard to an enterprise transformation. Management, for example, needs insight into the impact of changes, alternatives, technological developments, new government regulations, etc. Stakeholders involved in enterprise transformations need, for instance, insight into the boundaries of systems/processes to be developed and the relation to adjacent systems/processes. Stakeholders involved in the outcome of a transformation typically want to gain insight into the impact of the new situation on their work and personal goals. We also discussed the notion of social complexity as a function of the number of stakeholders involved, variety of concerns, and the diversity in their backgrounds and abilities.
+            </p>
+            <p>
+                Before claiming a place for enterprise architecture as a new instrument fitting a need, we discussed some traditional approaches as well as their shortcomings for putting strategy to action and programmatic steering. We mapped the causes for these shortcomings to the areas of “organizing the organization,” “resources allocation,” and “change management.” This discussion, finally led to the identification of high-level requirements on the new instrument of enterprise architecture.
+            </p>
+        </article>
+        <article>
+            <header>
+                <h3>2.8 Discussion Statements</h3>
+            </header>
+            <ol>
+                <li>
+                    The introduction of enterprise architecture heralds the end of strategy.
+                </li>
+                <li>
+                    Enterprise architecture should be in the lead for portfolio and program management.
+                </li>
+                <li>
+                    No vision, no architecture.
+                </li>
+                <li>
+                    No architecture, no vision.
+                </li>
+                <li>
+                    Enterprise architecture is only necessary for major changes in strategy that effect the entire organization.
+                </li>
+                <li>
+                    Enterprise architecture is the only constant in ever changing enterprises.
+                </li>
+            </ol>
+        </article>
+    </section>
+</body>
+</html>
