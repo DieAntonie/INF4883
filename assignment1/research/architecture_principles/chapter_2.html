@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INF4883 - Architecture Principles</title>
+</head>
+<body>
+    <header>
+        <h1>INF4883 - Assignment 1 - Research - Architecture Principles</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="../index.html">Back</a>
+            </li>
+            <li>
+                <a href="chapter_2.html">Chapter 2</a>
+            </li>
+        </ul>
+    </nav>
+    <section>
+        <header>
+            <h2>The Role of Enterprise Architecture</h2>
+        </header>
+        <p>
+            <strong>Abstract</strong>
+        </p>
+        <p>
+            The aim of this chapter is to identify the role of enterprise architecture, and more specifically, the role of architecture principles. It starts with an exploration of the concept of enterprise transformation, including the enterprise engineering perspective. The purpose of enterprise architecture is to align an enterprise to its essential requirements. Its meaning is that it provides a normative restriction of design freedom toward transformation projects and programs. Key elements of enterprise architecture are concerns, models, views, architecture principles and frameworks. Enterprise architecture addresses the properties that are necessary and sufficient for it to be fit for its mission. Architecture principles are the cornerstones of enterprise architecture. They fill the gap between high-level strategic intents and concrete designs. They provide an anchor in a sea of change.
+        </p>
+        <article>
+            <header>
+                <h3>2.1 Introduction</h3>
+            </header>
+            <p>
+                As discussed in the introductory chapter, enterprise architecture is an instrument to articulate an enterprise’s future direction, while also serving as a coordination and steering mechanism toward the actual transformation of the enterprise. In this chapter, we elaborate on the role played by enterprise architecture in enterprise transformations. By doing so, we provide a context which allows the remainder of this book to more specifically zoom in on architecture principles.
+            </p>
+            <p>
+                Enterprise architecture is a relatively young field. Nevertheless, a large number of approaches to enterprise architecture have been developed. Standards such as IEEE 1471 (IEEE 2000), The Open Group Architecture Framework (TOGAF 2009) and ArchiMate (Iacob et al. 2009) are important steps in the continuous maturation of the field of enterprise architecture. The field of enterprise architecture also exhibits growth from an interpretation as the enterprise-wide IT architecture to the architecture of the enterprise (Fehskens 2008). One can also observe in industrial practice, how enterprise architecture initiatives increasingly include business aspects, while also providing guidance on the design of organizational aspects (Wagter 2009).
+            </p>
+            <p>
+                Even though enterprise architecture has grown to encompass more than IT, the term clearly originates from the IT domain. One of the first references to the term architecture in the context of IT is found in a paper from 1964 on the architecture of the IBM System/360 (Amdahl et al. 1964). The use of architecture in the context of the development of information systems started in the late 1980s in both Europe and North America. The North American use of the concept of architecture, in the context of information systems, can be traced back to a report on a large multi client study, the PRISM project (PRISM 1986) and a paper by Zachman (1987), while its European origins can be traced back to the early work of Scheer (1986, 1988, 2000) on the ARIS framework.
+            </p>
+            <p>
+                The ARIS framework eventually formed the base for the IDS Scheer toolset. The PRISM project was a multi-year research project, led by Michael Hammer, Thomas H. Davenport, and James Champy. The research project was called the Partnership for Research in Information Systems Management (or PRISM), and was sponsored by approximately 60 of the largest global companies (DEC, IBM, Xerox, Texaco, Swissair, Johnson and Johnson, Pacific Bell, AT&T, et cetera). This research effort produced an architecture framework known as the PRISM Architecture Model, which was published in 1986. The PRISM framework has strongly influenced other enterprise architecture standards, methods and frameworks (Davenport et al. 1989; Richardson et al. 1990; Beijer and De Klerk 2010; Rivera 2007). Many years later, the PRISM report also influenced the IEEE definition of architecture, as many of the IEEE 1471 committee members (Digital included) were employed by the original sponsors of their earlier work on PRISM.
+            </p>
+            <p>
+                Zachman (1987) is often referred to as one of the founders of the field of enterprise architecture, even though the original PRISM and ARIS frameworks were already published in 1986. At the same time, however, the publication that is used to substantiate this claim was actually titled “A framework for information systems architecture”. This clearly suggests a focus on information systems architecture rather than enterprise architecture in general. Even more, the actual focus of this publication was on computerized information systems rather than information systems in the broader sense (Falkenberg et al. 1998). Nevertheless, the Zachman framework was intended to support a strong focus on selected aspects of (computerized) information systems without losing a sense of the contextual, or holistic, perspective. The same holds for the earlier work reported by the PRISM project as well as for the early work of Scheer.
+            </p>
+            <p>
+                In moving beyond IT, enterprise architecture aims to provide a more holistic view on an enterprise. Therefore, enterprise architectures typically involve additional domains such as business architecture, process architecture, data architecture, application architecture and infrastructure architecture. The PRISM, ARIS and Zachman frameworks already suggested to take an enterprise-wide view on the aspects that are relevant to the design of (computerized) information systems, from the business process level to the IT infrastructure level. These frameworks were typically derived from analogous structures that are found in the older disciplines of construction and engineering that classify and organize design artifacts created by the processes of designing and producing complex physical products (e.g. buildings or airplanes).
+            </p>
+            <p>
+                Nevertheless, no universal agreement exists on the exact views that can be used in an enterprise architecture, nor on the exact content of such views. This is illustrated by the wide variety of architecture frameworks (identifying different views) that have been defined, which do not seem to converge (Greefhorst et al. 2006). This has been a real issue in the application of enterprise architecture in practice, and has not helped in the acceptance in organizations.
+            </p>
+            <p>
+                To better understand the role of enterprise architecture, and ultimately the role of architecture principles, we first need to gain a better understanding of enterprise transformations. To this end, the next section will continue with a discussion of enterprise transformations. This is followed by an elaboration on the role of enterprise architecture as a means to steer and coordinate enterprise transformations. Based on this, we define the view on enterprise architecture as taken in this book. We then continue with a brief overview of some relevant industry standards, as well as key flavors of enterprise architecture. Before concluding, we explicitly zoom in on the role of architecture principles.
+            </p>
+        </article>
+        <article>
+            <header>
+                <h3>2.2 Enterprise Transformations and Enterprise Engineering</h3>
+            </header>
+            <p>
+                As a consequence of challenges such as the ones discussed in Sect. 1.1, modern day enterprises have to change themselves continuously. These transformations may be the result of a gradual change of the behavior of the elements in the enterprise, or they may be the result of a deliberate action. In Sect. 1.2 we already mentioned the importance for senior management (CEO, CFO, CIO, et cetera) to be engaged in the decision making process concerning the design of their enterprise. This applies to both gradual changes and deliberately designed changes.
+            </p>
+            <p>
+                An increasing number of scholars and practitioners take the perspective that in order to make conscious (and well informed) decisions, an engineering-like approach to the design of enterprises is needed (Dietz 2006; Op ’t Land et al. 2008; Lankhorst et al. 2005a; Österle and Winter 2003; Tribolet et al. 2008). This has led to the fields of business engineering (Österle and Winter 2003), organizational engineering (Tribolet et al. 2008) and enterprise engineering (Dietz 2006).
+            </p>
+            <p>
+                The American Engineers Council for Professional Development (ECPD 1941) states that engineering concerns:
+            </p>
+            <p>
+                <blockquote>
+                    The creative application of scientific principles to design or develop structures, machines, apparatus, or manufacturing processes, or works utilizing them singly or in combination; or to construct or operate the same with full cognizance of their design; or to forecast their behavior under specific operating conditions; all as respects an intended function, economics of operation and safety to life and property.
+                </blockquote>
+            </p>
+            <p>
+                In line with this general definition of engineering, we will use the term enterprise engineering as the general term for an engineering based approach to design or develop enterprises:
+            </p>
+            <aside>
+                <header>
+                    <h4>ENTERPRISE ENGINEERING</h4>
+                </header>
+                <p>
+                    The creative application of scientific principles to develop (which includes design and implementation) enterprises, or parts/aspects thereof; or to operate the same with full cognizance of their design; or to forecast their behavior under specific operating conditions; all as respects an intended function, economics of operation and safety to life and property.
+                </p>
+            </aside>
+            <p>
+                In this definition, development is defined in line with Dietz (2008) as involving both design and implementation.
+            </p>
+            <p>
+                As stated in the enterprise engineering manifesto (CIAO 2010), it is the mission of the discipline of enterprise engineering to bring the rigor of engineering in general to the design of enterprises:
+            </p>
+            <p>
+                <blockquote>
+                    It is the mission of the discipline of Enterprise Engineering to develop new, appropriate theories, models, methods and other artifacts for the analysis, design, implementation, and governance of enterprises by combining (relevant parts of) management and organization science, information systems science, and computer science. The ambition is to address (all) traditional topics in said disciplines from the Enterprise Engineering Paradigm. The result of our efforts should be theoretically rigorous and practically relevant.
+                </blockquote>
+            </p>
+            <p>
+                The field of scientific management (Taylor 1911), or its present day ‘variations’ such as Lean (Womack and Jones 2003) and Six Sigma (Pyzdek 2003), can also be regarded as relevant theories within the field of enterprise engineering. However, scientific management should not be equated to enterprise engineering. The field of enterprise engineering involves more than just optimization of labor and production activity. A first example is the DEMO method (Dietz 2006). The DEMO method provides a rigorous approach for the design of an enterprise that is based on both a philosophical and mathematical foundation. It focuses on the design of the essence of an enterprise in terms of its technology independent design. Another example, is the viable systems model of Beer (1985), which provides a set of systems-theoretic (Ashby 1956) principles for the successful design of viable enterprises.
+            </p>
+            <p>
+                The earlier mentioned enterprise engineering manifesto (CIAO 2010), provides seven key postulates to provide the field of enterprise engineering with more direction and focus. The postulates included in the manifesto are also an anchor point for the enterprise engineering series. This book, being part of the enterprise engineering series, is compatible with these postulates.
+            </p>
+            <p>
+                Finally, the above discussed approaches to enterprise engineering willingly or not, invite a top-down ‘design-first’ style of thinking toward the engineering of enterprises. Enterprise engineering should not be regarded as ‘just’ being a designfirst style of enterprise transformation (Fehskens 2010). Since enterprises are, at the end of the day, human driven endeavors, it is important to combine the above approaches with approaches that take human beings as a starting point. For example, Achterbergh and Vriens (2009) take the view that the development/evolution of an organization (involved in one or more enterprises) can be regarded as a social experiment, involving the human actors that comprise the organization. Another example is the communication oriented perspective taken by Taylor and Van Every (2010). Their approach views an organization as being primarily the result of human communication. Most importantly, it is based on the communication among the human beings who actually do the work. Taking this approach also explicitly exposes the potential contradiction between what may have been designed up-front and what materializes in reality. Finally, the shift toward networked and services-oriented enterprises, as discussed in the introductory chapter, also requires a balance betweena design-first style of thinking with an emergence style of thinking.
+            </p>
+            <p>
+                Given the need to balance a design-first and an emergence oriented style of thinking, enterprise engineering can benefit from the rigor from other fields of engineering such as civil engineering. However, it should be clear that enterprise engineering has to deal with other forces, such as emergence and the fact that enterprises are human driven, which make it quite a different ‘game’ to play.
+            </p>
+        </article>
+        <article>
+            <header>
+                <h3>2.3 Streams of Activities in Enterprise Engineering</h3>
+            </header>
+            <p>
+                In using an engineering based approach to the transformation of enterprises, we suggest to make a distinction between three key streams of activities (Harmsen et al. 2009):
+            </p>
+            <ul>
+                <li>
+                    <header>
+                        <h4>Asses</h4>
+                    </header>
+                    <p>
+                        The assessment (diagnosis) of the problem/challenge a potential enterprise transformation aims to solve/meet. In other words, clarifying the motivation for the transformation (e.g. involving the goals of the core stakeholders) as well as its requirements and intended results.
+                    </p>
+                </li>
+                <li>
+                    <header>
+                        <h4>Aim</h4>
+                    </header>
+                    <p>
+                        The identification of how the transformation aims to solve/meet the problem/challenge (formulation/selection of the treatment). In other words, restricting/focusing the design of the desired enterprise and the transformation steps needed to get there. In view of the needed balance between the design-first and emergence styles of thinking, the Aim stream should make explicit what needs to be restricted top-down, and what can be left to bottom-up emergence. Even more, top-down design decisions might be taken that enable/invite future emergence. In our view, architecture principles provide an excellent means to articulate the balance between top-down restrictions and bottom-up emergence.
+                    </p>
+                </li>
+                <li>
+                    <header>
+                        <h4>Act</h4>
+                    </header>
+                    <p>
+                        The acting out of the actual transformation (applying the treatment). In other words, the implementation of the desired enterprise. The act process is started only if the results of the aim process defines a solution that is in line with the diagnosis arrived at in the assess process.
+                    </p>
+                </li>
+            </ul>
+            <p>
+                This distinction leads to the situation as depicted in Fig. 2.1. The Assess, Aim and Act streams of activities will be highly iterative and cyclic in nature. There is, nevertheless, a strong dependency between the results produced in the three streams. There must be some general motivation to start the Assess activities in the first place. During the assessment activities, the understanding of the precise motivation for the transformation will increase, while the requirements on a possible solution are gathered. The requirements serve as input to the Aim process in which a solution is designed fitting the requirements. While the requirements state what properties the enterprise should have, the motivations express why the stakeholders want the enterprise to have these properties (Beijer and De Klerk 2010). The design expresses how an actually ‘implemented’ enterprise will meet the requirements. It consequently acts as a restriction of implementation freedom toward the implementers. Needless to say that the design should indeed balance between the top-down design-first and bottom-up emergence style of thinking.
+            </p>
+            <p>
+                Dietz (2006, 2008) describes a generic system development process, which we essentially regard as a possible realization of the generalized structure shown in Fig. 2.1. The same applies to TOGAF’s Architecture Development Method (ADM, illustrated in Fig. 2.2). It also provides a particular way of ‘doing’ the Assess, Aim and Act processes. The ADM’s architecture vision phase focuses on an understanding of the essential ‘problem’ and vision on the ‘solution’, i.e. a first Assess/Aim iteration. The business architecture, information systems architecture and technology architecture phases provide further Assess/Aim iterations. Depending on the situation at hand, the focus will be more on understanding the problem (Assess) or developing the solution (Aim). The opportunities and solutions and migration planning yield further iterations of the aim process, elaborating the actual intended transformation. Finally, the implementation governance and architecture change management phases (and associated projects that actually realize the envisaged architecture) correspond to the Act process.
+            </p>
+            <p>
+                To make large enterprise transformations feasible and manageable, they will typically be split into programs and eventually into projects. Even more, larger enterprises typically do not just have one transformation program, but rather multiple, which all need to be kept in sync and aligned to the strategy of the enterprise. A more theoretical underpinning of this phenomenon can be found in theories on multi-level systems dealing with problems that cannot be solved with a monolithic decision artifact, and require multiple levels to come to terms with them (Mesarovic´ et al. 1970). In our view, there are roughly three key granularity levels at which enterprise transformations can be regarded:
+            </p>
+            <ul>
+                <li>
+                    <header>
+                        <h4>Strategic transformation level</h4>
+                    </header>
+                    <p>
+                        This level is tied into the strategy formulation and execution processes. It is concerned with the strategic direction of the enterprise’s transformation.
+                    </p>
+                </li>
+                <li>
+                    <header>
+                        <h4>Tactical transformation level</h4>
+                    </header>
+                    <p>
+                        This level is concerned with the portfolio of transformation programs needed to execute the overall enterprise transformation. At this level we find the definition of the transformation programs, their overall planning and mutual synchronization.
+                    </p>
+                </li>
+                <li>
+                    <header>
+                        <h4>Operational transformation level</h4>
+                    </header>
+                    <p>
+                        At this level, we are concerned with the dayto-day progress of the enterprise transformation. This level concerns the projects within the programs. This is where the actual work of the transformation takes place.
+                    </p>
+                </li>
+            </ul>
+            <p>
+                These levels are illustrated in the diagram depicted in Fig. 2.3. The diagram also shows the recursive use of the Assess/Aim/Act stream, where each time the Act stream spawns a series of further programs/projects. TOGAF also suggests the recursive use of the ADM process (see Fig. 2.2) on multiple levels of granularity of the transformation.
+            </p>
+            <p>
+                It should be noted that the structure as depicted in Fig. 2.3 does not necessarily mean that the decomposition of a transformation is a strict top-down process. While the transformation progresses, changes in the context of the transformation may prompt a change of direction, or the execution of projects/programs lead to new insights that also require changes of direction, or even new ‘spontaneous’ projects. In that sense, the intentions of the structure depicted Fig. 2.3 is that it should work just as well with a collection of agile projects (Martin 2002). This also stresses the need to strike a balance between the design-first and emergence styles of thinking. As mentioned before, we take the view that architecture principles are an excellent way of articulating this balance.
+            </p>
+        </article>
+        <article>
+            <header>
+                <h3>2.4 Architecture-Based Governance of Enterprise Transformations</h3>
+            </header>
+            <p>
+                As discussed above, due to the complexity of enterprise transformations, they are typically decomposed into multiple, smaller, projects. In terms of Fig. 2.3, one can state that at the level of projects the actual ‘work’ of transforming the enterprise occurs, while the higher levels focus on the integration of results, as well as the alignment to the enterprise’s strategy. To this end, a governance mechanism is needed to steer and coordinate the transformation, connecting the strategic considerations at the strategy level to the execution of the transformation projects at the operational level. This generally also requires a further elaboration of the enterprise’s strategy, since strategies tend to be too unspecific to effectively steer and coordinate the programs and projects within the transformation (Op ’t Land et al. 2008; Wagter 2009). Additionally, the needed governance mechanism must also explicitly address the coherence needed among the different aspects of an enterprise.
+            </p>
+            <section>
+                <header>
+                    <h4>2.4.1 The Need for Architecture</h4>
+                </header>
+                <p>
+                    Traditionally, project management and program management are put forward as being responsible for these coordination tasks (PRINCE 2009; PMBOK 2001). How ever, these approaches focus primarily on the management of typical project parameters such as budgets, resource use, management of project risks, deadlines, et cetera. When indeed only considering the typical project parameters, one runs the risk of conducting ‘local optimizations’ at the level of specific projects. For example, when making design decisions that have an impact which transcends a specific project, projects are likely to aim for solutions that provide the best cost/benefits trade-off within the scope of that specific project, while not looking at the overall picture. Regretfully, however, in practice such local optimizations do not just remain a potential risk. The risk actually materializes, and consequently reduces the overall quality of the result of the transformation. This type of risk generally occurs when stakes with regards to general infrastructural elements of an enterprise collide with local short-term interests. This especially endangers the needed coherence/alignment between different aspects within an enterprise (such as business and IT, but also human resources, physical infrastructures, et cetera). As a result, more often than not, enterprises fail to actually realize the desired transformation even though it might be the case that all projects are finished on time and within budget.
+                </p>
+                <p>
+                    This means that separate from project/program management, an additional ‘force’ is needed to steer and coordinate enterprise transformations. This additional force should also explicitly target the essential requirements that transcend the scope of specific projects. In line with Rijsenbrij et al. (2002), Op ’t Land et al. (2008), we regard the overall steering of an enterprise transformation (illustrated in Fig. 2.4) as involving a force-field among three perspectives:
+                </p>
+                <ul>
+                    <li>
+                        <header>
+                            <h5>Enterprise strategy perspective</h5>
+                        </header>
+                        <p>
+                            From this perspective, the focus is on a long-term outlook on why, and how, the enterprise aims to realize its mission and vision (Johnson et al. 2005). An enterprise strategy typically includes a business strategy and an IT strategy (Henderson and Venkatraman 1993).
+                        </p>
+                    </li>
+                    <li>
+                        <header>
+                            <h5>Program management perspective</h5>
+                        </header>
+                        <p>
+                            In executing a (new) strategy, the enterprise will have to be transformed to match the strategy. Such a transformation will involve a portfolio of change projects. Therefore, from a program management perspective, the focus is on a managed and controlled way of executing the processes involved in an enterprise transformation effort. From this perspective, one is concerned with typical project parameters such as budgets, management of project risks, resource use, deadlines, et cetera (PRINCE 2009; PMBOK 2001).
+                        </p>
+                    </li>
+                    <li>
+                        <header>
+                            <h5>Enterprise architecture perspective </h5>
+                        </header>
+                        <p>
+                            The enterprise architecture perspective is concerned with the overall steering of the direction in which the enterprise aims to transform itself, and the coordination of the projects and programs. The focus is on those requirements on the design of the enterprise that are essential to the stakeholders of/within the enterprise and/or transcend individual programs or projects.
+                        </p>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <header>
+                    <h4>2.4.2 Architecture as a Bridge from Strategy to Design</h4>
+                </header>
+                <p>
+                    As mentioned above, an enterprise architecture should provide an elaboration of an enterprise’s strategy such that it enables the steering and coordination of the programs and projects involved in the transformation. It should therefore focus on those requirements on the design of the enterprise that are essential to the key stakeholders (including senior management) of the enterprise and/or transcend individual programs or projects.
+                </p>
+                <p>
+                    This view is shared by Fehskens (2008). He states that the architecture of a ‘thing’ should explicitly address alignment, relating the role of architecture to the mission of that ‘thing’. Fehskens defines architecture as “those properties of a thing and its environment that are necessary and sufficient for it to be fit for purpose for its mission”. In his view, architecture should focus on what is essential, on “the stuff that matters”. The focus on the properties that matter, is also what distinguishes architecture from design. A different architecture implies a different mission, whilst different designs may address the same mission.
+                </p>
+                <p>
+                    By focusing on the essential requirements, there is a natural tendency for architectures (in our domain) to be concerned with a class of systems,1 such as the system of systems that collectively forms the enterprise, or a family of similar systems. We, however, believe that a focus on essential requirements leads to a more meaningful and discriminating view on architecture. It ensures that architectures contain “everything you need and nothing you don’t” (Fehskens 2010). Also, architectures that are defined based on the essential requirements, still define a class of systems. In particular, all designs that adhere to the architecture describe systems in this class. However, there may also be a single design and system for a given architecture. This interpretation of architecture resonates well with the definitions provided by IEEE (2000) and TOGAF (2009), which state that the architecture level should focus on the fundamental organization of a system. It also conforms to the definition of architecture as suggested by Dietz (2008) and Hoogervorst (2009), who state that an architecture operates on a class of systems.
+                </p>
+                <p>
+                    While an architecture focuses on the essential requirements, a design focuses on how the remaining (system specific) requirements will be met. The design decisions underlying the design are much more specific, and should only have a limited impact on the essential requirements of the key stakeholders. If such decisions would have a significant impact on these requirement, then this would be an indication that they should have been included at the architecture level in the first place.
+                </p>
+                <p>
+                    Needless to say that the actual designs used in the projects need to comply to the architecture. As a consequence, an architecture by definition restricts the design space. Or formulated more positively, it reduces design stress from the designers in the projects. It does so especially, since the key design decisions that transcend the project’s scope have been addressed in the architecture. The point of view that an enterprise architecture is a normative restriction of design freedom also features prominently in the definition of architecture as provided by Dietz (2008): “Theoretically, architecture is the normative restriction of design freedom”.
+                </p>
+                <p>
+                    One may argue that an enterprise architecture may also provide guidance to the programs and projects, rather than a normative restriction of design freedom. While we agree to this, we also argue that acting as a normative restriction of design freedom is at the heart of its role as a steering instrument.
+                </p>
+                <p>
+                    When we now re-visit the decomposition of enterprise transformations into programs and projects as shown in Fig. 2.3. It is quite natural to identify different granularity levels of essential requirements addressed by an enterprise architecture. For example, in TOGAF a distinction is made between a strategic architecture, segment architecture and capability architecture. These architectures become increasingly more specific in terms of their scope, while reducing their intended time-horizon to the horizon relevant to the program or project. More specifically:
+                </p>
+                <ul>
+                    <li>
+                        <strong>Strategic Architectures</strong> show a long-term summary view of the entire enterprise. Strategic Architectures provide an organizing framework for operational and change activity and allow for direction setting at an executive level.
+                    </li>
+                    <li>
+                        <strong>Segment Architectures</strong> provide more detailed operating models for areas within an enterprise. Segment Architectures can be used at the program or portfolio level to organize and operationally align more detailed change activity.
+                    </li>
+                    <li>
+                        <strong>Capability Architectures</strong> show in a more detailed fashion how the enterprise can support a particular unit of capability. Capability Architectures are used to provide an overview of current capability, target capability, and capability increments and allow for individual work packages and projects to be grouped within managed portfolios and programs.
+                    </li>
+                </ul>
+                <p>
+                    As a summary, Fig. 2.5 (page 18) summarizes how architecture forms a bridge between strategy and design, and ultimately the implementation of the (future) enterprise. Based on the distinction between a strategic architecture, segment architecture and capability architecture, as suggested by TOGAF, three levels of architecture are identified. These levels correspond to the three levels of transformation granularity shown in Fig. 2.3. The enterprise strategy drives the enterprise transformation, and therefore also the formulation and use of the architecture. The strategic architecture restricts the design space for the segment architecture, while the segment architecture limits the design space of the capability architecture. Finally, the architectures limit the design space of designers, while the design on its term can be regarded as limiting the space for valid implementations.
+                </p>
+            </section>
+            <section>
+                <header>
+                    <h4>2.4.3 Steering with Architecture</h4>
+                </header>
+                <p>
+                    The situation depicted in Fig. 2.5 may suggest that the steering role of architecture is a pure top-down communication channel. In other words, a channel from strategy to implementation. It is, however, important to realize that steering is not a oneway flow. When steering, one uses controls to sent signals to an object that needs steering. For example, using a break, an accelerator and a steering wheel, a driver can sent steering signals to the car. However, in addition to these controls, one also needs indicators to see whether the object being steered is actually responding as planned. When one turns a car’s steering wheel to the left, this is not necessarily a guarantee that the car will indeed move to the left. When, for example, the road is iced over, it is likely that when the speed of the car is high, the car will not turn left. Even though the steering signal has been transferred successfully to the wheels of the car, the car is not turning left. Drivers of a car can use their own sense to assess whether the car is indeed turning left or not. In general, indicators are needed to observe the consequences of steering actions. In other words, for steering we need controls to send steering signals to the object to be steered, and indicators to observe the (changed) behavior of the object. In the field of management science, this principle is captured in the so called control paradigm (De Leeuw 1982; De Leeuw and Volberda 1996) as depicted in Fig. 2.6 (page 19) showing that a control system controls an object system using controls and indicators.
+                </p>
+                <p>
+                    When using architecture as a steering and coordination mechanism for enterprise transformations, the architecture itself and the associated governance processes provide the controls. At the same time, a feedback mechanism is needed to assess whether the enterprise transformation is indeed moving in line (and pace) with the enterprise strategy. Discrepancies may be caused by distortions of the steering signals (cf. a failing break), or due to changed or unanticipated circumstances in the enterprise’s implementation and/or its environment (cf. an icy road when normal road conditions were expected).
+                </p>
+                <p>
+                    Most existing architecture approaches focus on the control aspects of steering only, while not paying much attention to the indicator aspects of steering. As mentioned before, the situation as depicted in Fig. 2.3 (page 14) should not be misinterpreted as a strict top-down style of steering. To steer such a portfolio, one clearly needs indicators in addition to controls. This also enables enterprises to find a better balance between the earlier discussed design-first or emergence style of thinking about transformations.
+                </p>
+            </section>
+            <section>
+                <header>
+                    <h4>2.4.4 The Three Roles of Enterprise Architecture</h4>
+                </header>
+                <p>
+                    To play its role well, an enterprise architecture should have multiple roles. To be able to steer, it needs to provide clear regulations toward programs and projects in order to restrict their design space. This is the regulative role of enterprise architecture. At the same time, however, since architecture also needs to play a guiding role toward the projects and programs, it needs to capture more specific instructions that enable this guidance. This is the instructive role of enterprise architecture. Finally, an enterprise architecture should have an informative role as well, in the sense that employees are provided with proper information and knowledge that supports their decision making. We therefore argue that an enterprise architecture has three important roles:
+                </p>
+                <ul>
+                    <li>
+                        <strong>A regulative role</strong> which manifests itself as a prescriptive notion governing the design of an enterprise. From this angle, an enterprise architecture presents itself as a prescriptive and normative concept (Hoogervorst 2004). Hoogervorst (2009) states that normative guidance is the essential purpose of architecture. He considers architecture to be a prescriptive concept that expresses ex ante how systems must become, rather than a descriptive concept that depicts ex post how systems are. The concept of architecture principles, as will be elaborated in the remainder of this book, is prominent in the regulative role of enterprise architecture.
+                    </li>
+                    <li>
+                        <strong>An instructive role</strong> which emphasizes the specification of an enterprise in all its facets, as a high-level design, and providing guidance to the organization in the actual application of such a specification. This perspective focuses on the design consequences of the regulations formulated in the regulative role, providing instructions toward the ensuing design activities that are to take place within the programs and projects. When taking this perspective, one typically produces models that describe the design of actual systemic artifacts and their interrelations. For example, in terms of ArchiMate models (Iacob et al. 2009).
+                    </li>
+                    <li>
+                        <strong>An informative role</strong> which focuses on enabling decision making by sharing knowledge on architecture decisions, and their underlying rationale, throughout the organization. This architectural knowledge can be either organizationspecific or generic. Generic architectural knowledge is embedded in artifacts such as reference models, design patterns and scientific principles. It is transformed into organization-specific knowledge based on organization-specific drivers. Tacit knowledge is codified where relevant.
+                    </li>
+                </ul>
+                <p>
+                    Op ’t Land et al. (2008) distinguished a regulation-oriented perspective, a designoriented perspective and a patterns-oriented perspective, respectively. These correspond to the above identified three ‘roles of enterprise architecture’. The designoriented perspective from Op ’t Land et al. (2008) corresponds to the instructive role of architecture. In this book, however, we prefer to stress the instructive role of this perspective toward the programs and projects. The patterns-oriented perspective from Op ’t Land et al. (2008) corresponds to the informative role. In the context of this book we would like to stress the role of enterprise architecture in capturing architectural and design knowledge.
+                </p>
+            </section>
+        </article>
+        <article>
+            <header>
+                <h3>2.5 Defining Enterprise Architecture</h3>
+            </header>
+            <p>
+                As a way to make the role of enterprise architecture more explicit, this section provides our definition of enterprise architecture. As will be shown below, the goal is not to provide yet another definition, but rather to make the role of enterprise architecture more explicit. In that sense, the definition offered in this section represents our fundamental understanding of the concept, while at the same time aiming to remain compatible with other definitions (IEEE 2000; TOGAF 2009). Before providing the definition used in this book, we first discuss the concept from three different perspectives:
+            </p>
+            <ol>
+                <li>
+                    The purpose which an enterprise architecture serves.
+                </li>
+                <li>
+                    The meaning of an enterprise architecture, i.e. what it does.
+                </li>
+                <li>
+                    The elements of an enterprise architecture in terms of the typical components used in capturing an enterprise architecture.
+                </li>
+            </ol>
+            <p>
+                We will then finalize this section with the definition of enterprise architecture as we will use it in this book. From this definition, the role of principles will also be made clear, setting the scene for the remainder of this book.
+            </p>
+            <section>
+                <header>
+                    <h4>2.5.1 The Purpose of an Enterprise Architecture</h4>
+                </header>
+                <p>
+                    Based on the above discussions, our view is that the main purpose of an enterprise architecture is to align an enterprise to its essential requirements. As such, it should provide an elaboration of an enterprise’s strategy to those properties that are necessary and sufficient to meet these requirements. These properties will impact the design of the enterprise, and enable the steering and coordination of transformation programs and projects. As mentioned before, the essential requirements refer to those requirements that (when not attained) have a high impact on the goals of the enterprise’s key stakeholders.
+                </p>
+                <p>
+                    One might wonder whether enterprise architecture should consequently only refer to a future state. This is not the case; an enterprise architecture can be concerned with the current situation, past situations, as well as a future (desired) situation. To illustrate this, consider the potential roles of an enterprise architectures in the three streams of activities as identified in Fig. 2.1 (page 11):
+                </p>
+                <ul>
+                    <li>
+                        <header>
+                            <h5>Assess</h5>
+                        </header>
+                        <p>
+                            In the Assess activities, the current architecture of the enterprise can be used to explain and understand how the existing situation aligns to the past strategy, as well as to analyze potential short-comings in the existing situation, potential impact of anticipated changes, new regulations, risks, et cetera. In TOGAF this is referred to as the baseline architecture. The role played by the baseline architecture is quite fundamental to the planned enterprise transformation, as it can be used to underpin the needs for the transformation. Fehskens (2010) states that architecture can be used to “recognize or classify existing things”.
+                        </p>
+                    </li>
+                    <li>
+                        <header>
+                            <h5>Aim</h5>
+                        </header>
+                        <p>
+                            In the Aim activities, the architecture of the future enterprise is used to formulate a ‘solution’ to the ‘problem’ identified in the Assess activities, while elaborating the updated strategy. In TOGAF this is referred to as the target architecture. The target architecture can be used to study and identify the changes that need to be made to the current enterprise, in order to move in the desired direction.
+                        </p>
+                    </li>
+                    <li>
+                        <header>
+                            <h5>Act</h5>
+                        </header>
+                        <p>
+                            In the Act activities, the target architecture provides the needed steering and direction of the transformation process, while the baseline architecture serves as a source of knowledge on the existing situation.
+                        </p>
+                    </li>
+                </ul>
+                <p>
+                    Once again, note that the Asses, Aim and Act activities are likely to be highly cyclic in nature.
+                </p>
+            </section>
+            <section>
+                <header>
+                    <h4>2.5.2 The Meaning of an Enterprise Architecture</h4>
+                </header>
+                <p>
+                    Given that the main purpose of an enterprise architecture is to align the design of an enterprise to its strategy, the essential meaning of an enterprise architecture is that it provides a normative restriction of design freedom toward transformation projects and programs (or put more positively: a reduction of design stress). This was already illustrated in Fig. 2.5 (page 18).
+                </p>
+                <p>
+                    As discussed before, one might counter the point that the meaning of an enterprise architecture is a normative restriction of design freedom by saying that it should also provide guidance to programs and projects. However, for it to be used as a means to steer and coordinate transformations, it needs to have a clear status as ultimately being a restriction of design freedom. It may indeed provide guidance as well, but ultimately, its meaningfulness as a means of steering depends on its meaning as a normative restriction of design freedom. Furthermore, even though the IEEE and TOGAF definitions do not explicitly refer to a role of architecture in restricting design space, this role is implicitly present in terms of the requirement that project level designs should comply to the architecture. This also comes to the fore in the strong role of governance in TOGAF’s ADM method.
+                </p>
+                <p>
+                    One might wonder whether a baseline architecture provides a restriction of design freedom, since it refers to an existing situation and not a future situation that still needs to be designed. However, the baseline architecture captures the design restrictions that were applied in creating the existing situation. In that sense, a baseline architecture has a more explanatory role, in that it documents the design restrictions that were explicitly (or implicitly) used in creating the existing situation.
+                </p>
+            </section>
+            <section>
+                <header>
+                    <h4>2.5.3 The Elements of an Enterprise Architecture</h4>
+                </header>
+                <p>
+                    As discussed by Op ’t Land et al. (2008), key concepts in the field of enterprise architecture include concerns, architecture principles, models, views and frameworks.
+                </p>
+                <p>
+                    An enterprise has many stakeholders, and the future development of the enterprise is likely to impact on the interests of these stakeholders. A stakeholder typically is an individual, a team, or an organization (or classes thereof) with interest in, or concerns relative to, a system (such as an enterprise). Concerns are interests pertaining to the system’s development, its operation or any other aspect that is critical or otherwise important to one or more stakeholders. In making decisions about an enterprise’s future directions, stakeholders want to obtain insight into the impact these directions will have on their concerns, and understand the risks involved in current and future initiatives. Even more, since present day enterprises are complex social systems of interrelated processes, people and technology, stakeholders are keen on finding a way to harness this complexity when judging the impact on their concerns.
+                </p>
+                <p>
+                    According to TOGAF, architecture principles are general rules and guidelines, intended to be enduring and seldom amended, which inform and support the way in which an organization sets about fulfilling its mission. Op ’t Land et al. (2008) position architecture principles as a way to capture an univocal understanding about what is of fundamental importance to the enterprise. Given the central position of architecture principles in this book, the ensuing chapters will provide a more elaborate discussion on the nature and definition of architecture principles. The IEEE (2000) definition of architecture:
+                </p>
+                <p>
+                    <blockquote>
+                        The fundamental organization of a system embodied in its components, their relationships to each other, and to the environment, and the principles guiding its design and evolution
+                    </blockquote>
+                </p>
+                <p>
+                    also explicitly refers to the role of principles in guiding the design and evolution of systems.
+                </p>
+                <p>
+                    Models are generally understood to be purposeful abstractions of (some relevant part of) reality (Falkenberg et al. 1998). Models can be used to represent systems, and actually can be regarded as systems themselves. For example, Apostel (1960) defines a model as a system representing another system: “any subject using a system A that is neither directly nor indirectly interacting with a system B, to obtain information about the system B, is using A as a model for B”. In colloquial use, in the context of enterprise architecture, the term model is equated to some diagram. This colloquialism can be explained as most models used in process modeling and software development are graphical models. Models, however, do not necessarily have to be graphical. In the context of enterprise architecture, a multitude of models are used that describe different aspects:
+                </p>
+                <ul>
+                    <li>
+                        Different levels of realization: from conceptual via logical to physical.
+                    </li>
+                    <li>
+                        Different aspects of transformation: from contextual (why) via design (where to) to the actual transformations (how).
+                    </li>
+                    <li>
+                        Different aspects of enterprises: from goals via services, products and processes to IT.
+                    </li>
+                    <li>
+                        Different levels of aggregation: from enterprise level to the level of specific (partial) processes or applications.
+                    </li>
+                </ul>
+                <p>
+                    It is in these models where we will find the components, their relationships to each other, and to the environment as referred to by the IEEE (2000) definition of architecture.
+                </p>
+                <p>
+                    A view is a representation of (a part of) a system from the perspective of a related set of concerns (IEEE 2000). Different views based upon the stakeholders concerns are an important communication means to obtain the cooperation of the stakeholders. Views are typically derived from models. While models focus more on completeness in coverage and detail, views focus more on tuning the content toward the concerns of stakeholders.
+                </p>
+                <p>
+                    To provide architects with some structure to select views, architecture frameworks have been introduced. These frameworks intend to aid architects by providing an ontology, which uses different abstraction levels to map all kinds of information needed. Architecture frameworks position architecture results and enable diverse communication (stakeholders, detail). Often tools and best practices are included in the framework to support the work needed.
+                </p>
+            </section>
+            <section>
+                <header>
+                    <h4>2.5.4 Definition of Enterprise Architecture</h4>
+                </header>
+                <p>
+                    Finally, as a summary we will now provide a definition of enterprise architecture which summarizes our understanding of the concept of enterprise architecture. However, before doing so, we first define the general concept of architecture in general.
+                </p>
+                <aside>
+                    <header>
+                        <h5>ARCHITECTURE</h5>
+                    </header>
+                    <p>
+                        Those properties of an artifact that are necessary and sufficient to meet its essential requirements.
+                    </p>
+                </aside>
+                <p>
+                    This definition also shows the clear distinction between a design and an architecture. While the design provides a full elaboration of ‘the design’ of an artifact such that it leaves no room for undesired results in the implementation, the architecture focuses on how the essential requirements will be met.
+                </p>
+                <p>
+                    The definition of architecture, allows us to summarize our understanding of enterprise architecture as
+                </p>
+                <aside>
+                    <header>
+                        <h5>ENTERPRISE-ARCHITECTURE</h5>
+                    </header>
+                    <p>
+                        The architecture of an enterprise. As such, it concerns those properties of an enterprise that are necessary and sufficient to meet its essential requirements.
+                    </p>
+                </aside>
+                <p>
+                    The focus of enterprise architecture on the essential requirements allows it to be used as a means to align the design of an enterprise to its strategy, where the strategy should fuel the identification of the essential requirements. By necessity, these should be requirements which, when not attained, have a high impact on the goals of the key stakeholders. This focus allows an enterprise architecture to be used effectively when steering and coordinating transformation programs and projects. The meaning of the enterprise architecture then becomes that it provides a normative restriction of design freedom toward projects and programs.
+                </p>
+            </section>
+        </article>
+        <article>
+            <header>
+                <h3>2.6 Other Forms of Architecture</h3>
+            </header>
+            <p>
+                As indicated by the definition in the previous section, enterprise architectures describe the most fundamental aspects and choices of the enterprise, close to its strategy. In practice, other forms of architecture exist in the design of organizations, information systems and technology (Fattah 2009). Although strictly speaking these forms of architecture do not fall into the category of enterprise architecture, they are closely related. Also, they share certain characteristics with enterprise architecture: they can also describe architecture principles, models and other decisions (albeit at a different level). In practice, architectural descriptions may include aspects from multiple forms of architecture. As a result, the form of architecture may not be directly obvious from the contents of an architectural description. Besides enterprise architecture, two other forms of architecture exist: reference architecture (Greefhorst et al. 2008) and solution architecture.
+            </p>
+            <aside>
+                <header>
+                    <h4>REFERENCE-ARCHITECTURE</h4>
+                </header>
+                <p>
+                    A generalized architecture, based on best-practices.
+                </p>
+            </aside>
+            <p>
+                A reference architecture is a generic architecture for systems that have similar characteristics. Also, reference architectures are defined based on past experience, and specifically best-practices therein. The focus of such a best-practices based architecture is not so much on the essential requirements on a specific enterprise or a specific situation, but rather on general engineering qualities and how they can be met. As such, a reference architecture is a generalized architecture that can be applied to multiple solutions and across multiple enterprises. The informative role will be dominant for this form of architecture, due to its natural focus on codifying reusable architectural knowledge.
+            </p>
+            <aside>
+                <header>
+                    <h4>SOLUTION-ARCHITECTURE</h4>
+                </header>
+                <p>
+                    An architecture of a solution, where a solution is a system that offers a coherent set of functionalities to its environment. As such, it concerns those properties of a solution that are necessary and sufficient to meet its essential requirements.
+                </p>
+            </aside>
+            <p>
+                A solution architecture describes the fundamental decisions in the design of a specific solution, covering business- as well as IT-aspects. Note that the system as a whole may be composed of multiple other (software) systems. This form of architecture is what TOGAF calls a “capability architecture”, and is close to what is also called “software architecture” (Shaw and Garlan 1996; Kruchten 1998) in the domain of application development. It strongly relies on the instructive role of architecture. Given its strong design bias, there is a some discussion whether solution architecture should be considered architecture at all, or just (high-level) design (Luijpers 2009).
+            </p>
+            <p>
+                The three forms of architecture differ in multiple ways; their generality as well as their scope. A reference architecture is a generic architecture, whilst enterprise architectures and solution architectures are specific architectures. Enterprise architectures target an enterprise, whilst solution architectures have only a specific solution architecture in their scope. Reference architectures can operate on systems at all levels.
+            </p>
+            <p>
+                As shown in Fig. 2.7 the three forms of architecture are strongly related, and influence each other. Architectural knowledge is what they share, which can be documented in the form of an architecture repository. In the informative role of architecture, sharing this knowledge with all relevant stakeholders is one of the primary tasks of the architect. In the end, a solution architecture should be based on all relevant architectural knowledge that is documented in enterprise architectures and reference architectures. On the other hand, there is also a feedback loop from solution architectures to reference architectures and enterprise architectures. Certain solutions can be abstracted into generic solutions that may also be applied in other parts of the organization, and incorporated into a reference architecture. Also, solution architectures may lead to insights on viability of information described in the enterprise architecture.
+            </p>
+            <p>
+                The creation of a solution architecture may be guided by a project, or program, start architecture (Wagter et al. 2001), which translates the enterprise architecture and reference architectures to the context of a specific solution. In our opinion,a project (or program) start architecture is not an architecture in itself. In terms of TOGAF it can be seen as an architectural contract between architecture design and development partners (can be within the same organization). In contrast to the project start architecture, the solution architecture provides models of actual designs and the underlying design decisions.
+            </p>
+        </article>
+        <article>
+            <header>
+                <h3>2.7 Standards for Enterprise Architecture</h3>
+            </header>
+            <p>
+                Several standards exist for architecture in general, and enterprise architecture in particular. Some of them are company specific, some originate from an academic context, some have only a national status, whilst some are supported and maintained by international standardization organizations. In this section we briefly describe the standards from international standardization organizations that have influenced us most when writing this book. As can be gleaned from the many citations of other sources, this does not mean that we have not been influenced by other approaches and standards. However, given the industrial relevance of the standards discussed below, it is relevant to briefly describe them and relate them to the contributions this book aims to provide.
+            </p>
+            <p>
+                The IEEE 1471 standard (IEEE 2000) (also known as ANSI/IEEE 1471-2000, and more recently as ISO/IEC 42010:2007) finds its origins in the software engineering community. Its most important contribution is the already quoted definition of architecture. This definition has been broadly accepted and shows that principles are an important part of architecture, providing guidance in the design and evolution of systems. It also shows how architecture concerns itself with structure: components and relationships. The standard also provides definitions for a number of related concepts, and their relationships. It distinguishes the architecture itself from architectural descriptions that are documents that describe the architecture. An architectural description is defined for specific concerns of one or more stakeholders, and contains one or more views. These views contain the architectural content, and are based on more generic viewpoints. Targeting architecture specifically at stakeholders and their concerns is an important insight and has a profound impact on how architectures should be developed.
+            </p>
+            <p>
+                As already mentioned before, the IEEE definition refers explicitly to the principles guiding its design and evolution as being part of an architecture. At the same time, the original IEEE document does not elaborate much on the precise nature of principles and how to formulate them. This book aims to provide both a definition for architecture principles and a practical way of formulating and using principles.
+            </p>
+            <p>
+                The Open Group Architecture Framework (TOGAF 2009) is a standardized method for enterprise architecture. TOGAF is maintained by The Open Group, which is a consortium of literally hundreds of organizations covering both the profit and not-for-profit sectors. TOGAF finds its origins in the Technical Architecture Framework for Information Management TAFIM (1996), developed by the Department of Defense of the United States of America. At the start of 1995, the first version of TOGAF was developed, as an evolution of TAFIM. TOGAF has since become a worldwide and broadly accepted standard, which is freely available. Organizations nowadays embrace open standards, which has increased the importance of TOGAF. Large consultancy firms, such as IBM, HP, SAP and Capgemini have adopted TOGAF and enriched it with their own architectural knowledge and experience. TOGAF provides an elaborate reference on enterprise architecture, including an architecture development method, an architecture content framework, architecture reference models and an architecture capability framework. In the view of TOGAF, enterprise architecture is divided into four architecture domains: business architecture, data architecture, application architecture and technology architecture.
+            </p>
+            <p>
+                Architecture principles play a central role in TOGAF. Even though a template for architecture principles is given, with a number of examples, no crisp definition of the concept is given. Furthermore, no practical way of formulating and using principles is provided either. In addition to providing a clearer definition of the concept of architecture principles, and an associated way of formulating and using principles, Appendix B provides a discussion on how the proposed way of formulating and using principles can be used in the context of TOGAF.
+            </p>
+            <p>
+                The ArchiMate standard (Iacob et al. 2009) has been adopted by the Open Group more recently. It was initially developed by a consortium of Dutch organizations (companies, governmental organizations and research institutes) as part of a collaborative research project (Lankhorst et al. 2005a). The intention of the standard is to provide a language for describing enterprise architectures. This language consists of a meta-model describing the various concepts and relationships, as well as a standard notation for them.
+            </p>
+            <p>
+                The current version of the ArchiMate standard does not contain constructs to represent architecture principles and their motivations. The discussion provided in Chap. 3 provides suggestions on how to represent architecture principles and their motivations. These might be combined with the ArchiMate extension recently suggested by Engelsman et al. (2010).
+            </p>
+        </article>
+        <article>
+            <header>
+                <h3>2.8 The Role of Architecture Principles</h3>
+            </header>
+            <p>
+                According to TOGAF, architecture principles are general rules and guidelines, intended to be enduring and seldom amended, that inform and support the way in which an organization sets about fulfilling its mission. Architecture principles should also be few in number (typically around 10 at the highest level), future oriented, and endorsed and championed by senior management. This ensures that the enterprise architecture is future directed, and can actually guide design decisions, while preventing analysis paralysis by focusing on the essence. As a result, they provide a firm foundation for making architecture and planning decisions, framing policies, procedures, and standards, and supporting resolution of contradictory situations.
+            </p>
+            <p>
+                In line with the meaning of enterprise architecture as a restriction of design freedom, the regulative role of enterprise architecture is the most important role. As argued before, it is where enterprise architectures derive their steering-ability from. It should come as no surprise that this book takes the perspective that architecture principles should feature prominently on the regulative role of enterprise architectures. As such, we take the position that architecture principles are the cornerstones of enterprise architecture. They are key in ensuring the effectiveness of enterprise architecture toward its steering and coordination task. Architecture principles fill the gap between high-level strategic intents and concrete designs, and allow for a univocal articulation of what is of fundamental importance to an organization.
+            </p>
+            <p>
+                The role of architecture principles is not only limited to the regulative role of enterprise architecture. Toward the instructive role of enterprise architecture, they provide motivations for the fundamental design decisions. Toward the informative role, they provide a carrier of fundamental design knowledge.
+            </p>
+            <p>
+                Several approaches to enterprise architecture indeed position principles as a key ingredient (Davenport et al. 1989; Richardson et al. 1990; Tapscott and Caston 1993; Wagter et al. 2005; Op ’t Land et al. 2008; TOGAF 2009; Van’t Wout et al. 2010; Beijer and De Klerk 2010), while some even go so far as to position principles as being the essence of architecture (Dietz 2008; Hoogervorst 2009; PRISM 1986; Fehskens 2010).
+            </p>
+            <p>
+                More fundamentally, when controlling some object, the controlling system (see Fig. 2.6 (page 19)) needs some policy to provide guidance in its steering activities. The policy, and its motivation, collectively capture the steering goal needed by the controlling system (De Leeuw 1982; De Leeuw and Volberda 1996). Rose (1969) defined a policy as being “a long series of more-or-less related activities” and their consequences for those concerned rather than as a discrete decision. Rose’s definition embodies the understanding that policy is a course or pattern of activity and not simply a decision to do something. Friedman (1963) regards policy as “a proposed course of action of a person, group, or government within a given environment providing obstacles and opportunities which the policy was proposed to utilize and overcome in an effort to reach a goal or realize an objective or a purpose.”
+            </p>
+            <p>
+                Based on Rose’s and Friedrich’s definition of policy, as well as later definitions by others (Anderson 1975; Eulau and Prewitt 1973; Robbins et al. 1997; Schneider and Ingram 1997), Nabukenya et al. (2007a, 2007b, 2007c) provided the following definition of a policy as a synthesis:
+            </p>
+            <aside>
+                <header>
+                    <h4>POLICY</h4>
+                </header>
+                <p>
+                    A purposive course of action followed by a set of actor(s) to guide and determine present and future decisions, with an aim of realizing goals.
+                </p>
+            </aside>
+            <p>
+                We argue that in the case of enterprise transformations, policies for steering enterprise transformations correspond to the use and enforcement of sets of architecture principles.
+            </p>
+        </article>
+        <article>
+            <header>
+                <h3>2.9 Key Messages</h3>
+            </header>
+            <ul>
+                <li>
+                    Enterprise architecture is a young field, which originates from IT.
+                </li>
+                <li>
+                    Enterprise transformations require an engineering approach that operates at strategic, tactical and operational levels.
+                </li>
+                <li>
+                    A governance mechanism is needed that regulates, instructs and informs transformation programs and projects.
+                </li>
+                <li>
+                    The purpose of enterprise architecture is to align an enterprise to its essential requirements.
+                </li>
+                <li>
+                    The meaning of enterprise architecture is that it provides a normative restriction of design freedom toward transformation projects and programs.
+                </li>
+                <li>
+                    Other forms of architecture play an important role as well: reference architectures are generic architectures, solution architectures are concerned with the architecture of a specific solution.
+                </li>
+                <li>
+                    Important standards for architecture are IEEE 1471, TOGAF and ArchiMate.
+                </li>
+                <li>
+                    Architecture principles are the cornerstones of enterprise architecture, and bridge the gap between high-level strategic intents and concrete designs.
+                </li>
+            </ul>
+        </article>
+    </section>
+</body>
+</html>
