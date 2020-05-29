@@ -37,7 +37,13 @@
                 A number of books and articles have been written on Enterprise Architecture. We do not try to write a new one, or present a revolutionary way of defining it. Yet, we do need to write a few words on Enterprise Architecture, as it is the vessel on which we transport our concept of patterns. In the following sections we give a brief overview of the concepts behind Enterprise Architecture. You may find more in-depth information in the reference list at the end of this chapter.
             </p>
             <p>
-                If you had to explain the rather abstract discipline of «Enterprise Architecture» to a friend or relative, who is not in the Information Technology business, you certainly would try to make an analogy with something that the person could know from his or her own experience: «Planning and overview the building of a house», «Urban planning and sustainability» or «Draw plans for different craftsmen» would be common approaches to try to explain this topic. After your expert talk, your discussion partner will certainly have one understanding: Architecture, be it in the house construction business or in information technology, is a planning discipline, involving many different people with different skills. The architect is expected to overview, coordinate the different craftsmanship, and address the requirements of all the people involved through adequate views of the building (or information system) to be built or renovated. He will have to translate the requirements of the sponsor into a feasible architecture, present options depending on costs and budget, and measure the progress of the as-is architecture in relation to the to-be architecture. As in real architecture, the Enterprise Architecture is not «l’art pour l’art» – you do not do it just because of the beauty of it, but to align your Information Technology investments with the business needs and strategies. This is the main goal. In addition to this, one of the agreeable by-products of an Enterprise Architecture initiative is to order things, make classification, to clarify terms, and to introduce a sustainable way to document your business processes, the application landscape, and the underlying infrastructure. Every architect adheres to a more or less rigorous methodology to document his doing. This ensures transparency, traceability, and minimizes the risks of wrong decisions by using wellproven techniques and documentation standards.
+                If you had to explain the rather abstract discipline of «Enterprise Architecture» to a friend or relative, who is not in the Information Technology business, you certainly would try to make an analogy with something that the person could know from his or her own experience: «Planning and overview the building of a house», «Urban planning and sustainability» or «Draw plans for different craftsmen» would be common approaches to try to explain this topic. After your expert talk, your discussion partner will certainly have one understanding: Architecture, be it in the house construction business or in information technology, is a planning discipline, involving many different people with different skills. The architect is expected to overview, coordinate the different craftsmanship, and address the requirements of all the people involved through adequate views of the building (or information system) to be built or renovated.
+                He will have to translate the requirements of the sponsor into a feasible architecture, present options depending on costs and budget, and measure the progress of the as-is architecture in relation to the to-be architecture.
+                As in real architecture, the Enterprise Architecture is not «l’art pour l’art» – you do not do it just because of the beauty of it, but to align your Information Technology investments with the business needs and strategies.
+                This is the main goal.
+                In addition to this, one of the agreeable by-products of an Enterprise Architecture initiative is to order things, make classification, to clarify terms, and to introduce a sustainable way to document your business processes, the application landscape, and the underlying infrastructure.
+                Every architect adheres to a more or less rigorous methodology to document his doing.
+                This ensures transparency, traceability, and minimizes the risks of wrong decisions by using wellproven techniques and documentation standards.
             </p>
             <p>
                 There is no scientific definition of Enterprise Architecture, but a lot of smart people have thought about it and have formulated their understanding in books, articles, forums, blogs, and conferences in the last few years (Perks and Beveridge 2003; Wikipedia EA 2011; NIH 2008; Lankhorst 2005). In the context of this book we use the definitions related to the vast field of Enterprise Architecture as given by TOGAF (2009). In order to facilitate the understanding of the EAP in this book, the following definitions will be of help to the reader:
@@ -522,7 +528,7 @@
             <p>
                 As stated in the list above, there are no differences for the definition of an AB on the different architecture layers (e.g., business, data and application technology). We do not differentiate a brick that is being used to build a wall on the first floor from the one used on the third floor of a house. They are all described by the same meta-data. The mortar between the bricks is the interface. A brick may use an interface from another brick (even if the brick resides on another architecture layer) and provides some functionality to other bricks through its own interface(s). Starting from the definition of an AB we are now able to write the meta-model for these kinds of bricks. Table 2.8 gives a possible list of parameters you will have to fill in to describe your architecture bricks:
             </p>
-            <label for="table2-8"><strong>Table 2.8</strong> List of possible parameters to define an architecture brick</label>
+            <!-- <label for="table2-8"><strong>Table 2.8</strong> List of possible parameters to define an architecture brick</label>
             <table id="table2-8">
                 <thead>
                     <th>Parameter</th>
@@ -599,7 +605,7 @@
                         </td>
                     </tr>
                 </tbody>
-            </table>
+            </table> -->
             <p>
                 You may define other parameters to further specify an AB (ownership, creation, and modification date, etc.). The above list should help you to get a start to define a meta-model. Our recommendation is that you should only describe the parameters that are useful to at least one of the stakeholders, because only those will effectively be managed. We will not describe every AB in this book according to the proposed meta-model. We will only describe an AB in more detail if there might arise some ambiguities concerning its functionalities in comparison to another brick.
             </p>
@@ -860,7 +866,7 @@
                     <p>
                         A table such as shown in Table 2.11 is used as an overview of the pattern and provides hints to architects whether this pattern is suited for their purpose or not.
                     </p>
-                    <label for="table2-11"><strong>Table 2.11</strong> Overview of a pattern</label>
+                    <!-- <label for="table2-11"><strong>Table 2.11</strong> Overview of a pattern</label>
                     <table id="table2-11">
                         <tr>
                             <th>Name</th>
@@ -939,7 +945,7 @@
                             <td>
                                 Keywords help finding and—in case of a database used—indexing the pattern catalog
                             </td>
-                        </tr>
+                        </tr> -->
                     </table>
                     <p>
                         The «Type of pattern» and the three parameters «Invariance», «Complexity», and «Connectivity» need a little bit more explanation:
@@ -963,6 +969,54 @@
                     </p>
                     <label for="table2-12"><strong>Table 2.12</strong> Invariance of a pattern</label>
                     <table id="table2-12">
+                        <tr>
+                            <th>Low</th>
+                            <td>
+                                The stated problem can be solved in many different ways. The described pattern offers a certain guideline on how you could apply it, but there will certainly be other solutions to solve the problem. These patterns are often highly dependent on the context they are used in. Examples: FromSupplierToCustomer (S4), WorkTogether (B1)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Medium</th>
+                            <td>
+                                The proposed pattern has some qualities of invariance, but we strongly recommend that you apply it as described if «in doubt». You may find a solution that suits your needs better than the solution proposed in this book, but the pattern shows you the right direction to take. Examples: Financials (S1), ResourcesAreScarce (S3)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>High</th>
+                            <td>
+                                We believe that we have found a generic solution to the problem and that the pattern can be applied as described. Examples: VendingMachine (B2), ForYourEyesOnly (S5)
+                            </td>
+                        </tr>
+                    </table>
+                    <p>
+                        The «Complexity» of a pattern is a hint on the number of elements and relationship between these elements in a pattern. By elements we mean the total number of «things» in all the views: Activities in processes, bricks, applications, servers, and the relationships between these. The complexity is therefore a parameter that reflects how much effort you must put in, to implement the pattern (Table 2.13).
+                    </p>
+                    <label for="table2-13"><strong>Table 2.13</strong> Complexity of a pattern</label>
+                    <table id="table2-13">
+                        <tr>
+                            <th>Low</th>
+                            <td>
+                                The pattern consists of only few elements (bricks, applications, servers, and so on) and relationships between these elements. Examples: VendingMachine (B2), ForYourEyesOnly (S5)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Medium</th>
+                            <td>
+                                The pattern consists of a moderate number of elements and/or a moderate number of relationships between the elements. Examples: Financials (S1), ResourcesAreScarce (S3)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>High</th>
+                            <td>
+                                The pattern consists of a high number of elements and relationships between these elements. Examples: WorkTogether (B1), LetMeAccess (I2)
+                            </td>
+                        </tr>
+                    </table>
+                    <p>
+                        The purpose of the «Connectivity» parameter is to show how highly a pattern is connected to other patterns. It is closely related to the pattern map and gives you a hint how important a pattern may be (It is like in the social communities: the more followers or friends you have, the more important you think you are…) (Table 2.14).
+                    </p>
+                    <label for="table2-14"><strong>Table 2.14</strong> Connectivity of a pattern</label>
+                    <table id="table2-14">
                         <tr>
                             <th>Low</th>
                             <td>
