@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INF4883 - Collaborative Enterprise Architecture - Chapter 1</title>
+</head>
+<body>
+    <header>
+        <h1>INF4883 - Enterprise Architecture - Research - Collaborative Enterprise Architecture - Chapter 1</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="2.html">Back</a>
+            </li>
+        </ul>
+    </nav>
+    <section>
+        <header>
+            <h2>Controlling IT complexity</h2>
+        </header>
+        <p>
+            The answer to the most basic question, “What is it that enterprises want from IT?” is consistently the same across all industries. The answer is, “Enterprises want their IT to be stable, agile, adaptable, and efficient.” Now, what does that mean?
+        </p>
+        <ul>
+            <li>
+                <strong>Stable.</strong> Reliable, resilient, available and fault-tolerant.
+            </li>
+            <li>
+                <strong>Agile.</strong> Enable quick introduction of new products, services, and business processes; be responsive to market dynamics and customer needs.
+            </li>
+            <li>
+                <strong>Adaptable.</strong> Adapt easily to different business contexts, regulations, mergers and acquisitions, and convergences.
+            </li>
+            <li>
+                <strong>Efficient.</strong> Meet or exceed business and service-level expectations; minimize total cost of operations.
+            </li>
+        </ul>
+        <p>
+            Unfortunately for IT, these noble goals are a far cry from reality today. IT invariably remains brittle, sluggish, inflexible, and expensive. This nuisance of IT is, in most enterprises, a compounding effect of the complexities originating from many sources:
+        </p>
+        <ul>
+            <li>
+                Complex business operations
+            </li>
+            <li>
+                Technology changes
+            </li>
+            <li>
+                Immaturity in software engineering
+            </li>
+            <li>
+                An uncontrolled proliferation in the IT landscape (sometimes dressed as lack of organizational ownership in IT)
+            </li>
+        </ul>
+        <p>
+            The prime reason for IT complexity is the inherent complexity of business itself. A typical global enterprise like Bank4Us in our example operates in a highly volatile market environment. Apart from supporting local customer demands and market regulations, enterprises must also respond to competitor challenges and market opportunities. In addition, they must keep pace with the emerging technology landscape and introduce innovation in performing their business tasks. To fulfill the myriad of such demands, an accelerating train of changes runs though the enterprise. These changes take place on different planes:
+        </p>
+        <ul>
+            <li>
+                <strong>Business.</strong> Changes in the business context (such as regulation, mergers and acquisitions, or the competitive landscape), new business models, new business products and processes, or new customer demands.
+            </li>
+            <li>
+                <strong>Technology.</strong> Changes in the technology strategy (technology usage, vendor preference, new technology integration, legacy retirement, out-of-support software, server consolidation, license optimization, maintenance and upgrade), workload changes due to user and volume growth, or updated service-level expectations.
+            </li>
+        </ul>
+        <p>
+            For Sarah’s portfolio of customer management systems in Bank4Us, the business challenges mainly manifest themselves as new business models and new customer demands. They invariably require a high level of synchronization between the five business lines. With regard to technology, Sarah faces the inevitable pains when it comes to version upgrades of the middleware platforms her applications are based on. However, Bank4Us’s EA team has in the past done a good job of keeping the technology strategy stable. So at least she doesn’t yet have to go through the adventure of migrating between two different middleware implementations.
+        </p>
+        <p>
+            The immaturity of software engineering practices also contributes to IT complexity. In comparison to other engineering disciplines such as mechanical or civil engineering, the field of software engineering is quite young. The design, development, and operational processes are not yet as mature as those in traditional engineering disciplines. Despite the high-handed quality promises of software vendors, system integrators, and other players in the IT market, the reality on the ground often relies on improvisation rather than rigidly followed formal processes. Frequently, enhancements and quick fixes are introduced to operational systems in an ad hoc manner—sometimes to meet delivery commitments, sometimes in response to emergency situations.
+        </p>
+        <p>
+            In other disciplines, the engineering of a product comes to an end once it is shipped to the customer for use. From then on it is never redesigned or rebuilt. Once a compact family car has been manufactured, for example, it will not be upgraded to a convertible sports car. In contrast, IT systems are enhanced continuously while they are in use. Often something like the conversion from a family car to a sports car is actually attempted in IT—though not always successfully.
+        </p>
+        <p>
+            For Sarah, this inherent process immaturity is a constant challenge in every IT project. Her applications are customer-facing and are used across multiple time zones. Therefore, only a minimal downtime for redeployment is permissible. Furthermore, the testing procedures require a high amount of rigor. Sarah’s worst nightmare is the proverbial call from the CIO’s office in the middle of the night, enquiring why UK customers cannot access their account details. Fortunately, this situation has not happened yet.
+        </p>
+        <p>
+            To a great extent, IT complexity is also the result of an uncontrolled proliferation of redundant IT systems, caused by the IT organization’s tendency to follow a stovepipe system integration style. In an enterprise with silo-based organizational partitions, each business unit typically has its own IT budget; therefore it will go its own way in procuring, building, and operating its IT systems.
+        </p>
+        <p>
+            In addition, IT departments are normally organized on a project (or a product) basis. The project teams decide everything locally. This is a trade-off: It allows for independence, agility, flexibility, and efficiency in the local environment, but it prevents leveraging enterprise-wide synergies. A large number of tactical and parallel IT systems mushroom up into different parts of the enterprise, often leading to a nearly unmanageable jungle of redundant applications and data stores.
+        </p>
+        <p>
+            System redundancy is, in our Bank4Us example, not much of a concern for Sarah. She sometimes regrets not having closer cooperation with her program management peers in other units, though, since that might be helpful in addressing common issues. For the enterprise architect Ian Miller, however, the redundancy causes more of a headache. For example, customer management systems are scattered across five different business units and therefore (because IT is organized mirroring the business) are spread over five different IT departments. If Ian needs to address issues with customer management systems, he also needs to talk to four other program managers besides Sarah and facilitate common ground among them.
+        </p>
+        <p>
+            The ever-expanding cosmos of enterprise IT is becoming more and more complex. An enterprise architect must safeguard IT as a corporate asset. The cost must be justified by what IT delivers. This means that every opportunity to eliminate needless complexity and costs in the IT landscape must be spotted and leveraged. In addition, the enterprise architect must make sure that every new addition or change to the IT landscape is justified by an agreed business purpose and that it has a committed business value.
+        </p>
+        <p>
+            EA provides guidance about what technologies are a strategic fit, which ones are deprecated, and which are emerging. The project managers on the ground need that input in order to take decisions on turning off legacy platforms, merging redundant applications, or introducing new systems—in effect, simplifying the IT landscape. The benefits may be realized in terms of:
+        </p>
+        <ul>
+            <li>
+                Reduced development effort
+            </li>
+            <li>
+                Optimized integrations
+            </li>
+            <li>
+                Decreased IT risks
+            </li>
+            <li>
+                Lower IT costs
+            </li>
+            <li>
+                Improved business confidence
+            </li>
+        </ul>
+        <p>
+            In essence, EA is a hygiene factor for the IT landscape.
+        </p>
+        <p>
+            Ian Miller, in our Bank4Us example, needs to facilitate the implementation of the CIO’s mission statement. In his role as enterprise architect, he plans the first steps toward the cost-saving goal. First, he needs to get up-to-date information on the current costs of the applications in the IT landscape. The last survey conducted by Ian’s predecessor is already more than two years old. It can serve as starting point, but Ian decides that it needs an update. In addition, he needs to understand which applications are used for what purpose. He would like to see a mapping of the business processes against the applications so that he can identify redundancies. Luckily enough, the business processes have been modeled only recently and can be assumed to be fairly up to date.
+        </p>
+        <p>
+            Ian decides to make appointments with his main stakeholders before proceeding any further. One of his first meetings will be with Sarah. Since Ian has not only his CIO’s cost-saving target to fulfill but also has the CEO’s vision of a more customer-oriented focus in mind, Ian also needs Sarah’s input on how well the current IT landscape supports customer orientation.
+        </p>
+    </section>
+</body>
+</html>

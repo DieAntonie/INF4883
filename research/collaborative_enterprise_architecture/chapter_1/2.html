@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INF4883 - Collaborative Enterprise Architecture - Chapter 1</title>
+</head>
+<body>
+    <header>
+        <h1>INF4883 - Enterprise Architecture - Research - Collaborative Enterprise Architecture - Chapter 1</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">Back</a>
+            </li>
+            <li>
+                <a href="1.html">Previous</a>
+            </li>
+            <li>
+                <a href="3.html">Next</a>
+            </li>
+        </ul>
+    </nav>
+    <section>
+        <header>
+            <h2>Goals and benefits of enterprise architecture</h2>
+        </header>
+        <p>
+            We open this section with a little story. It illustrates in a nutshell, and in a somewhat idealized way, what targets EA should fulfill. It talks about enterprise architecture against the backdrop of a leading global bank, Bank4Us.
+        </p>
+        <p>
+            Bank4Us is a fictitious bank, yet its story reflects the realities of a typical large enterprise in today’s global environment. We will meet various members of the Bank4Us staff—managers, enterprise architects, IT experts—in this and coming chapters. Bank4Us will serve as a common theme running throughout this book, illustrating how an IT organization can implement a collaborative EA. (We have listed the employees we will accompany in the Appendix, “The Bank4Us Staff,” including a brief description of their roles, so in case you lose track of the players you can look them up there.)
+        </p>
+        <p>
+            The world of banking is changing rapidly: Customers are difficult to acquire and retain; competitor initiatives, coupled with economic recession, are eroding banks’ market shares; technology-driven avenues for business growth are available but not yet tapped effectively. In response to this difficult market situation, the CEO of Bank4Us issues a vision statement that clearly underscores the bank’s priority number one:
+        </p>
+        <p>
+            <blockquote>
+                Best-in-Class Customer Experience: Anywhere, Anytime, Any Channel
+            </blockquote>
+        </p>
+        <p>
+            A new business transformation program named “Closer to Customer” is initiated. During the annual strategic planning sessions of the bank, Dave Callaghan, the bank’s CIO, confirms his commitment to the CEO vision:
+        </p>
+        <p>
+            <blockquote>
+                Our IT will act as a transformation engine to take the bank “Closer to Customer”—step by step. While we expect a business growth of 150% over the next five years, we will restrict the IT growth to 60% of our current investment level. We will adopt a “20/20” strategy, meaning 20% savings and 20% value addition. The savings will be attributed to legacy reduction/downsizing, reduction in number of system interactions, and reduction in IT operation/support cost. The value addition, on the other hand, will be achieved by customer empowerment, customer satisfaction, operational efficiency, and shorter time cycles.
+            </blockquote>
+        </p>
+        <p>
+            Sarah Taylor, a program manager at Bank4Us, is unsure how Dave is going to fulfill these promises, given the current state of the bank’s IT environment. Sarah has only recently joined the bank and is responsible for managing an application portfolio of 62 IT systems. These systems support the customer management platform for the retail line of business, one of a total of five business lines. At this point Sarah has only a rough idea about the bank’s overall IT landscape.
+        </p>
+        <p>
+            To her knowledge, the total application portfolio consists of more than 3,000 applications, including around 600 aging legacy systems (systems with more than 10 years in a live environment). There is a significant functional overlap among these applications: For example, there are as many as 30 account-opening systems, more than 10 authentication systems, more than 20 credit decision engines, and almost 40 business intelligence tools.
+        </p>
+        <p>
+            The supporting technology infrastructure is equally complex. It includes more than 2,000 server machines hosting 20 versions of five operating systems. There are more than 10 database platforms and roughly 25 middleware platforms, with as many as 35 programming languages in use. The scale and complexity of the IT landscape is further aggravated by a large number of system interactions— some of them apparent, but most of them buried under the heap of heterogeneous technology platforms.
+        </p>
+        <p>
+            In this jungle of IT systems, Sarah already finds it difficult to control her portfolio of a mere 62 systems. She has the feeling that her knowledge about her own portfolio is quite limited and superficial at best, or grossly incorrect and outdated at worst. She does not dare deduce her own goals from the CIO’s commitments. As impressed as Sarah is by Dave’s confidence, all the more she is worried about the mandate set forth for the IT organization and its consequences for her own job. When Sarah discusses her concern with her supervisor, he advises her to speak to Ian Miller, an enterprise architect.
+        </p>
+        <p>
+            Ian is a member of the bank’s EA group and will collaborate with Sarah on the architectural work related to the customer management area. The EA team at Bank4Us has existed for a couple of years now. Last year a new chief architect, Oscar Salgado, was appointed head of the team. Since then the EA team has been seeking to play a more proactive role in the business-IT interaction and is becoming more visible in the enterprise.
+        </p>
+        <p>
+            So, what is Ian expected to do? Ian was instrumental in crafting the CIO’s mission and strategy based on the priorities of the business. He will be responsible for helping Sarah establish her project portfolio in alignment with the defined mission and strategy. He is supposed to sketch the complete picture of the IT landscape, show Sarah how the CIO’s mission links to the IT landscape. Ian will also have to demonstrate how the planned projects will take the current IT landscape to the envisaged state over a period of time. He will explain to Sarah what that means for the business and, more specifically, how it influences her scope of work. After the project-planning phase, he is also committed to guiding her project teams so that the desired goals are met and expected benefits are realized.
+        </p>
+        <p>
+            In addition to Sarah, many more individuals and groups inside the bank organization need to be told the same story about the bank’s IT landscape. Hence Ian and his team will consistently communicate with all the concerned parties in such a way that they can understand the information presented and act accordingly. In essence, Ian’s task list and job description reflects what enterprise architecture is all about. It ensures that the enterprise IT landscape moves in the right direction to fulfill the strategic goals of the enterprise.
+        </p>
+        <aside>
+            <header>
+                <h4>THE ENTERPRISE ARCHITECT</h4>
+                <p>
+                    <strong>The Mandate of an Enterprise Architect</strong>
+                </p>
+            </header>
+            <p>
+                Information technology (IT) is a fairly young field compared to many other industry sectors. IT has been used in mainstream business for only 50-odd years. Over the last few decades, IT has made a startling impact on the way enterprises do business. As enterprises started relying more and more on IT to support their day-to-day business operations and to enable their long-term business strategies, the role and contribution of IT in the enterprise gained more and more importance. With a continuous addition of new applications, prolonged retention of legacy platforms, and a growing number of system interactions, the enterprise IT landscape has gradually reached a remarkable level of complexity. Apart from incurring heavy costs, this complexity impedes business changes and therefore causes frustration among business people. For business, IT is an asset and a liability at the same time. Broadbent and Kitzis (2003) characterize this reality as “IT has fallen victim of its own success.”
+            </p>
+            <p>
+                So, what does this reality mean for an enterprise architect? In a very condensed form, it puts forth the following mandate for EA architects:
+            </p>
+            <ul>
+                <li>
+                    Controlling IT complexity. Manage the IT landscape as an asset.
+                </li>
+                <li>
+                    Aligning business and IT. Ensure the business value of IT.
+                </li>
+            </ul>
+        </aside>
+        <section>
+            <header>
+                <h3><a href="2_1.html">Controlling IT complexity</a></h3>
+            </header>
+        </section>
+        <section>
+            <header>
+                <h3><a href="2_2.html">Aligning business and IT</a></h3>
+            </header>
+        </section>
+    </section>
+</body>
+</html>

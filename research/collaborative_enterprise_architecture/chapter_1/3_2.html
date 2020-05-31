@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INF4883 - Collaborative Enterprise Architecture - Chapter 1</title>
+</head>
+<body>
+    <header>
+        <h1>INF4883 - Enterprise Architecture - Research - Collaborative Enterprise Architecture - Chapter 1</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="3.html">Back</a>
+            </li>
+        </ul>
+    </nav>
+    <section>
+        <header>
+            <h2>Perspective: Between bird’s-eye view and nitty-gritty on the ground</h2>
+        </header>
+        <p>
+            An Indian saying expresses that a bird flying high in the skies will always keep an eye on her babies in the nest down below. In comparison, what is the extent to which an enterprise architect looks at the concerns on the ground while flying high on the level of a corporate vision? A candid answer to this question reveals the degree to which the enterprise architect can succeed in translating a vision to a venture.
+        </p>
+        <p>
+            Enterprise architecture is predominantly approached through a top-down way of thinking: First articulate the corporate vision, then define key objectives and progressively drill down into the further details of implementation. The vision will help bring all stakeholders across all organizational silos of the enterprise under one common roof, and will motivate the entire workforce to reach for that vision. All the subsequent objectives, targets, projects, and activities can be derived from the vision and must lead toward the vision. At least in theory, this is how it EA is supposed to work.
+        </p>
+        <p>
+            We have encountered many examples whereby this process is less straightforward. An application rationalization project of a global logistics company was run under the maxim of considerably reducing the numbers of applications and application platforms in order to serve the corporate mandate: save costs. Among the concrete measures identified by the EA team was the global replacement of a parcel-tracking application by an already existing Web-based system. The planning had been finalized, and the budget was allocated.
+        </p>
+        <p>
+            Then a series of letters was sent to the country heads, announcing that the legacy tracking application was about to be replaced by the Web interface. You can imagine the surprise in the EA group when the Italian country head wrote a letter back, asking sarcastically if the IT department would also pay for a couple of thousand iPads. As it turned out, the handhelds that the logistics drivers in his region used were incapable of running a Web browser. No one on the EA team had known that.
+        </p>
+        <p>
+            This may be an isolated example, but it illustrates a general problem with regard to EA. On one side, an enterprise architect is expected to have a broad overview of both the IT and the business landscapes. On the other side, the enterprise architect needs to retain her grip on the details of business and technology to such an extent that she still understands the reality on the ground. This is a wide chasm that’s not always easy to bridge.
+        </p>
+        <aside>
+            <header>
+                <h5>PERSPECTIVE CARICATURES</h5>
+                <p>
+                    <strong>Caricature #1: Living in Cloud Cuckoo Land</strong>
+                </p>
+            </header>
+            <p>
+                When an enterprise architect is too decoupled from the community of project architects and developers, she loses insight into the challenges of the IT projects on the ground. A similar gap can exist between the enterprise architect and the users of applications and processes on the business side. If the enterprise architect does not bother to ask the end users how well suited a process is, she is likely to evaluate the as-is process landscape in the wrong way. An EA organization in Cloud Cuckoo Land is ignored or circumvented by both the IT and business departments on the ground.
+            </p>
+            <p>
+                One possible symptom of Cloud Cuckoo Land is a tendency to focus on the big picture. The big picture is part of the standard mindset of EA, which everyone immediately associates with the activities of an enterprise architect. However, many of these big pictures you meet in practice have been overabstracted to the point of insignificance and no longer address any relevant question.
+            </p>
+            <p>
+                In addition, the option for hierarchical search and semantic drill-in is often undermined by the loss of information between the abstraction layers. Semantic distortions are the rule rather than the exception. The main danger of such a kind of big picture is that it glosses over and obfuscates the gap of understanding between EA and IT management on one side and the IT reality on the ground on the other. This creates an atmosphere of false security at the corporate level and prevents triggering corrective actions.
+            </p>
+        </aside>
+        <p>
+            EA entails making and following a set of policy decisions that steers the strategic direction for the evolution of IT. Often there is no one single “right” answer but a plethora of conflicting priorities and choices. The enterprise architect has to select those options that seem both most promising and least damaging at a given point in time. An example is the choice between the conflicting architectural priorities of performance, interoperability, and manageability. The right solution design for a certain type of application can look quite different for different enterprises. It can even vary at different points in time for the same business line of one enterprise.
+        </p>
+        <p>
+            If such policies are designed by an isolated group of experts with little bandwidth (and even less inclination to reach out to the people concerned by the consequences), EA is bound to run into a wide range of problems. Overlooking technical details can become far more costly than anticipated. “Architecture represents the significant design decisions that shape a system, where significant is measured by cost of change,” writes Booch (2006). A high-handed focusing on the big picture is prone to overlook some of the significant (i.e., expensive, in the sense of Booch’s definition) aspects of the solution.
+        </p>
+        <p>
+            The quoted example of not having Web-enabled handhelds for the logistics drivers would be, if it had not been detected in time, a good example of this risk. Another rich source of Cloud Cuckoo Land examples is the “naı̈ve” way of implementing SOA, which was pretty common in the early days of this design pattern. The best example we found was the strict directive of the EA group of a logistics company to implement all data interchanges between systems as Web services—including a point-to-point connection that had previously been a nighttime batch job. It shovelled gigabytes of data through a web connection, including the transformation to and from XML.
+        </p>
+        <p>
+            Another shortcoming of a top-down approach without sufficient grounding is that it may meet significant conscious or subconscious resistance in the people on whom such decisions are imposed. It is a trivial (yet surprisingly often disregarded) fact that the buy-in of co-workers can be neither taken for granted nor enforced by orders; it has to be earned by involving these people in the decision-making process.
+        </p>
+        <p>
+            So far, we have described the risks of a too detached and high-handed EA team. However, in the Perspective dimension the other extreme also exists and can be responsible for EA failures. An “oldschool” type of CIO is firmly rooted in the IT department and focuses on maintaining the status quo: ensuring that the IT service-level agreements are kept and the costs are under control. An EA group operating in such an environment is prone to lack a quality that the Cloud Cuckoo Land variety has in abundance: broad vision. Decisions are taken from an IT-centric background, and there is little inclination to proactively approach the business and to position IT as an enabler for new business models and markets.
+        </p>
+        <aside>
+            <header>
+                <h5>PERSPECTIVE CARICATURES</h5>
+                <p>
+                    <strong>Caricature #2: In the Chief Mechanic’s Workshop</strong>
+                </p>
+            </header>
+            <p>
+                If the enterprise architect focuses too much on purely technical issues or works merely as project architect, she runs the risk of neglecting the broad view and is not taken seriously by the business. This promotes the perception of IT as a cost-driving commodity instead of a business enabler. The role of an EA organization is then likely to be reduced to achieve cost reduction by managing standards and conducting IT rationalizations.
+            </p>
+            <p>
+                Often in such a setup, the EA group consists of experts instead of generalists. Each enterprise architect is a one-track specialist with a narrow focus on specific technologies or business requirements (such as security, performance, or user interface and stability), and no one in the team has a holistic view of the enterprise IT landscape.
+            </p>
+        </aside>
+        <p>
+            Broadbent and Kitzis (2004) coined the term chief technology mechanic for the CIO running the shop in the preceding caricature. Apart from an organizational structure that places the EA team too close to the IT department, such a setup may also have other reasons. Insufficient architectural skills can be one. Another possibility is that the IT landscape of an enterprise has grown to such complexity that no single person understands the whole of it or even the whole of one application. A chief architect of a car manufacturing company admitted that fact quite frankly—the enterprise was so large, so long in the market, and so riddled with poorly documented proprietary IT solutions that no single enterprise architect had the complete overview anymore. A holistic view of the enterprise’s IT landscape appears hardly possible under such circumstances.
+        </p>
+        <p>
+            An EA group working in such fashion, with too much focus on the details and too little attention to the broad vision, tends to manage only singular aspects of the system. It basically abandons EA’s claim to shape the IT landscape actively and capitulates in the face of complexity. EA effectively stops happening.
+        </p>
+        <p>
+            This situation drives IT into the passive role of a mere commodity. Commodities, however, are primarily perceived as cost drivers. Therefore the IT function will quickly find itself in an endless loop of cost reduction demands from the CEO. This leads to the “orange-squeezing effect,” as Keller (2006) describes it: IT has managed to reduce its budget by 20% this year, and the applications are still operable. So why not ask for another 20% reduction next year? In the long run, this cycle leads to a degradation of IT within the enterprise. It also threatens the CIO’s position. As Broadbent and Kitzis (2004) point out: Each enterprise needs electricity, but no one would think of establishing a chief officer of electricity on the board.
+        </p>
+        <p>
+            An EA group operating too much on the detail level will not be able to ensure the design of appropriate, business-aligned IT applications. We encountered a particularly good example of this at a global insurance company. Over the years, the company’s IT department had developed a costly, proprietary content management system for their intra- and extranet, targeted at supporting the specific editorial process prevailing in this enterprise. In an assessment of the enterprise portal landscape it became evident that no one had ever bothered to precisely model the editorial process that had been the starting point of the development. The IT department had simply implemented a solution they thought would fit the business needs—with the effect that no one, neither on the business side nor on the IT side, was happy with the outcome. This situation is primarily the result of poor requirements engineering in the development project, of course, but an EA group with sufficiently broad vision would have insisted on doing the business architecture first.
+        </p>
+        <p>
+            Another phenomenon typically to be observed in a rather technology-savvy EA organization is a tendency to implement its own proprietary platforms instead of just reusing tried and tested industry standards. In the course of our careers we have seen several custom enterprise UI frameworks, each tailored to a special use case in the particular enterprise that was overrated at best, nonexistent at worst. (As a general rule, each enterprise considers its UIs to follow a unique paradigm, and almost always this is a case of self-delusion.) Such a reinventing-the-wheel mindset is a risk that leads to a hard-to-control jungle of technologies and solutions.
+        </p>
+        <p>
+            In summary, neither the big picture nor attention to detail alone will ensure successful EA work. The enterprise architect needs to be like a helicopter pilot who is fighting forest fires. Flying too high, she will no longer see the fires. Flying too low or even moving on the ground all the time, she will never get a complete picture of how much fire there is in the whole of the woods. She needs to fly at a middle level—sometimes higher to get an overview, sometimes lower to analyze a particular patch, and sometimes she will have to land in order to fix things on the ground.
+        </p>
+        <p>
+            This requires a practical framework for structuring the EA activities on a day-to-day basis, supporting the enterprise architect’s workflow at all levels of operation and ensuring the participation of all stakeholders. The enterprise architect needs all the help she can get to master this tightrope walk.
+        </p>
+    </section>
+</body>
+</html>

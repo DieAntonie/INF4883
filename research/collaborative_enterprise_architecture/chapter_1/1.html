@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INF4883 - Collaborative Enterprise Architecture - Chapter 1</title>
+</head>
+<body>
+    <header>
+        <h1>INF4883 - Enterprise Architecture - Research - Collaborative Enterprise Architecture - Chapter 1</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">Back</a>
+            </li>
+            <li>
+                <a href="2.html">Next</a>
+            </li>
+        </ul>
+    </nav>
+    <section>
+        <header>
+            <h2>Reasons for this book</h2>
+        </header>
+        <p>
+            Enterprise architecture (EA) is often projected as a multipurpose medicine that cures an enterprise of all pains and problems. EA comes in different flavors—sometimes a marketing gimmick in management talks, sometimes a means to boast about knowledge of some framework or other, and sometimes an academic research topic. As a consequence, there seems to be a mystical mist surrounding the field of EA. This mist obscures the meaning and purpose of this field—not only for the naı̈ve observer but also for the mature architect.
+        </p>
+        <p>
+            In our professional lives, we (the authors of this book) have approached EA from the ground up, coming from the basic levels of IT and software architecture. When EA groups were established in our organizations, we experienced both the benefits and the shortcomings of EA. When eventually taking over enterprise architect roles ourselves, we had our own sets of successes and blunders. Over the years and across different roles in the IT organization, we have become convinced that something as vitally necessary as EA should be organized in a more effective mode. This reorganization should appropriately involve all stakeholders in the decisions, including business users and developers, instead of acting out of an elite inner circle. It should adopt a more incremental mode of working and drop unnecessary bureaucracy in order to become more flexible.
+        </p>
+        <p>
+            The first time we came in touch with EA was about ten to fifteen years ago. We were, in separate companies, working as software architects at the project level. Shailendra was employed by an IT consulting company doing various projects for customers around the globe. At the same time, Stefan and Uwe were working in product development for a global network equipment provider. Still, our experiences with EA (both on the customer side and within our own organizations) were similar among all of us. There was often a mix of great expectations and disappointment in the actual result.
+        </p>
+        <p>
+            The need for an enterprise architecture was always plainly and painfully visible. In Stefan’s and Uwe’s company, the product lines behaved like independent principalities, each making its own technology platform decisions. A Not Invented Here 1 mentality prevailed. In the same way, each line was responsible for its own product management. Therefore, the alignment between customers’ business needs and products’ features was handled in a quite fragmented way. The different software applications in the overall product portfolio were hardly interoperable. They had overlapping and competing features that were jealously guarded by their respective product managers.
+        </p>
+        <p>
+            When we, as architects responsible for one of these products, met customers, we often felt as though we’d drawn the shortest straw. “Why do we have to export the data from product X and import it to product Y in order to use it there, instead of just opening Y from X’s user interface?” asked the customer, and silently we had to agree with them. However, the situation on the customer side wasn’t any better. Not only did the customers’ different departments and business areas use different middleware (three different vendors, each in multiple versions, were nothing out of the ordinary); they also used separate sets of applications for the same tasks. This made system integration a challenging task for us when we had to build an integration platform, or deploy a business intelligence system that needed to draw data from virtually everywhere.
+        </p>
+        <p>
+            Given this evident lack of coordination amongst the software applications and between the application portfolio and the business needs, we often longed for a group of vigorous enterprise architects. They would ride in like the good guys in a Western movie and reinstitute order in a world of anarchy. And indeed, gradually we noticed the rise of an EA culture. EA groups were formed in the customer organizations as well as in Stefan’s and Uwe’s product development organization. But, alas, it was not the band of superheroes we had hoped for.
+        </p>
+        <p>
+            For each sensible move toward synergy and technology harmonization, there were also a few mindless decisions imposed on us from above. This, at least, was how we perceived the situation. In one of Shailendra’s projects, the project architects had proposed Oracle for a data volume expected to be in the terabyte range. The customer’s newly formed EA group, however, had just declared Microsoft the strategic vendor. They insisted on SQL Server for the project, which (in the version available at that time) Shailendra’s team considered quite ill suited for such a large data volume. He had a very hard time talking the enterprise architects out of their decision.
+        </p>
+        <p>
+            In another project, where Uwe served as the lead architect, the EA group insisted on being the only design body for services deployed to the enterprise service bus (ESB). This meant a considerable risk of delays for the project. First, one had to reserve time with an enterprise architect for doing the service design, and then one had to subordinate to the fixed three-month release cycle of the ESB. In addition, the quality of delivered service design was often debatable. No wonder that projects usually tried to avoid using the ESB at all and chose other—often less suitable—middleware options instead.
+        </p>
+        <p>
+            Over the years we started to take over responsibility in the enterprise architecture area ourselves as platform architects, in consulting assignments, or, in Shailendra’s case, as practice head for enterprise architecture within the company. Evidently we did a decent job, by and large, since each of us was granted more and more responsibility over time. However, we had ample opportunity to ourselves commit some of the blunders we had previously observed in EA groups. And we made full use of this opportunity:
+        </p>
+        <ul>
+            <li>
+                We steadfastly defended our own holy cows—insisting, for example, that everything should be modeled as a Java Enterprise Edition (JEE) entity bean and that stored procedures are impure. We tried to push the usage of our enterprise platforms by extensive micro-management and were surprised and embittered about the resistance from projects.
+            </li>
+            <li>
+                Harmonization and integration of competing base platforms were activities we repeatedly, and with much heart, engaged in—often enough seeing in the end that integration projects were way too expensive to be realized or were no longer needed from a business perspective one year later.
+            </li>
+            <li>
+                Designing a model-driven common middleware mediation layer, we yielded to the temptation of using highly complex meta- (and meta-meta-) models that were supposed to cover each and every foreseeable extension—only to fail with a simple side requirement coming in one month later.
+            </li>
+            <li>
+                We repeatedly spent months on writing extensive IT strategy papers, only to discover in the formal review meetings that no one had read them. Those stakeholders whose opinion really counted hadn’t even turned up.
+            </li>
+            <li>
+                Often enough, we talked until we were blue in the face to convince different (and bitterly competing) business groups to come to an agreement on a shared application platform, shared data model, or shared infrastructure. Frequently such mediation was a wasted effort. None of the stakeholder groups was willing (or able) to compromise on its own unique requirements and service-level expectations.
+            </li>
+        </ul>
+        <p>
+            The list could be continued further. On top of all that, we (of course) always believed ourselves to be right—at least at the time a decision was made. Assuming that we are not stupider than other architects, what could be the reason for such suboptimal outcomes? After exhaustive analysis and many discussions, we found that each of the previously described situations boiled down to people issues. These issues can be characterized by lack of interaction and communication, resistance to leaving the ivory tower, failure to involve the right stakeholders, specification as an end in itself, and so on.
+        </p>
+        <p>
+            Such behavior is human and occurs even among the most highly skilled individuals. The countermeasure is not attempting to change people. This will not work. The most effective remedy is to changethe way of collaboration, the rules for interaction, and the organization structure.
+        </p>
+        <p>
+            We had seen techniques for making that work outside our architecture domain. As project architects, we had applied lean and agile methods for years. We had helped produce software in an incremental way, on time, and of good quality. The agile methodology involves all stakeholders on a regular basis and focuses on producing usable results within a fixed heartbeat. Lean practices avoid wasteful activities and help concentrate on the need at hand.
+        </p>
+        <p>
+            In addition, we had dealt with Web 2.0 and Enterprise 2.0 2 concepts in a couple of projects and had seen how well they, if properly used, can leverage the wisdom of crowds for decision making.
+        </p>
+        <p>
+            Couldn’t these techniques also be applied to enterprise architecture? Are they appropriate for such a dignified, long-term oriented, and elitist discipline? Against a backdrop of the discussions, lectures, consulting assignments, and trials we have undertaken in recent years, we answer these questions with a clear Yes. In writing this book, we attempt to elaborate our view on the current best practices of enterprise architecture and how those practices can be enriched by lean, agile, and Enterprise 2.0 concepts.
+        </p>
+        <p>
+            Our effort in writing this book is a consequence of our desire to steer away from the mystical mist that surrounds EA, as we mentioned in the beginning of this chapter. We want clarity—as vivid and as realistic a picture of enterprise architecture as possible. We want to make practical sense of EA and make it more meaningful to use—for ourselves, for our fellow IT practitioners, and for managers. And we want to explore new, pragmatic ways of practicing EA that will work well in today’s rapidly changing business world.
+        </p>
+        <p>
+            We will consider ourselves successful if you, the reader, can zealously and successfully translate our proposals outlined in this book into your own way of dealing with enterprise architecture. You are invited to follow us into EA as a realm of high-flying goals and humble reality—and then further toward pragmatic improvements.
+        </p>
+    </section>
+</body>
+</html>
