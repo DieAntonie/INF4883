@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INF4883 - Collaborative Enterprise Architecture - Chapter 3</title>
+</head>
+<body>
+    <header>
+        <h1>INF4883 - Enterprise Architecture - Research - Collaborative Enterprise Architecture - Chapter 3</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="5.html">Back</a>
+            </li>
+        </ul>
+    </nav>
+    <section>
+        <header>
+            <h2>Standardizing on technology usage</h2>
+        </header>
+        <p>
+            Technologies emerge and continuously evolve over time. Many technologies come and go, but only a few of them succeed and sustain. One of the fundamental considerations in determining the strategic fit of an application is to look at its underlying technologies. This base needs to be rated in relation to the strategic importance and supportability of those technologies in the overall schema of the enterprise. The overall schema of the enterprise’s technology usage can broadly be classified as shown in Figure 3-15.
+        </p>
+        <p>
+            This classification plots an enterprise’s ability to execute the projects in a given technology on the X-axis and plots the strategic importance of the given technology on the Y-axis. This classification closely relates to the Ward and Peppard scheme, described earlier in the “Evolving the IT Landscape (EA-3)” section. The Ward and Peppard scheme is better suited for application classification, whereas this scheme focuses on the technology layer. Comparing the two schemes leads to the following findings:
+        </p>
+        <ul>
+            <li>
+                <strong>Star</strong> and <strong>Cash Cow</strong> applications will be scattered across the Core and Declining technology areas.
+            </li>
+            <li>
+                <strong>Wild Cats</strong> will be spotted in the Emerging square.
+            </li>
+            <li>
+                <strong>Poor Dogs</strong> can be found anywhere.
+            </li>
+        </ul>
+        <p>
+            Having categorized the technology usage in the enterprise based on the aforementioned classification, one of the primary responsibilities of the enterprise architect is to inform the project teams of acceptable technology usage. This comprises the technology products they can use and the technology standards they must follow while building business solutions:
+        </p>
+        <ul>
+            <li>
+                <strong>Technology products.</strong> This comprises any software that is acquired to support an enterprise’s business or IT needs. It includes commercial products, open source, libraries, frameworks, and any other code that the project teams did not create internally.
+            </li>
+            <li>
+                <strong>Technology standards.</strong> This refers to one or more related specifications that have been approved externally by standards development forums, have been widely used and accepted by the industry, have been enforced by the government, or have been internally mandated for use within the enterprise. Standards come in the form of policies, guidelines, constraints, or conformance criteria.
+            </li>
+        </ul>
+        <p>
+            The enterprise architect thus provides guidance on the permissible range of technologies that a project team may select to meet their business requirements. However, the approved technologies are not necessarily equal in terms of their supportability and quality of service. Each technology is subject to certain constraints. It is apparent from Figure 3-15 that supportability depends on the categorization (Core, Declining, Emerging, and Specialized). Opposed to that, the service level depends on business demand and cost structure and can, for instance, be classified as platinum, gold, or silver.
+        </p>
+        <p>
+            The technology guidance primarily comprises a list of technology products and technology standards that have been assessed and rated to be either compliant or noncompliant with the enterprise’s strategic technology direction. It should therefore cover each and every technology that is relevant to the enterprise—from web browser to data storage; from coding standards to UI guidelines; and from modeling tools to security guidelines. A mature technical architecture is one that fulfills all the following criteria:
+        </p>
+        <ul>
+            <li>
+                Identifying the key technologies
+            </li>
+            <li>
+                Describing the enterprise strategy for technology provision
+            </li>
+            <li>
+                Containing a list of vendors, products, and standards associated with the technology
+            </li>
+            <li>
+                Including a model for technology implementation
+            </li>
+        </ul>
+        <p>
+            In the best possible case, such standards enable project teams to assemble a significant portion of their solution using the guidance contained in the technical architecture and the list of approved products and standards. The teams should not use forbidden technologies but at the same time should minimize the portion of their own development.
+        </p>
+        <p>
+            In reference to the technology classification in Figure 3-15, the EA group at Bank4Us does not have dedicated specialists for many Core and Declining technologies within the EA group itself. In general, the competency in some of these technologies—for instance, mainframe or CRM—often resides within the IT delivery units owning those environments. Oscar Salgado, the chief architect leading the EA group of Bank4Us, finds it therefore appropriate that the IT delivery units should be responsible for maintaining the approved product list and standards specifications for their own technology environment.
+        </p>
+        <p>
+            In addition, Oscar ensures that a single point of contact (SPOC) for the architecture group is appointed from every delivery unit. The SPOC makes sure that appropriate communication between the IT delivery unit and the architecture group is established and ensures a continuous information flow between the two. Oscar does not want his team to be too deeply involved in the Core technology domains belonging to those units. He wants his team to focus only on the edge of those technology islands—on the interaction of the IT delivery units with the rest of the enterprise.
+        </p>
+        <p>
+            Nevertheless, Oscar also looks for the opportunities for short-term job rotation for his architects. That way, they can participate in ongoing project activities within such independent IT delivery units. The primary role of Oscar’s enterprise architects there is coaching and reviewing projects. This helps them to keep an eye on the end-to-end solution delivery that runs across many of these units.
+        </p>
+        <p>
+            Oscar takes a similar stance for the Specialized technology space simply because its footprint is too small to attract enterprise-wide attention. It is always the owning organizations who should care for these technologies.
+        </p>
+        <p>
+            On the other side of the spectrum, generalized technologies such as .Net, JEE, and similar development platforms have widespread proliferation across the bank. Oscar therefore takes over the ownership of them under his EA regime. The EA team offers a crystallization point for these technologies to which the project teams can refer and contribute.
+        </p>
+        <p>
+            Irrespective of whether a technology is centrally controlled by the EA group or not, Oscar ensures that the approved lists of technology standards and product specifications are maintained by the respective owners and that they are accessible to the EA group and the wider IT community over the bank’s intranet. That way, Oscar’s team has an up-to-date, consolidated list of all the products and standards employed within each technology environment at the bank. Table 3-8 presents a partial view of this list. Such a view is available on the EA Website accessible to all project teams over the Bank4Us intranet.
+        </p>
+        <p>
+            As far as the Core, Declining, or Specialized technologies are concerned, the respective IT units in the bank possess a sustainable delivery capability. They are fully equipped with mature product implementations, established standards, and an experienced staff. However, this is not the case with the Emerging technologies and there are large numbers of new technologies shooting up like mushrooms. The bank does not have expertise on these new technologies. It is the EA group’s task to lead the way and harness the bank’s new technologies.
+        </p>
+        <section>
+            <header>
+                <h3><a href="5_1_1.html">Introducing new architectural paradigms</a></h3>
+            </header>
+        </section>
+    </section>
+</body>
+</html>

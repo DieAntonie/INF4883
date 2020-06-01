@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INF4883 - Collaborative Enterprise Architecture - Chapter 3</title>
+</head>
+<body>
+    <header>
+        <h1>INF4883 - Enterprise Architecture - Research - Collaborative Enterprise Architecture - Chapter 3</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="2.html">Back</a>
+            </li>
+        </ul>
+    </nav>
+    <section>
+        <header>
+            <h2>Visualizing cross-relations and transformations</h2>
+        </header>
+        <p>
+            Enterprise architects are in charge of making the entanglement of business and IT comprehensible. The models they create must therefore capture relations between all architecture layers, from business down to technology. Likewise, the views on top of these models should visualize how the entities of the layers, which in a first approach appear rather isolated, are in fact interwoven. Figure 3-4 depicts a highly simplified but typical example from a fictitious logistics company.
+        </p>
+        <p>
+            This process map draws a relationship among business processes, the organizational units in charge of them, and the applications supporting these units in their duties. It highlights, for example, that the organizational Unit B uses a rather old 2.3 release of the CRM system, whereas Unit E is already equipped with the more modern release 3.0. As a consequence, Unit B has to work with the legacy applications GDA and DES to manage the whole pickup and delivery processes.
+        </p>
+        <p>
+            Another kind of view that is widely used to visualize relations is the cluster diagram. Figure 3-5 is, again, a highly simplified example of a more technically oriented cluster diagram that draws a relationship between technology platforms and applications based on those platforms. The applications are sorted into clusters according to the technology they are built on; the reader can learn from it, for example, that release 7.1 of the Settlement application is built on an exceptional technology mix (MS SQL Server and JBoss) that might not accord with an enterprise’s technology standards.
+        </p>
+        <p>
+            We can choose from among a large variety of process maps and cluster diagrams. The process map can, for instance, also be used to visualize relationships between processes, supporting application functions, and business objects involved in these functions. But the two examples shown should suffice to illustrate how they address relationships, dependencies, and cross-concerns. The reader interested in a broader treatment of best-practice EA views may refer, for instance, to Hanschke (2010).
+        </p>
+        <p>
+            Another peculiarity of enterprise architecture models is that they have a time dimension. The models do not merely present a snapshot of the architecture(s) at a particular point in time; they capture the current state, the future desired state, and possibly a roadmap of transition states along the way. Figure 3-6 is a simplified example of an application roadmap addressing the evolution of the application landscape.
+        </p>
+        <p>
+            Another frequently used means of eliciting “Aha!” effects of how things will evolve is a flip-book of consecutive states, like the one in Figure 3-7. The two consecutive states show the simplified application landscape of a logistics company, clustered by functional domains. The arrows mark the data flow with regard to a central business object. The flip-book now clearly demonstrates the effect of an application rationalization on this flow.
+        </p>
+        <p>
+            There is an abundance of variants of such landscape maps. You may use them to relate applications with technology stacks, business objects with application functions, or whatever results in a better understanding of how the bits and pieces fit together.
+        </p>
+    </section>
+</body>
+</html>

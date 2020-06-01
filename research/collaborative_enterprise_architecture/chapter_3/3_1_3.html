@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INF4883 - Collaborative Enterprise Architecture - Chapter 3</title>
+</head>
+<body>
+    <header>
+        <h1>INF4883 - Enterprise Architecture - Research - Collaborative Enterprise Architecture - Chapter 3</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="3_1.html">Back</a>
+            </li>
+        </ul>
+    </nav>
+    <section>
+        <header>
+            <h2>Assessing alternatives</h2>
+        </header>
+        <p>
+            Let’s turn back to Ian’s application rationalization journey at Bank4Us. The KPI assessment of the application catalogue gave him hindsight into the applications with a high potential for optimization. The application TR2 in Figure 3-11, for example (a trading application developed in the 1990s, as far as Ian knows), is close to a Poor Dog but causes tremendous costs. Nevertheless, simply ramping it down will be an intricate matter since it shows a lot of interactions with other applications, and presumably it is deeply interwoven into the data- and workflows of the enterprise. But maybe there are other options?
+        </p>
+        <p>
+            Consequentially Ian’s next step is to deep dive into the refactoring options of each optimization candidate. Can a candidate be ramped down by rearranging some business processes or shifting functionality to some other applications? Can the application be refactored so that it is less interwoven with other systems? Can at least a couple of business functions be taken over by some star applications? Ian and his team discover that a small extension of the Wild Cat trading application TAR (see Figure 3-11) would make a larger part of the TR2 functionality superfluous, with only minor changes to the business processes and one additional system interaction (fan-in) added to TAR.
+        </p>
+        <p>
+            This appears to Ian and his team as the healthiest thing to do in comparison to other options. Hence, they redraw the architecture models, accommodate this change into the target architecture, and reassess the modified overall landscape once again, as shown in Figure 3-13.
+        </p>
+        <p>
+            Application rationalization is an optimization with constraints, as you can see from Ian’s reasoning. One essential constraint is that the rationalization measures must neither disrupt daily operations nor cause critical changes to the business processes or organization. Therefore, the impact of these measures must be assessed, and this will be the easier the better you have accomplished activity EA-2, Modeling the Architectures. An up-to-date EA model highlighting the relations between business processes, organizational units, services, applications, and so forth makes such an assessment a piece of cake. (Well, this statement needs to be taken with a grain of salt; it still remains a challenge, of course.)
+        </p>
+        <p>
+            But many enterprises are far from having such a model in place, so the assessment can really become a desperate endeavor. According to our experience, a high percentage of application rationalization initiatives fail, and they fail because of the inability to assess the impact of even humble changes. When you are consulting a company in an application rationalization and you touch the ground for the first time, you’re likely to meet ironic people telling you things like: “We have tried to ramp down application SIS in 2005 and 2007 already, and now you with your supernatural powers come to the rescue?”
+        </p>
+        <p>
+            The dose of sarcasm depends on the personality, but the reason for the failure of earlier attempts usually is that they unraveled so many unknown ramifications and configurations that people eventually decided they’d better not touch anything. Chapter 1 already reported on highly respected enterprises that lost track of their IT to such an extent that the lunatic “hotline approach” becomes an acceptable reengineering method: Install an emergency phone right beneath the application server, shut the server down, and wait to see who calls.
+        </p>
+        <p>
+            The Bank4Us example also illustrates that application rationalization is a recursive process. Options that seem promising and feasible are applied to the architecture model, and the resulting target landscape is reassessed using the same KPIs as in the first round. Since the target landscape is just a vision and not operational, one is relying on guesswork here more than usual. But the effect of an improvement must be quantified somehow.
+        </p>
+        <p>
+            The guesswork character of this projection into the future brings us to an important question: How are the KPI values actually calculated? How did Ian and his team come to the conclusion that the return on equity (ROE) application has a TCO of $390,000 per year but a poor strategic fit of three?
+        </p>
+        <p>
+            The answer in brief is: Facts and opinions. A concrete indicator such as TCO can mostly be calculated on the basis of facts—by gathering the bills and contracts pertinent to the application under inspection or by collecting maintenance efforts from incident management systems and similar sources. But the evaluation of an imaginary measure such as strategic fit (SF) mostly relies on opinions. To gather them, Ian and his team have conducted a series of interviews with subject matter experts with different responsibilities: business and IT strategists, application owners, software developers, and operating personnel.
+        </p>
+        <p>
+            But the question “How well do you think the application fits to the strategy?” is too abstract for a non-erratic answer. Most people will shrug their shoulders. Ian therefore decomposes the SF-KPI into about two dozen base indicators and places them on a scorecard, as shown in Table 3-5. The scores of the individual base indicators are then aggregated according to some weighted formula to the KPI value of SF.
+        </p>
+        <p>
+            In collecting opinions, it is crucial whom you decide to ask. The prevalent approach is to nominate subject matter experts and conduct interviews with them. This narrows the circle to a small, illustrious group of adepts whose judgments are hopefully full to the brim with insight. But if the majority of users say that a certain application is cumbersome, the experts’ praise of it is to be taken with care. Chapter 8, “Inviting to Participate,” therefore suggests complementary means of Enterprise 2.0 to come to a broader, balanced assessment.
+        </p>
+    </section>
+</body>
+</html>

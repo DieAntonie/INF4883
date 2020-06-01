@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INF4883 - Collaborative Enterprise Architecture - Chapter 3</title>
+</head>
+<body>
+    <header>
+        <h1>INF4883 - Enterprise Architecture - Research - Collaborative Enterprise Architecture - Chapter 3</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="2.html">Back</a>
+            </li>
+        </ul>
+    </nav>
+    <section>
+        <header>
+            <h2>Modeling standards</h2>
+        </header>
+        <p>
+            The notation, terminology, and conceptual meta-model of enterprise architecture models are not standardized in practice. Unlike software design, where most practitioners nowadays agree that the Unified Modeling Language (UML) is the language in which to express software architectures, there is no such convention about enterprise architecture. Some core concepts such as business process can be found in most models; even there the notation and maybe also the definition are not unanimous among enterprises. The modeling language being used in an enterprise is formed by the vocabulary of concepts that has grown over the years, condensing much of the organization’s view of the world as well as the vendor-dependent taxonomy of the modeling tools that are in place.
+        </p>
+        <p>
+            The nonexistence of a universally understood, reliable language to communicate about enterprise architecture has become an obstacle—even more so in a business context that increasingly counts on collaboration between people and joint ventures of partners. ArchiMate is a modeling standard that is supposed to overcome this obstacle and that up to now remains the only serious attempt to standardize EA notations.
+        </p>
+        <p>
+            ArchiMate was designed by research institutes and universities in the Netherlands from 2002 to 2004. Since 2008 it has been under the stewardship of and published at The Open Group (2008). As we shall see in the description of the TOGAF framework in Chapter 4, the taxonomy of ArchiMate resembles TOGAF’s own content meta-model. ArchiMate therefore is a perfect fit for modeling the architecture layers along the phases of the TOGAF Architecture Development Method.
+        </p>
+        <p>
+            Figure 3-8 shows an example of how ArchiMate models a simplified pickup and delivery process that belongs to the core express business of any logistics company: Customers can ring up a call center and request the pickup of a parcel from some place in order to get it transported to a destination address.
+        </p>
+        <p>
+            The standard distinguishes three modeling layers—namely the business, application, and technology layers; they are depicted by different shadings in Figure 3-8. Let’s briefly traverse these layers from top to bottom to get to know the most important concepts of the ArchiMate taxonomy.
+        </p>
+        <p>
+            First we learn from the business layer that the pickup and delivery process consists of three subprocesses: pickup, transport, and delivery. Furthermore, the process implements the pickup service, a business service offered to customers as a part of the parcel shipment product governed by an express contract. The service is supported by call center agents and used via the order acceptance business interface by customers that have registered accounts. The process is triggered when a customer calls up the pickup service and thereby issues a pickup order business event. The customer submits information such as the consignee address, which is comprised in a new shipment business object.
+        </p>
+        <p>
+            The next layer, application, tells us that the pickup subprocess is supported by the order management application. The application offers a process order application function that is used by the call center agents via the order entry API, the user interface of the application. Furthermore, the order management application invokes an API of the dispatching application to assign orders to pickup routes.
+        </p>
+        <p>
+            The bottom layer eventually shows how infrastructure components such as database systems, servers, and network segments host the order management application.
+        </p>
+        <p>
+            Though rather simplified, the example conveys an impression of how ArchiMate models entities, in particular of the granularity of detail it addresses. The decomposition of the process, for instance, is much coarser than the detailed flow modeled by a BPMN 3 diagram. The modeling of applications does not go deeper than the delineation of applications and their functions and interfaces, which is much less than what is usually captured in a UML model. This granularity is quite suitable for modeling larger parts of an enterprise IT-landscape, and the ArchiMate vocabulary, which is summed up in Table 3-3, 4 indeed offers the concepts needed to do so. Furthermore, the standard also addresses the requisite cross-relations from business down to technology, which is a major concern of EA modeling.
+        </p>
+        <p>
+            But ArchiMate also has some shortcomings. 5 The concepts are ambiguous and not as straightforward to apply as intended. In practical work, you often start wondering whether, for instance, this portal page now offers a business service, a business function, or an application interface.
+        </p>
+        <p>
+            When it comes to communication, models like Figure 3-7 also tend to be a trifle bulky; such drawings must be interpreted and simplified by views to convey a message to stakeholders. ArchiMate proposes some standard views that leave out model elements or use simplified relationships to come to drawings that are simpler to grasp. (For more details, refer to the chapter “Architecture Viewpoints” in The Open Group [2008].) But in practice the architect needs to expend some creativity to create additional views in PowerPoint so she can get her ideas across.
+        </p>
+        <p>
+            Although ArchiMate is not that old as a standard, there are already remarkably many EA tool vendors claiming support of the standard—for example, Rational System Architect by IBM, BizzdesignArchitect by Bizzdesign, or Abacus by Avolution. There is also an Eclipse-based open source tool for drawing ArchiMate models, called Archi 6 ; maintained by the University of Bolton (UK), it accurately implements the standard and works well in practical use.
+        </p>
+        <p>
+            But managing the enterprise architecture with Archi, Microsoft Visio, or any other plain drawing tool is an impossible undertaking. The costs of keeping the data up to date are prohibitive, and the rift between model and reality will soon be insurmountable. Such drawing tools fall short of the major requirements an EA toolset should fulfill beyond capturing plain models, namely:
+        </p>
+        <ol>
+            <li>
+                The tool has a timeline for planning and simulating future states of the architectures.
+            </li>
+            <li>
+                It supports quantitative assessments and optimizations of the IT landscape; in other words, it supports application rationalization.
+            </li>
+            <li>
+                It has rich facilities to visualize models and craft views addressing specific stakeholder viewpoints as well as publishing functions for sharing knowledge.
+            </li>
+            <li>
+                It is integrated with other tools, as depicted in Figure 3-9.
+            </li>
+            <li>
+                It facilitates communication by feedback, collaborative authoring, and other means of participation.
+            </li>
+        </ol>
+        <p>
+            Dedicated EA tools such as Rational System Architect or Abacus more or less fulfill requirements 1 through 3. But there are no tools on the market yet for making the enterprise architect’s dream of integration with all related sources of information come true. Such an unobstructed synchronization of data would be a powerful weapon in defeating the drifting apart of EA models and reality, a safeguard “that which must not, cannot be.”
+        </p>
+        <p>
+            Wide-ranging IT-management tools such as alfabet’s planningIT offer EA and some of the neighboring functionality in one product offering, but they come with a price tag that is hard to sell to the chief information officer (CIO) “just for architecture.” In addition, this approach does not help if there already are other CASE 8 , CMDB 9 , or what-have-you tools installed. But even if the CIO is in a spending mood, the price tag restricts such tools to a small circle of authors since they mostly are desktop applications licensed per user.
+        </p>
+        <p>
+            Some creativity is required to balance the need for up-to-date EA models with the integration costs of the vision expressed in Figure 3-9. Since there are no standard integration interfaces, the realization of any synchronization arrow of the diagram in most cases means investing in custom implementation. The maxim here is to make the best of an existing blend of tools for EA purposes.
+        </p>
+        <p>
+            On the other hand, a manual refresh of the models is strenuous and has a slight ex post skew: just documenting what has been implemented. Manual refresh usually is a dead end because it only allows for modeling an isolated core of high-level entities. The result therefore misses an important requirement of architecture models: They should be continuous and ideally should support a seamless drill-in from high-level application landscapes to fine-grained class diagrams, project schedules, configuration parameters, operational incidents, and so on.
+        </p>
+        <p>
+            Finally, stale and unfertile architecture models can only be avoided by inviting a wider audience to take part in architecture concerns. This demand is expressed by requirement 5, and we’ll embark on it in Chapter 8, “Inviting to Participation.” It again stresses the importance of collaboration—this time not with adjacent information systems, as in Figure 3-9, but with the people involved in IT. Today most EA tools are pretty weak with respect to participation. They mostly support a one-directional publication by architects to the world but don’t implement feedback channels. Chapter 8 will give us an idea of how to overcome this obstacle.
+        </p>
+        <p>
+            The short list of requirements we’ve set out can be taken as a starting point for educated selection of an EA tool. More guidance and a checklist for tool assessment are available in, for instance, Schekkermann (2011).
+        </p>
+    </section>
+</body>
+</html>

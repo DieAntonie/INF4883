@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INF4883 - Collaborative Enterprise Architecture - Chapter 3</title>
+</head>
+<body>
+    <header>
+        <h1>INF4883 - Enterprise Architecture - Research - Collaborative Enterprise Architecture - Chapter 3</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">Back</a>
+            </li>
+            <li>
+                <a href="7.html">Previous</a>
+            </li>
+        </ul>
+    </nav>
+    <section>
+        <header>
+            <h2>Managing risks involved in IT (EA-8)</h2>
+        </header>
+        <p>
+            Enterprises are exposed to a wide range of risks. Bank4Us, for instance, has subdivided the whole range of risks it can fall victim to into several categories, as shown in Figure 3-18.
+        </p>
+        <p>
+            The palette of threats ranges from strategic risks (for example, outsourcing a business unit that turns out to be a competitive differentiator) over environmental risks (political changes or natural disasters) to regulatory risks—the peril of accidentally violating laws or regulations.
+        </p>
+        <p>
+            Since IT is involved in almost all enterprise activities, it also has its share in all risk categories. On one hand, existing risk scenarios affect IT. A fire, for example, might destroy not only office documents and furniture but also a mail server handling the messages of a wider region. On the other hand, IT also adds new risk scenarios, such as the threat of a denial-of-service (DoS) attack on an online brokerage portal.
+        </p>
+        <p>
+            Nevertheless, IT risks must not be considered as a new, separate risk category. “IT risk is business risk” write the authors of the ISACA 30 Risk IT – framework for risk management (2009). The bad thing about the denial of service attack obviously is not that some web server goes down, but the financial loss and the damage of reputation caused by the outage of the trading site.
+        </p>
+        <p>
+            Yet from a chief IT mechanics perspective, damages of the IT landscape sometimes look different from the business point of view. What appears as an IT catastrophe—for instance, the irreparable crash of a complete server cluster—sometimes has only a negligible impact on the business figures. Unfortunately this statement also applies in the other direction: Tiny IT bugs can trap the regulatory reporting of a financial institute and cause a penalty in the double-digit million-dollar range. One of the major principles of Risk IT is, therefore, to bind IT risks to business objectives and to evaluate risks in business currency, not in IT currency.
+        </p>
+        <p>
+            Enterprise architecture is a key to a business-oriented management of IT risks that adheres to this principle. A well-maintained EA model captures the linkage between business and IT and hence facilitates the tracking of IT effects on the business. Figure 3-19 provides an example of how an EA model helps bind IT risks to business objectives.
+        </p>
+        <p>
+            Bank4Us offers a product called raw material trading access. Customers who subscribe to this offering can trade raw materials such as coal, silver, or cotton with the help of an agent in the local branch office. The local agent places orders to the NYMEX 31 trading place by using the branch office trading portal application.
+        </p>
+        <p>
+            The outage of the order placement process initiated by this portal has a clear price tag assigned to it: Given the average daily trading volume, an outage of one hour causes a loss of US$160,000, not counting compensations for lost trading opportunities and the somewhat intangible loss of trust and reputation.
+        </p>
+        <p>
+            Given these considerable costs, the risk managers at Bank4Us are interested in tracking down what failures in IT can actually cause such an outage. The ArchiMate EA model shown in Figure 3-19 helps solve this puzzle. By following the dependencies, the risk hunters find that the availability of the order process depends, for example, on the functioning of the CICS External Call Interface (ECI) hosted on a particular mainframe computer.
+        </p>
+        <p>
+            Although this is a simplified example, it makes clear the key role of EA in risk management. It bridges the layers and provides the knowledge base for a business-oriented impact assessment. Typical questions EA helps answer are:
+        </p>
+        <ul>
+            <li>
+                What business processes are affected if the JBoss server cluster Y2 goes down, and in what state?
+            </li>
+            <li>
+                Which organizational units will be cut off from messaging if mail server DUCLONM01 goes down?
+            </li>
+            <li>
+                Can damage of router 192.8.56.287 cause an outage on some business service, and if so, what is the expected financial loss?
+            </li>
+        </ul>
+        <p>
+            Enterprise architects are not accountable for IT risk management. This usually is in the hands of the CIO or some senior management board. Yet, according to C OBI T, they are at least partly responsible for identifying risk scenarios, assessing their impact, and defining suitable risk responses (ISACA, 2007, p.65).
+        </p>
+        <p>
+            While participating in activity EA-1, Defining the IT Strategy, enterprise architects also are at least informed about the risk management policy. This policy sets out how big the risk appetite and tolerance of the enterprise is. Is it a risk-averse, conservative firm investing heavily in avoiding bad surprises and mitigating their impact? Or is it an opportunity-seeking organization with a relaxed attitude toward losses and deviations?
+        </p>
+        <p>
+            Since the protection against risk doesn’t come free, this question needs a well-considered answer. The policy also defines the responsibilities and communication channels with regard to managing risks and thereby forms what the risk IT framework calls risk governance (ISACA, 2009). According to ISACA, IT risks can occur in three subdomains (ISACA, 2009, p. 11):
+        </p>
+        <ul>
+            <li>
+                <strong>IT benefit/value enablement risks.</strong> These are risks causing a suboptimal exploitation of IT assets or missed opportunities in business enablement.
+            </li>
+            <li>
+                <strong>IT program and project delivery risks.</strong> These are the usual project risks involved in the prosecution of IT initiatives.
+            </li>
+            <li>
+                <strong>IT operations and service delivery risks.</strong> These are the risks involved in running the IT infrastructure and delivering IT services to the enterprise.
+            </li>
+        </ul>
+        <p>
+            EA has its share in all subdomains. With its focus on business-IT alignment, EA can be regarded as a general antidote against benefit/value enablement risks. Enterprise architects are also consulted in managing the risks of IT projects. In some cases, they even take the driver’s seat in such initiatives, as described in the section “Monitoring the Project Portfolio (EA-6).” Finally, they are at least partly in charge of identifying risks hidden in the current IT landscape—as outlined in the examples—and to accommodate suitable risk responses in the future target landscape.
+        </p>
+        <p>
+            There are four general types of possible risk responses:
+        </p>
+        <ul>
+            <li>
+                <strong>Avoidance of risks.</strong> This means erecting a protective barrier that makes the occurrence of the risk event impossible. But waterproof barriers in most cases are quite expensive or even technically impossible.
+            </li>
+            <li>
+                <strong>Reduction and mitigation of risks.</strong> This entails lowering the frequency of risk events, absorbing the impact of these events, or installing an early warning system.
+            </li>
+            <li>
+                <strong>Sharing or transferring risks.</strong> Insurance policies, partnering, or outsourcing are typical means to get rid of the full burden of a risk.
+            </li>
+            <li>
+                <strong>Accepting risks.</strong> This means to consciously accept the risk and take no action to decrease its probability or impact.
+            </li>
+        </ul>
+        <p>
+            The mindset of an IT mechanic sometimes is inclined to the reduction and mitigation of risks and neglects the other risk responses as viable alternatives.
+        </p>
+        <p>
+            When dealing with risks, one needs to clearly differentiate between risks and uncertainty. The Factor Analysis for Information Risk (FAIR) framework gives the following formal definition of a risk (Jones, 2005):
+        </p>
+        <p>
+            <blockquote>
+                [Risk is] the probable frequency and magnitude of a future loss.
+            </blockquote>
+        </p>
+        <p>
+            According to FAIR’s taxonomy, a risk basically consists of two constituents, namely:
+        </p>
+        <ul>
+            <li>
+                <strong>Loss event frequency (LEF).</strong> This measures how often a threat agent (for instance, a hacker, but also a thunderstorm) comes across the asset, how probable it is that the agent attacks the asset in such a case and how vulnerable the asset actually is (how well it resists the attack).
+            </li>
+            <li>
+                <strong>Probable loss magnitude (PLM).</strong> A measure for different kinds of losses, ranging from costs for replacing a damaged asset or diminished competitive advantages to legal fines and judgments.
+            </li>
+        </ul>
+        <p>
+            According to this definition, a risk is always bound to a well-defined event and has known consequences. The probabilities in LEF and PLM can have a wide or narrow confidence interval, but otherwise they are well-known factors of the risk estimation.
+        </p>
+        <p>
+            Risk responses therefore can be planned. Uncertainty prevails, on the other hand, in case there is an overall lack of knowledge about the constituents or factors involved in a situation. There is no use in planning responses, because it is widely unclear what to respond to. The only reasonable plan of action is to approach the land of the unknown in an iterative trial-and-error approach. Many of the so-called “risks” in IT actually are uncertainties, and the approaches to tackle them are different from those in risk management. Agile software development, for instance, is an example of such an approach.
+        </p>
+    </section>
+</body>
+</html>

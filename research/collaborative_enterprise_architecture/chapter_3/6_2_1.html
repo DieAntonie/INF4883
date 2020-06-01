@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INF4883 - Collaborative Enterprise Architecture - Chapter 3</title>
+</head>
+<body>
+    <header>
+        <h1>INF4883 - Enterprise Architecture - Research - Collaborative Enterprise Architecture - Chapter 3</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="6_2.html">Back</a>
+            </li>
+        </ul>
+    </nav>
+    <section>
+        <header>
+            <h2>Patrolling for architecture conformance</h2>
+        </header>
+        <p>
+            The earliest entry of enterprise architects into a project may happen at the time of the project kickoff. It is the time to gain a first-cut understanding of the business requirements and to recommend the technology prerogatives for solution implementation. This involvement is, however, restricted to an advisory role.
+        </p>
+        <p>
+            A more formal engagement of enterprise architects in the projects usually begins during the design phase, primarily for review of the proposed solution design for conformance against the stipulated architectural principles and standards. This engagement instills a governance mechanism. This mechanism enables project teams, in consultation with the enterprise architect, to confirm the alignment of their solution design with the enterprise architecture, its policies, its technology roadmap, and its technology portfolio.
+        </p>
+        <p>
+            What does an enterprise architect need to review the solution designs for? There is no standard list of parameters on which such a review can be based. Again, it pretty much depends on the priorities and constraints of the enterprise. Nevertheless, the criteria listed in Table 3-11 give an idea of an enterprise architect’s possible architectural concerns during the design reviews.
+        </p>
+        <p>
+            As shown in Figure 3-17, 27 the architecture conformance review begins with a registration. The project team registers its solution design for architecture review to a governing body. TOGAF (The Open Group, 2011) identifies such a governance body as Architecture Review Board (ARB). The registration is needed to plan ahead the engagement of the project teams with the ARB during the upcoming delivery cycle. It helps them identify the design artifacts they want to put through the review process. It also chalks out the plan as to who, when, how, and on what criteria the reviews will be conducted.
+        </p>
+        <!-- <label for="table3-11"><strong>Table 3.11</strong> Architecture Conformance Criteria (An Example to Illustrate the Concept)</label>
+        <table id="table3-11">
+            <thead>
+                <th>Criteria</th>
+                <th>Metrics</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Technology usage</td>
+                    <td>
+                        <ul>
+                            <li>
+                                Standards compliance, justification for deviation
+                            </li>
+                            <li>
+                                Infrastructure reuse, shared services—productivity gain, effort, and cost savings
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Capability completeness</td>
+                    <td>
+                        <ul>
+                            <li>
+                                Business scope completeness—count and/or percentage of: customer types supported, product types supported, processes supported
+                            </li>
+                            <li>
+                                Technical implementation completeness—count and/or percentage of: correct implementations, correct interface exposures, operations supported
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Capability reuse</td>
+                    <td>
+                        <ul>
+                            <li>
+                                Percentage of installed base (migrated to use common IT capability or shared services)
+                            </li>
+                            <li>
+                                Percentage of user base (migrated to use common IT capability or shared services)
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>System shutdown</td>
+                    <td>
+                        <ul>
+                            <li>
+                                Systems shutdown variance—actual vs. target (expressed in terms of count or percentage)
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Integration complexity</td>
+                    <td>
+                        <ul>
+                            <li>
+                                Integration complexity
+                            </li>
+                            <li>
+                                Integration maturity index: Using CMM for integration
+                            </li>
+                            <li>
+                                Level of process standardization achieved in percentage (across lines of business/product-portfolio/geographies): Actual vs. target
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Process harmonization</td>
+                    <td>
+                        <ul>
+                            <li>
+                                Process cycle-time reduction
+                            </li>
+                            <li>
+                                Process failure reduction: Failure mode and effect analysis (right-first-time)
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Data quality</td>
+                    <td>
+                        <ul>
+                            <li>
+                                Timeliness, accessibility, completeness, and correctness (accuracy and integrity) of data in given business context
+                            </li>
+                            <li>
+                                Data ownership, consolidation, synchronization, reuse, and sharing
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table> -->
+        <p>
+            It is expected that all the project teams register their solution designs for review by enterprise architects. It is, however, at the discretion of enterprise architects to determine which solution designs demand a formal review and which ones do not. Usually the enterprise architects need to focus their efforts on architecturally challenging areas in the enterprise.
+        </p>
+        <p>
+            Wherever practicable, the enterprise architect may recommend that the project architects themselves perform the review of their solution design and claim the self-certification for conformance. The enterprise architect can then determine whether such self-certification is justified, depending on the evidence produced by the project architect plus any other background factors such as the strategic importance of the solution and the track record of the project team. This minimizes the overhead for everyone.
+        </p>
+        <p>
+            We will explore new and effective ways of achieving this goal using the architecture scrum in Chapter 7, “Building Block 2: Involve All Stakeholders by Interlocking Architecture Scrums.” These scrums enforce strong rules for timeliness and quality and facilitate regular interaction and communication.
+        </p>
+        <p>
+            In essence there are two routes to certification for architecture conformance: self-assessment or a formal architecture conformance review. In either case, conformance certification must be sought by the project team before the solution design is finalized and the development begins. In some cases, the enterprise architect may grant a conditional certification, requiring the project teams to take corrective action to close the identified nonconformities prior to solution deployment.
+        </p>
+        <p>
+            After certification, if the project team makes any material change to the solution design, it must pass through the review process again. A material change is any change that invalidates the basis on which earlier conformance certification was granted. The enterprise architect comes back into the picture again during the acceptance testing phase. There the enterprise architect has to revalidate whether the solution being deployed is indeed architecturally conformant at that stage.
+        </p>
+        <p>
+            This is an idealistic sketch for an architectural governance process. In practice, we find project teams invariably fail to comply in many different ways and request exceptions. The most commonly encountered reasons are:
+        </p>
+        <ul>
+            <li>
+                Tight project timelines
+            </li>
+            <li>
+                “Scope creep”
+            </li>
+            <li>
+                Inadequacy of architecture
+            </li>
+            <li>
+                Specificity of business requirements that cannot be fulfilled with the standard architecture as stipulated by the enterprise architects
+            </li>
+            <li>
+                Open issues in the stipulated architecture itself
+            </li>
+        </ul>
+        <p>
+            Some reasons are genuine, whereas some are mere excuses. What do enterprise architects do then?
+        </p>
+        <ol>
+            <li>
+                Grant a conditional certification, telling the project team to close the nonconformity at the earliest possible project milestone in the future, or
+            </li>
+            <li>
+                Place a red mark on its status report to the steering committee, essentially escalating the nonconformance of the project higher up
+            </li>
+        </ol>
+        <p>
+            In the first case, the project team may agree to take all possible corrective actions and the enterprise architect may also take a softer stand. They compromise and make a deal. But later the project team either gets dismantled due to the project closure or it demands additional funds or time for making post facto changes in design and deployment. It is quite unlikely that additional funds will simply be granted for the sake of architectural compliance.
+        </p>
+        <p>
+            In the second case, the enterprise architect is bound to meet resistance in escalating non-conformance to the steering committee. However, she rarely has a really strong case to make the steering committee act in her favor. This is especially true when the solution has already been implemented by the project team and is working as intended in the production environment.
+        </p>
+        <p>
+            So, neither compromise nor confrontation works well. It is therefore of utmost importance for an enterprise architect to convincingly negotiate. He needs to create a win-win situation for both parties rather than falling into the trap of argumentative discussions. It is a real test to measure the enterprise architect’s interpersonal skills.
+        </p>
+        <p>
+            In Bank4Us, the enterprise architects assess solution designs by conducting formal architecture reviews. Oscar Salgado, the chief architect, reports a consolidated architecture conformance report to the steering committee at the end of each 90-day delivery cycle. The report is a dashboard, as shown in Table 3-12, intended to be discussed during the post-implementation review.
+        </p>
+    </section>
+</body>
+</html>

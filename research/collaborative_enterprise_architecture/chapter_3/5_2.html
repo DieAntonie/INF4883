@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INF4883 - Collaborative Enterprise Architecture - Chapter 3</title>
+</head>
+<body>
+    <header>
+        <h1>INF4883 - Enterprise Architecture - Research - Collaborative Enterprise Architecture - Chapter 3</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="5.html">Back</a>
+            </li>
+        </ul>
+    </nav>
+    <section>
+        <header>
+            <h2>Enforcing standards and guidelines</h2>
+        </header>
+        <p>
+            Skim through any document published by an EA group anywhere in the world and somewhere you will see a notice-cum-guidance-cum-threat that typically says something along these lines:
+        </p>
+        <p>
+            <blockquote>
+                All projects will be evaluated based on their consistency with the direction, products, and standards specified by the enterprise architecture. The project teams must adhere to the policies and standards stated in the enterprise architecture. Only the use of the listed tools, products, and technologies is permissible. The rare deviations need to be justified.
+            </blockquote>
+        </p>
+        <p>
+            The architects and developers on the ground react to such guidance with a mixed-emotions mindset. Widespread acceptance, subsurface resistance, and outright denial are the predominant reactions.
+        </p>
+        <p>
+            Let’s look at the widespread acceptance scenario first. This is the best-case scenario, reflecting a positive attitude of project teams toward the standards. They follow the standards not because an authority like EA says they should but because they themselves have come to realize that it is the right thing to do. They have nurtured the standards from the ground up. It has helped them do their job better in the past and will continue to help them in the future. Without doubt there will be pros and cons to any stipulated standards, but there is an overall agreement that they are the right thing. These standards have now seeped into their habit and culture.
+        </p>
+        <p>
+            For instance, at Bank4Us, the Proactive JEE Infrastructure (PJI) listed in Table 3-11 is widely used. At the time of its introduction, it substantially improved the productivity of project teams in JEE development. This sounds like a dream come true for the enterprise architects.
+        </p>
+        <p>
+            Unfortunately, developers and architects in the project teams don’t often really feel this way. More often, they show subsurface resistance toward the standards. They are typically frustrated with the constraints that such standards impose on them. Reasons are manifold: The standards and products are outdated, the newest library versions are not available (or approved by EA), the best possible solution for the project turns out to be nonstandard-complaint, and so forth.
+        </p>
+        <p>
+            At Bank4Us, the aforementioned PJI standard has by now grown into a massive proprietary code base. It costs too much in maintenance, and over the years has lost its significance. It locks the project teams into an outdated version of underlying JEE application server. Many enthusiastic developers and architects complain that they are notoriously late in leveraging the newer standards and rich feature sets, which are readily available in the latest version of JEE platform. They also complain that they cannot reduce the project costs by moving their noncritical applications to an open source platform.
+        </p>
+        <p>
+            At the extreme end, some project teams show outright denial for standards adoption. This is especially true for the standards enforced on them. Quite often it is not the developers but the project managers who are wary of immature industry standards. Although compliance with industry standards is essential for long-term sustenance, they might not necessarily be ready for primetime use. Sometimes they have been stipulated in the hope of anticipated benefits but without knowing their practicality.
+        </p>
+        <p>
+            Such decisions may stem from sheer enthusiasm fueled by market hype or the innovativeness of an idea. However, in the absence of concrete proof points, it is a challenge for enterprise architects to convincingly adopt such standards to the mainstream development. Amid tight delivery schedules, inflating project scope, and unanticipated technical glitches, a mandate for such standards is prone to move down to the bottom of a project team’s agenda and then drop off the list.
+        </p>
+        <p>
+            Such a mixed-emotions mindset—which includes widespread acceptance, subsurface resistance, and outright denial—characterizes the organizational dynamics of the enterprise. If the emotions are leaning more toward the latter two, one could call it organizational inertia. There are two extreme kinds of standards adoption strategy to deal with organizational dynamics:
+        </p>
+        <ul>
+            <li>
+                <strong>Eager adoption.</strong> Incubate the emerging industry standards and the cutting-edge technologies right away, and then proactively enforce them in order to become the first mover in the market. This is expensive in terms of development costs simply because it adds to the project effort and risks. It also neglects the opportunity to skip immature versions and reduce the number of upgrades. On the positive side, this strategy might offer a competitive edge and hence be suitable for applications belonging to the Wild Cats categories and for Emerging technologies.
+            </li>
+            <li>
+                <strong>Reluctant adoption.</strong> Defer adoption until as late as possible. This is expensive in the long run if the enterprise has to catch up with the industry at a later point in time. In that case, technology debt will accumulate and a wide software installation base will be in use when the need for adoption arises. This will demand a massive and dedicated migration project later on. However, this adoption strategy generally minimizes the immediate software development costs. This applies especially to the applications belonging to the Poor Dogs category and the technologies in the Core and Declining quadrants.
+            </li>
+        </ul>
+        <p>
+            In practice, the most rational approach will be a tightrope walk between these two extremes. In mature EA organizations, interim project reviews provide a mechanism whereby a formal dialogue between the enterprise architects and project teams is established. In that case, a golden mean between the two extremes—eagerness and reluctance—is reached by consensus.
+        </p>
+        <p>
+            The first interim review, called an architectural conformance review (ACR), is conducted during the design phase of the project. It must be concluded before the development phase can begin. The ACR allows project teams to consult with enterprise architects and validate the conformance of their solution design against the prescribed standards.
+        </p>
+        <p>
+            The second interim review is called a post-implementation review (PIR). It takes place after each production deployment and allows enterprise architects, along with other project stakeholders, to reflect on the performance of the project in regard to their specific interests and concerns. We will outline both ACR and PIR processes in the next section, “Monitoring the Project Portfolio (EA-6).”
+        </p>
+        <aside>
+            <header>
+                <h5>STANDARDS ENFORCEMENT STYLES</h5>
+                <p>
+                    <strong>Extreme Enforcement of Standards</strong>
+                </p>
+            </header>
+            <p>
+                At Amazon, SOA standards are known to be nonnegotiable. Google engineer Steve Yegge tells the story of Amazon’s rather ruthless style of enforcing SOA standards (2011). 23 In around 2002, Jeff Bezos (Amazon’s CEO) issued his mandate for SOA:
+            </p>
+            <p>
+                <blockquote>
+                    The project teams must expose their data and functionality through service interfaces only and they must communicate with each other through these interfaces only.
+                </blockquote>
+            </p>
+            <p>
+                Bezos then mentioned:
+            </p>
+            <p>
+                <blockquote>
+                    Anyone who doesn’t do this will be fired.
+                </blockquote>
+            </p>
+            <p>
+                What Bezos said was meant that way; it expressed his conviction for the SOA in no-nonsense terms. Amazon has made lots of progress since the SOA mandate was given in 2002, and it will have learned a lot of new lessons on the way. The infrastructure they had built for selling books has now transformed into an externally accessible, extensible computing platform.
+            </p>
+            <p>
+                However, this is an exceptional case. It is not apt to follow this style of enforcement in typical large enterprises. The statement is meant to set the long-term direction. In Chapter 9, where we discuss strategies of how to change the direction of EA in an enterprise, we will refer back to this story as an example for style called Black and White Goals
+            </p>
+            <p>
+                One needs to be aware that this is a double-edged sword. If enforced strictly, such a statement will take away an open, creative, and risk-taking culture. If not enforced strictly, it becomes a mockery. Nevertheless, the morale of this story is: A mandate for standardization has a chance to succeed when it comes from the highest authority and it comes with a strong sense of urgency and conviction.
+            </p>
+        </aside>
+        <p>
+            At Bank4Us Oscar Salgado, the chief architect, takes a balanced view and has established the following architectural principle: “Standardize wherever possible, deviate wherever necessary.” His rationale behind this principle is that 100% standardization is not possible and not needed. The effort of his team, however, must be focused on improving the level of standardization, progressively and definitively.
+        </p>
+    </section>
+</body>
+</html>

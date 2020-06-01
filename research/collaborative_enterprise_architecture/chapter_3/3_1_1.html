@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INF4883 - Collaborative Enterprise Architecture - Chapter 3</title>
+</head>
+<body>
+    <header>
+        <h1>INF4883 - Enterprise Architecture - Research - Collaborative Enterprise Architecture - Chapter 3</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="3_1.html">Back</a>
+            </li>
+        </ul>
+    </nav>
+    <section>
+        <header>
+            <h2>Identifying applications and key performance indicators</h2>
+        </header>
+        <p>
+            The first major step in such an initiative of application rationalization is, evidently, to get an overview of the current set of applications. As a prerequisite, there must be some guidelines that nail down what counts as an application.
+        </p>
+        <aside>
+            <header>
+                <h6>APPLICATIONS</h6>
+                <p>
+                    <strong>What Is an Application?</strong>
+                </p>
+            </header>
+            <p>
+                Though the term application is a central notion of IT, there is no commonly accepted or precise definition of this term. The Open Group (2011) defines the term in its TOGAF standard as:
+            </p>
+            <p>
+                <blockquote>
+                    A deployed and operational IT system that supports business functions and services; for example, a payroll. Applications use data and are supported by multiple technology components but are distinct from the technology components that support the application.
+                </blockquote>
+            </p>
+            <p>
+                This explanation leaves room for interpretation and certainly is not a sufficiently sharp delineation to come to a catalogue of enterprise applications in a straightforward manner. Further discussions are to be expected. Keller (2007) even claims that the struggle for an explicit definition of application is somewhat pointless because the domain experts working in a business unit already know their usual suspects. There’s some truth in this view, since the term application will always remain fuzzy to a degree. The identification of applications therefore needs to be backed up by the intuitions of domain experts. Nevertheless, there must be in place some guidelines that are sufficiently sharp to ensure that one doesn’t end up comparing apples with oranges across the business units. If one business unit counts single Java EARs 10 as applications, a moderately complex three-tier IT system with database, business logic, and presentation tier can easily consist of 100 applications. If another unit counts such a system as a single application, the enterprise-wide comparison is out of balance.
+            </p>
+            <p>
+                The guidelines for identifying applications probably differ from enterprise to enterprise and certainly depend on the granularity of the enterprise’s architecture management. But as a starting point we suggest the following common traits of applications:
+            </p>
+            <ul>
+                <li>
+                    They provide end-user functionality (as opposed to mere system software).
+                </li>
+                <li>
+                    They provide cohesive functionality having a common purpose.
+                </li>
+                <li>
+                    They are somewhat self-contained deployment units.
+                </li>
+                <li>
+                    They are logical entities in the sense that they are to some extent independent from the implementation technology.
+                </li>
+                <li>
+                    They have an owner who is responsible for development and maintenance.
+                </li>
+            </ul>
+        </aside>
+        <p>
+            The enterprise architects at Bank4Us are well prepared with a sufficiently up-to-date catalogue of applications at hand. In companies without an enterprise architecture practice, the composition of such a catalogue can be the first painful, laborious obstacle.
+        </p>
+        <p>
+            Given such a catalogue, the next step is to quantify what should be improved. This implies the agreement on some key performance indicators 11 (KPIs) that one wants to optimize—numeric values that should be increased or decreased. Ian Miller and his team decide that the CIO’s directive is best measured by the following KPIs:
+        </p>
+        <ul>
+            <li>
+                <strong>Total cost of ownership (TCO) of an application.</strong> This entails all costs related to the application: Development of new features, maintenance, trouble-ticket resolution, server costs, license fees, and whatever else is on the bill for changing or running the application.
+            </li>
+            <li>
+                <strong>Strategic fit (SF) of an application.</strong> This KPI tells to what extent an application is considered “legacy” on a scale from 1 to 10. It captures both technology and business aspects. An application scores high if it fits well with the envisioned business architecture, is built on standards and products that are considered future proof, and is in its prime with regard to the software life cycle.
+            </li>
+            <li>
+                <strong>Value contribution (VC) of an application.</strong> This measure reflects the business value generated by the application. There are only few cases where a definite amount of money can directly be associated with an application; in most cases, the VC will be a unitless value, like strategic fit. VC summarizes the importance of the application for the business processes it supports, how well it supports them, and what revenue streams are involved in these processes. This KPI reflects the business criticality of the application as well as the impact of replacing or retiring it on the organization.
+            </li>
+            <li>
+                <strong>Fan-in and fan-out of an application.</strong> The fan-in of an application A counts the different data flows entering A in the course of processes directly or indirectly supported by A. These data flows can be interface invocations by other applications, messages consumed by A, or global data structures—for instance, database tables read by A. The fan-out, on the other hand, counts how many data flows leave A. These can be interface invocations by A on other applications, messages sent out by A, or global data structures modified by A. Henry and Kafura (1981) have proposed these KPIs as measures of procedural complexity.
+            </li>
+        </ul>
+        <p>
+            Ian and his team conclude that these four KPIs should suffice. Further measures just make the comparison of applications less comprehensive. They also agree on the weight each KPI should get in a comparison, and they play for a while with the idea of an all-comprising KPI-formula, such as:
+        </p>
+        <p>
+            <blockquote>
+                Weight 1 * TCO + Weight 2 * SF + Weight 3 * VC + Weight 4 * (Fan - In + Fan - Out)
+            </blockquote>
+        </p>
+        <p>
+            But then they drop this “world formula” idea because it gives the simplistic impression that decisions could be based solely on a quantitative assessment of this variable.
+        </p>
+        <p>
+            The slightly complicated fan-in and fan-out KPIs are there to capture the CIO’s statement that the number of system interactions should be reduced. They raise some discussions about why the CIO included this reduction in a strategic initiative that primarily is about cost savings. Ian explains that this is because the total costs of an application landscape are a mix of application costs and interface costs, as schematically shown in Figure 3-10.
+        </p>
+        <p>
+            The distribution of functionality to many applications results in a highly modular landscape with increased interface costs. Take, for instance, the costs to keep several versions of an application interface concurrently alive in order to serve both new and old clients—these costs do not occur, if the same functionality is integrated into a single application. But integrating widely unrelated functionality into a single application, on the other hand, also generates surplus application costs. The hardware costs, for example, are higher with each installation, and the synchronization overhead of development projects also adds to the bill. To find the proper cohesion and compromise between modularity and integration is a U-curve optimization, and the Fan-In/Fan-Out KPI’s can help quantifying it. As a general rule, only a medium Fan-In/Fan-Out value allows for a minimal Total Cost of Ownership (TCO)—both minimizing and maximizing the Fan-In/Fan-Out will at some point increase the TCO.
+        </p>
+        <p>
+            This exemplifies an important point about application rationalization: The KPIs to be optimized seldom are independent variables. The expectation to freely lift them all to an optimum is misleading. As Garajedaghi (2011) puts it, there is a certain slack between the variables: One variable can be modified as if it were independent in some range of tolerance, but there is an excision where it starts affecting the others.
+        </p>
+        <p>
+            The best thing to hope for is, therefore, some equilibrium representing a local optimum. A more practical consequence for now is that it is crucial to agree on the weight of each KPI and consider the effect of changes on the whole tuple of KPI values.
+        </p>
+    </section>
+</body>
+</html>
