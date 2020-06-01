@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INF4883 - Collaborative Enterprise Architecture - Chapter 4</title>
+</head>
+<body>
+    <header>
+        <h1>INF4883 - Enterprise Architecture - Research - Collaborative Enterprise Architecture - Chapter 4</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">Back</a>
+            </li>
+            <li>
+                <a href="1.html">Previous</a>
+            </li>
+            <li>
+                <a href="3.html">Next</a>
+            </li>
+        </ul>
+    </nav>
+    <section>
+        <header>
+            <h2>The Zachman framework for enterprise architecture</h2>
+        </header>
+        <p>
+            The beauty of the Zachman Framework4 is that it visualizes the entire enterprise at one glance, just the way the periodic table of elements visualizes all 118 known chemical elements by selected properties of their atomic structure. By providing a classification schema, the Zachman Framework attempts to bring order to the complex world of business and IT, as the periodic table does for chemistry and chemical reactions.
+        </p>
+        <p>
+            Zachman is a framework of elements—a total set of descriptive representations to fully describe a complex object (the enterprise). It has 6  6 (some say 6  5) cells, as depicted in Figure 4-1 (Zachman, 2008). The columns are called Abstractions. They answer key questions about the enterprise: What (data), How (function), Where (network), Who (people), When (time), and Why (motivation). The rows are called Perspectives. Each row represents a viewpoint of a single group of stakeholders.
+        </p>
+        <p>
+            Zachman has a somewhat conservative view of enterprise architecture. Each cell in the Zachman grid defines primitive element and contains an elementary architectural model. Each cell must represent one and only one aspect of an enterprise. The architecture is “pure” only if you are able to extract different architectural aspects, as per the Zachman classification schema, and represent each of those aspects with a stand-alone model.
+        </p>
+        <p>
+            In that case, a cell contains a single-variable primitive model—only one architectural aspect, just like a basic chemical element in the periodic table. For instance, Cell [3,1] (System Model (Logical) – Data) must contain only the Logical Data Model and nothing else. It will not provide any information about ownership, usage, or location of the data that is being described. If you add that, then you are not doing architecture, you are doing the implementation—so says Zachman.
+        </p>
+        <p>
+            Accordingly, EA has to obey certain ground rules imposed by the Zachman Grid:
+        </p>
+        <ul>
+            <li>
+                <strong>Rule 1:</strong> The columns have no order. Each column (aspect) is equally important.
+            </li>
+            <li>
+                <strong>Rule 2:</strong> Each column has a simple, basic model. Each column describes one complete aspect of the enterprise using primitive models only.
+            </li>
+            <li>
+                <strong>Rule 3:</strong> The basic model of each column is unique. Each model in a column is related to the others. They are abstractions of the same enterprise aspect, yet each model represents a distinct and unique concept.
+            </li>
+            <li>
+                <strong>Rule 4:</strong> Each row represents a distinct view. The rows describe stakeholder perspectives (Executive, Business Management, Architect, Engineer, and Technician).
+            </li>
+            <li>
+                <strong>Rule 5:</strong> Each cell is unique. Each model representation or cell differs from the others in essence and not merely in level of detail.
+            </li>
+            <li>
+                <strong>Rule 6:</strong> Combining the cells in one row forms a complete view. Each row provides a comprehensive view of the enterprise from the perspective of a group of stakeholders.
+            </li>
+        </ul>
+        <p>
+            If a model covers more than one cell from the Zachman Grid, it becomes a composite model, just like a chemical compound. A composite model is very useful for the purpose of implementation. According to Zachman, composite models are only meant for the ease of implementation, not as part of the architecture. It is up to the architect to define the composite models by combining several primitive models. The composite models form architectural work products, which can then be taken to facilitate the implementation.
+        </p>
+        <p>
+            Again, referring to the periodic table analogy, a composite model is just like a chemical compound that can be produced by a chemical reaction between two or more elements. A Logical Data Model, when combined with a People Model, describes ownership and usage of entities. In the same way, data models that also include the physical location of data entities become composite models.
+        </p>
+        <p>
+            Zachman’s classification schema for architecture models does make sense, at least theoretically. However, it does not really provide any insight into the dependencies and relationships among the primitive architectural models. The practical viability of building the primitive and composite models is pretty much left to the enterprise architect to explore and determine.
+        </p>
+        <p>
+            In essence, the Zachman Framework is simply a framework of EA elements. It does not stand for itself but can be used (as a whole or in parts) as a complement to other major EA frameworks, such as TOGAF and FEA, or even in any custom frameworks or approaches that you may have in your enterprise.
+        </p>
+    </section>
+</body>
+</html> 
